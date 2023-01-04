@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-GO HOME!
+	<input type='date'>
 </body>
 </html>
