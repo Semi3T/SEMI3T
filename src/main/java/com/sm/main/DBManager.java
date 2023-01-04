@@ -13,10 +13,17 @@ public class DBManager {
 		//String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=C:/JGW/Wallet_URJ817BYXD912F6F";
 		
 		// 영웅
+<<<<<<< HEAD
 		//String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=C:/pyw(sbt 6)/Wallet_URJ817BYXD912F6F";
 		
 		// 용규
 		String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=/Users/jeon-yong-gyu/Documents/Wallet_URJ817BYXD912F6F";
+=======
+		String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=C:/pyw(sbt 6)/Wallet_URJ817BYXD912F6F";
+		
+		// 용규
+		//String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=/Users/jeon-yong-gyu/Documents/Wallet_URJ817BYXD912F6F";
+>>>>>>> ffab38b7d2c4e95995ba7c0d2859c08502bbb3c6
 		
 		// 현빈
 		//String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=D:/lhb/semi3tWorkspace/Wallet/Wallet_URJ817BYXD912F6F";
