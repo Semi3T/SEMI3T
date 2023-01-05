@@ -1,4 +1,4 @@
-package com.sm.main;
+package com.sm.account;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,13 +7,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/HC")
-public class HC extends HttpServlet {
+@WebServlet("/LoginC")
+public class LoginC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		request.setAttribute("contentPage", "jsp/home.jsp");
-		request.getRequestDispatcher("index.jsp").forward(request, response);
-		
 	
 	}
 

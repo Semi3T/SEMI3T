@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#account_Btn{
+	display: flex;
+	justify-content: flex-end;
+	margin: 10px 0 0 16px;
+  	font-size: 18px;
+  	font-weight: bold;	
+	
+}
+#account_Btn a{
+	margin-left: 16px;
+}
+#navi_Btn{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+  	font-size: 20px;
+ 	font-weight: bold;
+ 	padding: 5px 0 5px 0;
+ 	border: solid 1px black;
+}
+#navi_Btn a{
+ 	border: solid 1px black;
+}
+
+.rogo_img a{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+.index_con{
+	width: 1130px;
+    height: 100%;
+    margin: 0 auto;
+}
