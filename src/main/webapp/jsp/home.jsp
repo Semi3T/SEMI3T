@@ -7,13 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<div id ="loginArea">
-<jsp:include page="${loginPage }"></jsp:include>
-</div>
 
-GO HOME!
+<h1>HOME!</h1>
 
-
-<jsp:include page="${contentPage }"></jsp:include>
 </body>
 </html>
