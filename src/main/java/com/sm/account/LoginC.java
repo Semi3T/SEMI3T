@@ -1,4 +1,4 @@
-package com.sm.main;
+package com.sm.account;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,39 +7,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-@WebServlet("/LoginController")
-public class LoginController extends HttpServlet {
-	
-	
+@WebServlet("/LoginC")
+public class LoginC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		//로그아웃 하는 일
-		
-		AccountDAO.logOut(request);
-
-		
-		//1.로그인/아웃
-
-		
-		
-		//어디로?
-
-		request.setAttribute("contentPage", "home.jsp");
-		request.getRequestDispatcher("index.jsp").forward(request, response);
-		
+	
 	}
-
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		//로그인 하는 일
 		AccountDAO.login(request);
-		// 어디로
 		
 		AccountDAO.loginCheck(request);
-		request.setAttribute("contentPage", "home.jsp");
-		request.getRequestDispatcher("index.jsp").forward(request, response);
+		
+		request.getRequestDispatcher("home.jsp").forward(request, response);
 	}
 
 }

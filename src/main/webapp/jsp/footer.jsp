@@ -7,13 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<div id ="loginArea">
-<jsp:include page="${loginPage }"></jsp:include>
-</div>
-
-GO HOME!
-
-
-<jsp:include page="${contentPage }"></jsp:include>
+	<footer style="widows: 100%; height:300px; background-color: rgb(120,250,120);">
+		WWWWW
+	</footer>
 </body>
 </html>
