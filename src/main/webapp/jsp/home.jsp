@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,6 +20,7 @@ pageEncoding="UTF-8"%>
     ></script>
   </head>
   <body>
+  ${r }
     <div>
       <div
         id="carouselExampleControls"
@@ -68,7 +70,18 @@ pageEncoding="UTF-8"%>
         </button>
       </div>
     </div>
-
-    <div></div>
+    
+    <div style="display: flex;">
+	<c:forEach var="p" items="${product }">
+	
+		<div style="border: solid 1px black; width: 400px ">
+			<a href="">
+			<img style="width: 200px" src="jsp/master/imgFolder/${p.p_img }">
+			<p>${p.p_title }</p>
+			<p>${p.p_price }</p>
+			</a>
+		</div>
+	</c:forEach>
+	</div>
   </body>
 </html>
