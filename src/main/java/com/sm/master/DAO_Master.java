@@ -11,8 +11,6 @@ import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import com.sm.main.DBManager;
 
-import oracle.net.aso.f;
-
 public class DAO_Master {
 
 	public static void regproduct(HttpServletRequest request) {
@@ -59,9 +57,9 @@ public class DAO_Master {
 			pstmt.setInt(8, price);
 			pstmt.setInt(9, like);
 			
-//			³ªÁß¿¡ js·Î °æ°íÃ¢¿¡ µî·Ï ¼º°ø ¶ç¾î ÁÖ±â
+//			ï¿½ï¿½ï¿½ß¿ï¿½ jsï¿½ï¿½ ï¿½ï¿½ï¿½Ã¢ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ö±ï¿½
 			if(pstmt.executeUpdate() == 1) {
-				request.setAttribute("r", "µî·Ï ¼º°ø");
+				request.setAttribute("r", "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 			}
 			
 		} catch (Exception e) {
