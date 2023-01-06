@@ -11,10 +11,6 @@ import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import com.sm.main.DBManager;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> a3292ed48985a75c4fed14f85715ea960c61cf68
 public class DAO_Master {
 
 	public static void regproduct(HttpServletRequest request) {
@@ -61,16 +57,11 @@ public class DAO_Master {
 			pstmt.setInt(8, price);
 			pstmt.setInt(9, like);
 			
-<<<<<<< HEAD
-//			���߿� js�� ���â�� ��� ���� ��� �ֱ�
-			if(pstmt.executeUpdate() == 1) {
-				request.setAttribute("r", "��� ����");
-=======
+
 //			나중에 js로 등록성공 경고창으로 뛰우기
 			if(pstmt.executeUpdate() == 1) {
 				request.setAttribute("r", "등록 성공");
 
->>>>>>> a3292ed48985a75c4fed14f85715ea960c61cf68
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
