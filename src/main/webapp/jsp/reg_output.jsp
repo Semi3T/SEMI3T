@@ -13,7 +13,7 @@ request.setCharacterEncoding("utf-8");
 String id = request.getParameter("id");
 String pw = request.getParameter("pw");
 String name = request.getParameter("name");
-String hp = request.getParameter("hp");
+String phonenumber = request.getParameter("phonenumber");
 String birthday = request.getParameter("birthday");
 String addr = request.getParameter("addr");
 String gender = request.getParameter("gender");
@@ -59,7 +59,7 @@ String gender = request.getParameter("gender");
 
 <div class="items">
 <div class="item1">휴대전화</div>
-<div class="item2"><%= hp%>
+<div class="item2"><%= phonenumber%>
 </div>
 </div>
 

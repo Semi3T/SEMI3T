@@ -16,5 +16,7 @@
 		sssssss
 	</section>
 >>>>>>> 61b613e8ac67b05cefaf624c7461c272a9c854f8
+
+<jsp:include page="${contentPage }"></jsp:include>
 </body>
 </html>

@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import com.lhb.main.DBManager;
+import com.sm.main.DBManager;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
@@ -70,16 +70,15 @@ public class AccountDAO {
 					
 					
 					Account a = new Account();
-					a.setA_name(rs.getString("a_name"));
-					a.setA_id(rs.getString("a_id"));
-					a.setA_pw(rs.getString("a_pw"));
-					a.setA_gender(rs.getString("a_gender"));
-					a.setA_addr(rs.getString("a_addr"));
-					a.setA_interest(rs.getString("a_interest"));
-					a.setA_introduce(rs.getString("a_introduce"));
-					a.setA_img(rs.getString("a_img"));
+					a.setL_id(rs.getString("l_id"));
+					a.setL_pw(rs.getString("l_pw"));
+					a.setL_name(rs.getString("l_name"));
+					a.setL_phonenumber(rs.getString("l_phonenumber"));
+					a.setL_birthday(rs.getDate("l_birthday"));
+					a.setL_address(rs.getString("l_address"));
+					a.setL_gender(rs.getString("l_gender"));
+					
 					  
-				request.setAttribute("account", a);
 					HttpSession hs = request.getSession();
 					hs.setAttribute("account", a);
 					hs.setMaxInactiveInterval(30);
@@ -116,8 +115,7 @@ public class AccountDAO {
 
 	public static void logOut(HttpServletRequest request) {
 	
-		//�α� �ƿ� �ϴ� ��
-		//���� ���̱�
+		
 		
 		HttpSession hs = request.getSession();
 		
@@ -125,21 +123,21 @@ public class AccountDAO {
 	//	hs.removeAttribute("account");
 	// hs.invalidate(); 
 		loginCheck(request);
-		//���ʿ� �����������  ���ų�,�����ð� ����
+		
 	}
 
 
 
 
 	public static void regAccount(HttpServletRequest request) {
-		// �����ϴ� �� = crud =C 
+		//가입
 		
 		
 		
 		
 		Connection con = null;
 		PreparedStatement pstmt = null;
-		String sql = "insert into account_test values(?, ?, ?, ?, ?, ?, ?, ?)";
+		String sql = "insert into login values(?, ?, ?, ?, ?, ?, ?)";
 		
 		
 		
@@ -153,57 +151,35 @@ public class AccountDAO {
 			MultipartRequest mr = new MultipartRequest(request, path, 20 * 1024 * 1024, "utf-8" , new DefaultFileRenamePolicy());
 			
 			
-			//���� �� �� ����.
+			
 			
 			
 
-			request.setCharacterEncoding("utf-8");
+			request.setCharacterEncoding("UTF-8");
 			
-			String name = mr.getParameter("name");
 			String id = mr.getParameter("id");
 			String pw = mr.getParameter("pw");
-			String gender = mr.getParameter("gender");
+			String name = mr.getParameter("name");
+			String phonenumber = mr.getParameter("phonenumber");
+			String birthday = mr.getParameter("birthday");
 			String addr = mr.getParameter("addr");
-			String[] interest = mr.getParameterValues("interest");
-			String introduce = mr.getParameter("introduce");
-			String file = mr.getFilesystemName("img");
-			String interest2 ="";
+			String gender = mr.getParameter("gender");
+
+
 			
+		
+
 			
-			if(interest != null) {
-				
-			
-			for (String s : interest) {
-		//		System.out.println(s);
-				interest2 += s + "!"; // food!excer!game
-			}
 
-			}else {
-				interest2= "���ɻ� ����";
-			}
-
-			if(introduce.isEmpty()){
-				introduce = "...";
-
-			}
-
-System.out.println(name);
 System.out.println(id);
 System.out.println(pw);
-System.out.println(gender);
+System.out.println(name);
+System.out.println(phonenumber);
+System.out.println(birthday);
 System.out.println(addr);
-// System.out.println(interest);
-System.out.println(interest2);
-System.out.println(introduce);
+System.out.println(gender);
 
-pstmt.setString(1, name);
-pstmt.setString(2, id);
-pstmt.setString(3, pw);
-pstmt.setString(4, gender);
-pstmt.setString(5, addr);
-pstmt.setString(6, interest2);
-pstmt.setString(7, introduce);
-pstmt.setString(8, file);
+
 
 if (pstmt.executeUpdate() == 1) {
 	System.out.println("-- > ���Լ���");

@@ -18,14 +18,14 @@ ${r } </td>
 <tr>
 
 <td>
-${sessionScope.a_id } (${sessionScope.account.a_name })님 안녕하세요</td>
+${sessionScope.l_id } (${sessionScope.account.l_name })님 안녕하세요</td>
 </tr>
 
 
 <tr>
 <td>
-<button class="loginBtn" onclick="location.href='MyPageAccountC?id=${sessionScope.a_id }'">MYpage</button>
-<button class="loginBtn" onclick="location.href='LoginController'">로그아웃</button>
+<button class="loginBtn" onclick="location.href='MyPageAccountC?id=${sessionScope.l_id }'">마이페이지</button>
+<button class="loginBtn" onclick="location.href='LoginC'">로그아웃</button>
 </td>
 </tr>
 

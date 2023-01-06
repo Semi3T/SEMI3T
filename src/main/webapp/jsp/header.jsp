@@ -10,6 +10,7 @@
 
 <header>
 		<div id="account_Btn">
+		<jsp:include page="${loginPage }"></jsp:include>
 			<a href="RegC">회원가입</a>
 			<a href="LoginC">로그인</a>
 			<a href="MyPageC">마이페이지</a>

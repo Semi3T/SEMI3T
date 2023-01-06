@@ -22,7 +22,7 @@
 <tr>
 <td colspan="2">
 <button class = "loginBtn">로그인</button>
-<button type = "button" class = "loginBtn" onclick="location.href='RegAccountC'">회원가입</button>
+<button type = "button" class = "loginBtn" onclick="location.href='RegC'">회원가입</button>
 </td>
 
 </tr>

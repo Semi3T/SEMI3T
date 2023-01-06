@@ -9,7 +9,7 @@
 <script type="text/javascript" src = "validCheck.js"></script>
 </head>
 <body>
-<form action="RegAccountC" method ="post" enctype = "multipart/form-data" onsubmit="return call()">
+<form action="RegC" method ="post" enctype = "multipart/form-data" onsubmit="return call()">
 <div class = "container">
 
 <div class = "items">
@@ -38,7 +38,7 @@
 <div class = "items">
 <div class = "item1">전화번호</div>
 <div class = "item2">
-  <input type="text" name="hp"  placeholder="핸드폰번호 입력" maxlength="11"/>
+  <input type="text" name="phonenumber"  placeholder="핸드폰번호 입력" maxlength="11"/>
 </div>
 </div>
 
@@ -54,7 +54,7 @@
 <div class = "items">
 <div class = "item1">ADDR</div>
 <div class = "item2">
-<input type="text" id="addr" name="addr">
+<input type="text" id="address" name="address">
 </div>
 </div>
 
