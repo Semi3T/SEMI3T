@@ -8,7 +8,7 @@
 </head>
 <body>
 	<footer style="widows: 100%; height:300px; background-color: rgb(120,250,120);">
-		WWWWW
+		footer
 	</footer>
 </body>
 </html>
