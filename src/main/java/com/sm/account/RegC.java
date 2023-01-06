@@ -13,7 +13,7 @@ public class RegC extends HttpServlet {
 	
 		AccountDAO.loginCheck(request);
 		request.setAttribute("contentPage", "jsp/reg.jsp");
-		request.getRequestDispatcher("jsp/login.jsp").forward(request, response);
+		request.getRequestDispatcher("jsp/header.jsp").forward(request, response);
 	
 	}
 
