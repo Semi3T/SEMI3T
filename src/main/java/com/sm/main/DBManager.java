@@ -9,16 +9,16 @@ import java.sql.SQLException;
 public class DBManager {
 	public static Connection connect() throws SQLException {
 
-		// Í±¥Ïö∞
+		// ∞«øÏ
 		//String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=C:/JGW/Wallet_URJ817BYXD912F6F";
 		
-		// ÏòÅÏõÖ
+		// øµøı
 		String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=C:/pyw(sbt 6)/Wallet_URJ817BYXD912F6F";
 		
-		// Ïö©Í∑ú
+		// øÎ±‘
 		//String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=/Users/jeon-yong-gyu/Documents/Wallet_URJ817BYXD912F6F";
 		
-		// ÌòÑÎπà
+		// «ˆ∫Û
 		//String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=D:/lhb/semi3tWorkspace/Wallet/Wallet_URJ817BYXD912F6F";
 		
 		String user="YGG";
