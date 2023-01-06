@@ -18,6 +18,7 @@ public class ProductRegC extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 			DAO_Master.regproduct(request);
+			DAO_Master.getAllProduct(request);
 			request.setAttribute("contentPage", "jsp/home.jsp");
 			request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
