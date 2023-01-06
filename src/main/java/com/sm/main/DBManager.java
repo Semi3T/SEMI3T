@@ -12,11 +12,7 @@ public class DBManager {
 		// ê±´ìš°
 		//String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=C:/JGW/Wallet_URJ817BYXD912F6F";
 		
-<<<<<<< HEAD
 		// ì˜ì›…
-=======
-		// ¿µ¿õ
->>>>>>> 0929c34f3265cd07904bad8e6db7136556d51a4e
 		String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=C:/Wallet_URJ817BYXD912F6F";
 		
 		// ìš©ê·œ
