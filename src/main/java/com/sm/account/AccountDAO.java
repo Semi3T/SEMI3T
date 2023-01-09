@@ -146,22 +146,24 @@ public class AccountDAO {
 			pstmt = con.prepareStatement(sql);
 			request.setCharacterEncoding("UTF-8");
 			
-			String path = request.getSession().getServletContext().getRealPath("img");
-			System.out.println(path);
+
 			
+			String id = request.getParameter("id");
+			String pw = request.getParameter("pw");
+			String name = request.getParameter("name");
+			String phonenumber = request.getParameter("phonenumber");
+			String birthday = request.getParameter("birthday");
+			String address = request.getParameter("address");
+			String gender = request.getParameter("gender");
 
-			MultipartRequest mr = new MultipartRequest(request, path, 20 * 1024 * 1024, "utf-8" , new DefaultFileRenamePolicy());
-	
 			
-			String id = mr.getParameter("id");
-			String pw = mr.getParameter("pw");
-			String name = mr.getParameter("name");
-			String phonenumber = mr.getParameter("phonenumber");
-			String birthday = mr.getParameter("birthday");
-			String address = mr.getParameter("address");
-			String gender = mr.getParameter("gender");
-
-
+			pstmt.setString(1, name);
+			pstmt.setString(2, id);
+			pstmt.setString(3, pw);
+			pstmt.setString(4, phonenumber);
+			pstmt.setString(5, birthday);
+			pstmt.setString(6, address);
+			pstmt.setString(7, gender);
 			
 		
 
@@ -177,8 +179,8 @@ System.out.println(gender);
 
 
 if (pstmt.executeUpdate() == 1) {
-	System.out.println("-- > ���Լ���");
- request.setAttribute("r", "���Լ���");
+	System.out.println("-- > 가입 성공");
+ request.setAttribute("r", "가입성공");
 }
 			
 		} catch (Exception e) {

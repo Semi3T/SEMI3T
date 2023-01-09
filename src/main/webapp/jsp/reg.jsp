@@ -9,7 +9,7 @@
 <script type="text/javascript" src = "validCheck.js"></script>
 </head>
 <body>
-<form action="RegC" method ="post" enctype = "multipart/form-data" onsubmit="return call()">
+<form action="RegC" method ="post" enctype =  onsubmit="return call()">
 <div class = "container">
 
 <div class = "items">
