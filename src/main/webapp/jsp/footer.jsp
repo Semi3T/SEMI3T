@@ -7,8 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<footer style="widows: 100%; height:300px; background-color: rgb(120,250,120);">
-		footer
-	</footer>
+		<footer class="footer">
+			<div style="background-color: black; width: 1130px; height: 100%; margin: auto;">
+				footer
+			</div>
+		</footer>
 </body>
 </html>

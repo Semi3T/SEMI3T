@@ -68,16 +68,20 @@ pageEncoding="UTF-8"%>
     </div>
     
     
-    <div style="display: flex; border: 1px;">
-	<c:forEach var="p" items="${product }">
-		<div style="border: solid 1px black; width: 400px;">
-			<a href="DetailC?p_no=${p.p_no }">
-			<img style="width: 200px" src="jsp/master/imgFolder/${p.p_img }">
-			<p>${p.p_title }</p>
-			<p>${p.p_price }</p>
-			</a>
-		</div>
-	</c:forEach>
+    <div class="product-container">
+		<c:forEach var="p" items="${product }">
+			<div class="product-box">
+				
+					<div class="a-box"><a href="DetailC?p_no=${p.p_no }"><img src="jsp/master/imgFolder/${p.p_img }"></a></div>
+				
+				
+					<div class="a-box" style="font-size: 20pt;"><a href="DetailC?p_no=${p.p_no }">${p.p_title }</a></div>
+				
+					<div class="a-box"><a href="DetailC?p_no=${p.p_no }">${p.p_price } 원</a></div>
+				
+				
+			</div>
+		</c:forEach>
 	</div>
   </body>
 </html>
