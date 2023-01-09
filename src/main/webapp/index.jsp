@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="css/index/index.css">
 </head>
 <body>
+
 	<div class="index_con">
 		<div>
 			<jsp:include page="jsp/header.jsp"></jsp:include>
@@ -23,6 +24,7 @@
 			<jsp:include page="jsp/footer.jsp"></jsp:include>
 		</footer>
 	</div>
+
 
 </body>
 </html>
