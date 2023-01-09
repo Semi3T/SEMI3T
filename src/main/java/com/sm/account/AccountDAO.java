@@ -23,10 +23,10 @@ public class AccountDAO {
 		Account a = (Account) hs.getAttribute("account");
 		
 		if (a == null) {
-			request.setAttribute("loginPage", "jsp/login.jsp");
+			request.setAttribute("loginPage", "login.jsp");
 			return false;
 		} else {
-			request.setAttribute("loginPage", "jsp/loginOK.jsp");
+			request.setAttribute("loginPage", "loginOK.jsp");
 			return true;
 		}
 		
@@ -144,25 +144,21 @@ public class AccountDAO {
 		try {
 			con = DBManager.connect();
 			pstmt = con.prepareStatement(sql);
+			request.setCharacterEncoding("UTF-8");
 			
-			String path = request.getSession().getServletContext().getRealPath("account/imgFolder");
+			String path = request.getSession().getServletContext().getRealPath("img");
 			System.out.println(path);
 			
-			MultipartRequest mr = new MultipartRequest(request, path, 20 * 1024 * 1024, "utf-8" , new DefaultFileRenamePolicy());
-			
-			
-			
-			
-			
 
-			request.setCharacterEncoding("UTF-8");
+			MultipartRequest mr = new MultipartRequest(request, path, 20 * 1024 * 1024, "utf-8" , new DefaultFileRenamePolicy());
+	
 			
 			String id = mr.getParameter("id");
 			String pw = mr.getParameter("pw");
 			String name = mr.getParameter("name");
 			String phonenumber = mr.getParameter("phonenumber");
 			String birthday = mr.getParameter("birthday");
-			String addr = mr.getParameter("addr");
+			String address = mr.getParameter("address");
 			String gender = mr.getParameter("gender");
 
 
@@ -170,13 +166,12 @@ public class AccountDAO {
 		
 
 			
-
 System.out.println(id);
 System.out.println(pw);
 System.out.println(name);
 System.out.println(phonenumber);
 System.out.println(birthday);
-System.out.println(addr);
+System.out.println(address);
 System.out.println(gender);
 
 

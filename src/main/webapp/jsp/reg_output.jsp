@@ -15,7 +15,7 @@ String pw = request.getParameter("pw");
 String name = request.getParameter("name");
 String phonenumber = request.getParameter("phonenumber");
 String birthday = request.getParameter("birthday");
-String addr = request.getParameter("addr");
+String address = request.getParameter("address");
 String gender = request.getParameter("gender");
 
 
@@ -72,7 +72,7 @@ String gender = request.getParameter("gender");
 
 <div class="items">
 <div class="item1">주소</div>
-<div class="item2"><%= addr%>
+<div class="item2"><%= address%>
 </div>
 </div>
 

@@ -12,8 +12,8 @@ public class RegC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		AccountDAO.loginCheck(request);
-		request.setAttribute("contentPage", "jsp/reg.jsp");
-		request.getRequestDispatcher("jsp/header.jsp").forward(request, response);
+		request.setAttribute("contentPage", "reg.jsp");
+		request.getRequestDispatcher("jsp/home.jsp").forward(request, response);
 	
 	}
 

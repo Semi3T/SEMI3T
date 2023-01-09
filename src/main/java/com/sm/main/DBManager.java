@@ -9,21 +9,21 @@ import java.sql.SQLException;
 public class DBManager {
 	public static Connection connect() throws SQLException {
 
-		// °Ç¿ì
+		// ï¿½Ç¿ï¿½
 		//String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=C:/JGW/Wallet_URJ817BYXD912F6F";
 		
-<<<<<<< HEAD
-		// ¿µ¿õ
+
+		// ï¿½ï¿½ï¿½ï¿½
 		// String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=C:/pyw(sbt 6)/Wallet_URJ817BYXD912F6F";
-=======
+
 		// ì˜ì›…
-		String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=C:/Wallet_URJ817BYXD912F6F";
->>>>>>> a3292ed48985a75c4fed14f85715ea960c61cf68
+		// String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=C:/Wallet_URJ817BYXD912F6F";
+
 		
-		// ¿ë±Ô
+		// ï¿½ï¿½ï¿½
 		//String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=/Users/jeon-yong-gyu/Documents/Wallet_URJ817BYXD912F6F";
 		
-		// Çöºó
+		// ï¿½ï¿½ï¿½ï¿½
 		String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=D:/lhb/semi3tWorkspace/Wallet/Wallet_URJ817BYXD912F6F";
 		
 		String user="YGG";
