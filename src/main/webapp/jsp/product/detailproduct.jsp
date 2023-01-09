@@ -7,26 +7,28 @@
 <title>detail product</title>
 </head>
 <body>
-	<form action="">
-	<div class="detail-container">
+	
 		<div>
-			<img src="${p_img }">
+			<img src="jsp/master/imgFolder/${product.p_img }">
 		</div>
 		<div>
 			<div>
-				<h3>${p_brand }</h3>
-				<h1>${p_title }</h1>
+				<h3>${product.p_brand }</h3>
+				<h1>${product.p_title }</h1>
 			</div>				
 			<div>
-				<h1>${p_price } 원</h1>
+				<h1>${product.p_price } 원</h1>
 			</div>
 			<div>
 				<button>-</button>	
 				<input type="number" values="1">
 				<button>+</button>	
 			</div>
+			<div>
+				<img src="jsp/master/imgFolder/${product.p_contents }">
+			</div>
 		</div>
-	</div>
-	</form>
+
+
 </body>
 </html>

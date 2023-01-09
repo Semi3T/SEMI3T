@@ -23,7 +23,6 @@ public class DBManager {
 		
 		String user="YGG";
 		String password="Soldesk802!!";
-		System.out.println(url);
 		return DriverManager.getConnection(url, user, password);
 		
 	}
