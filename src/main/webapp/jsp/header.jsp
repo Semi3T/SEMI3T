@@ -8,8 +8,7 @@ pageEncoding="UTF-8"%>
   </head>
   <body>
     <header>
-      <div id="account_Btn">
-        <jsp:include page="${loginPage }"></jsp:include>
+      <div class="account_Btn">
         <a href="ProductRegC">제품 등록</a>
         <a href="RegC">회원가입</a>
         <a href="LoginC">로그인</a>
