@@ -1,57 +1,56 @@
 @charset "UTF-8";
- 	
-      * {
-        margin: 0px;
-        padding: 0px;
-       
-      }
 
-      .account_Btn {
-        display: flex;
-        justify-content: flex-end;
-        margin: 10px 0 0 16px;
-        font-size: 18px;
-        font-weight: bold;
-      }
-      .account_Btn a {
-        margin-left: 16px;
-        text-decoration: none;
-      }
+* {
+	margin: 0px;
+	padding: 0px;
+}
 
-      .navi_Btn_container {
-        display: flex;
-        width: 100%;
-        height: 70px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        
-      }
+.account_Btn {
+	display: flex;
+	justify-content: flex-end;
+	margin: 10px 0 0 16px;
+	font-size: 18px;
+	font-weight: bold;
+}
 
-      .navi_Btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex: 1;
-        color: #000;
-        letter-spacing: 0.1rem;
-        transition: all 0.5s ease;
-        font-size: 20pt;
-   		text-decoration: none;
-      }	
+.account_Btn a {
+	margin-left: 16px;
+	text-decoration: none;
+}
 
-      .navi_Btn:hover {
-        color: white;
-        background: rgba(102, 177, 241, 0.8);
-        transition: all 0.5s ease;
-      }
+.navi_Btn_container {
+	display: flex;
+	width: 100%;
+	height: 70px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
 
-      .rogo_img a {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-      }
-      .index_con {
-        width: 1130px;
-        height: 100%;
-        margin: 0 auto;
-      }
+.navi_Btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+	color: #000;
+	letter-spacing: 0.1rem;
+	transition: all 0.5s ease;
+	font-size: 20pt;
+	text-decoration: none;
+}
 
+.navi_Btn:hover {
+	color: white;
+	background: rgba(102, 177, 241, 0.8);
+	transition: all 0.5s ease;
+}
+
+.rogo_img a {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.index_con {
+	width: 1130px;
+	height: 100%;
+	margin: 0 auto;
+}
