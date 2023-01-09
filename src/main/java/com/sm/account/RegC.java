@@ -11,15 +11,17 @@ import javax.servlet.http.HttpServletResponse;
 public class RegC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
+<<<<<<< HEAD
 		AccountDAO.loginCheck(request);
 		request.setAttribute("contentPage", "reg.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
+=======
+>>>>>>> f43475bac38bbcf0666264e095eab639dc8dc320
 	
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//가입하는 일
-		AccountDAO.regAccount(request);
+
 	
 	}
 

@@ -19,11 +19,10 @@
 		<main>
 			<jsp:include page="${contentPage }"></jsp:include>
 		</main>
-	
-		<footer>
-			<jsp:include page="jsp/footer.jsp"></jsp:include>
-		</footer>
 	</div>
+		<footer>
+				<jsp:include page="jsp/footer.jsp"></jsp:include>
+		</footer>
 
 
 </body>

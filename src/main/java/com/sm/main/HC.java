@@ -7,9 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-import com.sm.account.AccountDAO;
-
 import com.sm.master.DAO_Master;
 
 
@@ -18,15 +15,19 @@ public class HC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 	
-		AccountDAO.loginCheck(request);
 		DAO_Master.getAllProduct(request);
 		request.setAttribute("contentPage", "jsp/home.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
+<<<<<<< HEAD
 		
 
+=======
+>>>>>>> f43475bac38bbcf0666264e095eab639dc8dc320
 		
 
 	}
+
+	
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
