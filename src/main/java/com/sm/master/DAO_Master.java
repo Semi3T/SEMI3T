@@ -11,7 +11,6 @@ import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import com.sm.main.DBManager;
 
-
 public class DAO_Master {
 
 	public static void regproduct(HttpServletRequest request) {
@@ -58,6 +57,7 @@ public class DAO_Master {
 			pstmt.setInt(8, price);
 			pstmt.setInt(9, like);
 			
+
 //			나중에 js로 등록성공 경고창으로 뛰우기
 			if(pstmt.executeUpdate() == 1) {
 				request.setAttribute("r", "등록 성공");
@@ -105,6 +105,46 @@ public class DAO_Master {
 		} finally {
 			DBManager.close(con, pstmt, rs);
 		}
+		
+	}
+
+	public static void getdetailproduct(HttpServletRequest request) {
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = "select * from product_table where p_no=?";
+		try {
+			con = DBManager.connect();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, request.getParameter("p_no"));
+			rs = pstmt.executeQuery();
+			
+			Product p = null;
+			if (rs.next()) {
+				
+				p = new Product();
+				p.setP_no(rs.getInt("p_no"));
+				p.setP_new(rs.getInt("p_new"));
+				p.setP_sale(rs.getInt("p_sale"));
+				p.setP_stock(rs.getInt("p_stock"));
+				p.setP_price(rs.getInt("p_price"));
+				p.setP_like(rs.getInt("p_like"));
+				p.setP_brand(rs.getString("p_brand"));
+				p.setP_title(rs.getString("p_title"));
+				p.setP_img(rs.getString("p_img"));
+				System.out.println(rs.getString("p_img"));
+				p.setP_contents(rs.getString("p_contents"));
+			}
+				request.setAttribute("product", p);
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(con, pstmt, rs);
+		}
+		
 		
 	}
 

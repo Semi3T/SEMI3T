@@ -9,17 +9,19 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.sm.master.DAO_Master;
 
-@WebServlet("/ProductC")
-public class ProductC extends HttpServlet {
+@WebServlet("/DetailC")
+public class DetailC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		request.setAttribute("contentPage", "jsp/brand/brand.jsp");
+		DAO_Master.getdetailproduct(request);
+		request.setAttribute("contentPage", "jsp/product/detailproduct.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
+	
 	}
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
+		
 	}
 
 }

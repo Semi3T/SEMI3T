@@ -25,7 +25,6 @@ pageEncoding="UTF-8"%>
 =======
   <head>
     <meta charset="UTF-8" />
-
     <title>home jsp</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -91,16 +90,21 @@ pageEncoding="UTF-8"%>
       </div>
     </div>
     
-    <div style="display: flex;">
+    <%-- <c:set var="p0" value="0" />
+    <c:set var="p3" value="3" /> --%>
+    <div style="display: flex; border: 1px;">
+    
 	<c:forEach var="p" items="${product }">
-	
-		<div style="border: solid 1px black; width: 400px ">
-			<a href="">
+		<c:if test="${p0%p3==0}">
+		<div style="border: solid 1px black; width: 400px;">
+			<a href="DetailC?p_no=${p.p_no }">
 			<img style="width: 200px" src="jsp/master/imgFolder/${p.p_img }">
 			<p>${p.p_title }</p>
 			<p>${p.p_price }</p>
 			</a>
 		</div>
+		</c:if>
+		<c:if test="${p0%p3==p3-1 }"></c:if>
 	</c:forEach>
 	</div>
   </body>
