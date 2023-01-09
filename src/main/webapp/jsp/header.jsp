@@ -23,8 +23,8 @@
 
       <div class="navi_Btn_container">
         <a class="navi_Btn" href="ProductC">브랜드</a>
-        <a class="navi_Btn" href="#">신제품</a>
-        <a class="navi_Btn" href="#">세일제품</a>
+        <a class="navi_Btn" href="NewPotionC">신제품</a>
+        <a class="navi_Btn" href="SalePotionC">세일제품</a>
         <a class="navi_Btn" href="#">Q&A</a>
       </div>
     </header>

@@ -30,22 +30,19 @@ pageEncoding="UTF-8"%>
           <div class="carousel-item active">
             <img
               class="d-block w-100"
-              src="https://source.unsplash.com/user/erondu/1200x500"
-              alt="..."
+              src="img/aaaa.jpg"
             />
           </div>
           <div class="carousel-item">
             <img
               class="d-block w-100"
-              src="https://source.unsplash.com/collection/190727/1200x500"
-              alt="..."
+              src="img/dddd.png"
             />
           </div>
           <div class="carousel-item">
             <img
               class="d-block w-100"
-              src="https://source.unsplash.com/WLUHO9A_xik/1200x500"
-              alt="..."
+              src="img/qqqq.jpg"
             />
           </div>
         </div>
@@ -70,12 +67,9 @@ pageEncoding="UTF-8"%>
       </div>
     </div>
     
-    <%-- <c:set var="p0" value="0" />
-    <c:set var="p3" value="3" /> --%>
-    <div style="display: flex; border: 1px;">
     
+    <div style="display: flex; border: 1px;">
 	<c:forEach var="p" items="${product }">
-		<c:if test="${p0%p3==0}">
 		<div style="border: solid 1px black; width: 400px;">
 			<a href="DetailC?p_no=${p.p_no }">
 			<img style="width: 200px" src="jsp/master/imgFolder/${p.p_img }">
@@ -83,8 +77,6 @@ pageEncoding="UTF-8"%>
 			<p>${p.p_price }</p>
 			</a>
 		</div>
-		</c:if>
-		<c:if test="${p0%p3==p3-1 }"></c:if>
 	</c:forEach>
 	</div>
   </body>
