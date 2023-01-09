@@ -3,6 +3,26 @@ pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<<<<<<< HEAD
+
+<h1>HOME!</h1>
+
+=======
+	<section style="width: 100%; height: 600px; background-color: blue;">
+		sssssss
+	</section>
+>>>>>>> 61b613e8ac67b05cefaf624c7461c272a9c854f8
+
+<jsp:include page="${contentPage }"></jsp:include>
+</body>
+</html>
+=======
   <head>
     <meta charset="UTF-8" />
     <title>home jsp</title>
