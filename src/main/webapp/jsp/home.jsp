@@ -71,16 +71,22 @@ pageEncoding="UTF-8"%>
       </div>
     </div>
     
-    <div style="display: flex;">
+    <c:set var="p0" value="0" />
+    <c:set var="p3" value="3" />
+    <div style="display: flex; border: 1px;">
+    
 	<c:forEach var="p" items="${product }">
-	
-		<div style="border: solid 1px black; width: 400px ">
-			<a href="">
+		<c:if test="${p0%p3==0}">
+		<div style="border: solid 1px black; width: 400px;">
+			<a href="${p.p_no }">
 			<img style="width: 200px" src="jsp/master/imgFolder/${p.p_img }">
 			<p>${p.p_title }</p>
 			<p>${p.p_price }</p>
 			</a>
+			<p></p>
 		</div>
+		</c:if>
+		<c:if test="${p0%p3==p3-1 }"></c:if>
 	</c:forEach>
 	</div>
   </body>
