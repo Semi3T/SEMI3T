@@ -1,7 +1,6 @@
 package com.sm.account;
 
 
-import java.io.File;
 
 import java.sql.Connection;
 
@@ -12,8 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import com.sm.main.DBManager;
-import com.oreilly.servlet.MultipartRequest;
-import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 public class AccountDAO {
 	
@@ -40,7 +37,6 @@ public class AccountDAO {
 		String userID = request.getParameter("id");
 		String userPW = request.getParameter("pw");
 		
-		//
 		String iddd = (String) request.getAttribute("iddd");
 		String pwww = (String) request.getAttribute("pwww");
 		
