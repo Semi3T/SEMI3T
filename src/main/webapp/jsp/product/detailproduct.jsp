@@ -7,7 +7,7 @@
 <title>detail product</title>
 </head>
 <body>
-	
+	<form action="">
 		<div>
 			<img src="jsp/master/imgFolder/${product.p_img }">
 		</div>
@@ -29,6 +29,10 @@
 			</div>
 		</div>
 
-
+		<div>
+			<button>구매</button>
+			<button>삭제</button>
+		</div>
+	</form>
 </body>
 </html>

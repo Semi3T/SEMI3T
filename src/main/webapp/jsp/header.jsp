@@ -15,6 +15,16 @@
         <a href="MyPageC">마이페이지</a>
       </div>
 
+<header>
+		<div id="account_Btn">
+		<jsp:include page="${loginPage }"></jsp:include>
+			<a href="ProductRegC">제품 등록</a>
+			<a href="RegC">회원가입</a>
+			<a href="LoginC">로그인</a>
+			<a href="MyPageC">마이페이지</a>
+		</div>
+		
+	
       <div class="rogo_img">
         <a href="HC">
           <img src="img/Imported_Image.png" style="width: 400px" />
@@ -35,8 +45,8 @@
         </div>
  	   	</div>  		
         
-        <a class="navi_Btn" href="#">신제품</a>
-        <a class="navi_Btn" href="#">세일제품</a>
+        <a class="navi_Btn" href="NewPotionC">신제품</a>
+        <a class="navi_Btn" href="SalePotionC">세일제품</a>
         <a class="navi_Btn" href="#">Q&A</a>
       </div>
       
