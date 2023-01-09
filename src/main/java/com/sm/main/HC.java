@@ -22,7 +22,7 @@ public class HC extends HttpServlet {
 		
 		DAO_Master.getAllProduct(request);
 		request.setAttribute("contentPage", "jsp/home.jsp");
-		request.getRequestDispatcher("jsp/header.jsp").forward(request, response);
+		request.getRequestDispatcher("index.jsp").forward(request, response);
 		
 
 		

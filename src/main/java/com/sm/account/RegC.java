@@ -18,7 +18,7 @@ public class RegC extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//가입하는 일
+
 		AccountDAO.regAccount(request);
 	
 	}
