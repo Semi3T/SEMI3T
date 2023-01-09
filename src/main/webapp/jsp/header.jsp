@@ -21,12 +21,26 @@
         </a>
       </div>
 
+      
       <div class="navi_Btn_container">
+ 	   	 
+ 	   	<div id="navi_brand" >
         <a class="navi_Btn" href="ProductC">브랜드</a>
+        <div class="dropdown-content">
+          <a href="#"> 브랜드1</a>
+          <a href="#"> 브랜드2</a>
+          <a href="#"> 브랜드3</a>
+          <a href="#"> 브랜4</a>
+          <a href="#"> 브랜드5</a>
+        </div>
+ 	   	</div>  		
+        
         <a class="navi_Btn" href="#">신제품</a>
         <a class="navi_Btn" href="#">세일제품</a>
         <a class="navi_Btn" href="#">Q&A</a>
       </div>
+      
+      
     </header>
 </body>
 </html>
