@@ -18,11 +18,7 @@ public class HC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 	
-// <<<<<<< HEAD
 		AccountDAO.loginCheck(request);
-// =======
-// >>>>>>> 61b613e8ac67b05cefaf624c7461c272a9c854f8
-	
 		
 		DAO_Master.getAllProduct(request);
 		request.setAttribute("contentPage", "jsp/home.jsp");
