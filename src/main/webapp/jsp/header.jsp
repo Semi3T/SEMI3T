@@ -17,14 +17,12 @@ pageEncoding="UTF-8"%>
 
       <div class="rogo_img">
         <a href="HC">
-          <img src="img/Imported_Image.png" style="width: 400px"/>
           <img src="img/mainlogoimg/Imported_Image.png" style="width: 400px" />
         </a>
       </div>
 
       <div class="navi_Btn_container">
         <div id="navi_brand">
-          <a class="navi_Btn" href="ProductC">브랜드</a>
           <a class="navi_Btn" href="BrandC">브랜드</a>
           <div class="dropdown-content">
             <a href="#"> 브랜드1</a>
