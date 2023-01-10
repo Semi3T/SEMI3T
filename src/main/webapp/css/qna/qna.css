@@ -5,17 +5,57 @@
 }
 
 .qnano {
-	flex: 2
+	flex: 2;
 }
 
 .qnatitle {
-	flex: 5
+	flex: 5;
 }
 
 .qnaid {
-	flex: 3
+	flex: 3;
 }
 
 .qna_detail_container {
 	display: flex;
+	flex-direction: column;
+	padding: 15px;
+	border: 1px solid black;
+}
+
+.qna_detail_titlewrapper {
+	display: flex;
+	align-items: center;
+}
+
+.titlewrapper_no {
+	display: inline-block;
+	width: 43px;
+	height: 43px;
+	line-height: 43px;
+	text-align: center;
+}
+
+.titlewrapper_title {
+	display: inline-block;
+	font-size: 24pt;
+	font-weight: bold;
+	height: 43px;
+	line-height: 43px;
+	text-align: center;
+}
+
+.qna_detail_accountinfo {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.contentwrapper_content {
+	min-height: 500px;
+}
+
+.qna_detail_buttonwrapper {
+	display: flex;
+	justify-content: flex-end;
 }
