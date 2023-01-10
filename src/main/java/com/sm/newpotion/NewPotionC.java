@@ -14,6 +14,7 @@ public class NewPotionC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		DAO_Master.newproduct(request);
+		DAO_Master.paging(request);
 		request.setAttribute("contentPage", "jsp/new/new.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	
