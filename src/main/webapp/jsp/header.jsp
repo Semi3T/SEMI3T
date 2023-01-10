@@ -17,7 +17,7 @@ pageEncoding="UTF-8"%>
 
       <div class="rogo_img">
         <a href="HC">
-          <img src="img/Imported_Image.png" style="width: 400px" />
+          <img src="img/Imported_Image.png" style="width: 400px"/>
         </a>
       </div>
 
@@ -35,7 +35,7 @@ pageEncoding="UTF-8"%>
 
         <a class="navi_Btn" href="NewPotionC">신제품</a>
         <a class="navi_Btn" href="SalePotionC">세일제품</a>
-        <a class="navi_Btn" href="#">Q&A</a>
+        <a class="navi_Btn" href="QnAC">Q&A</a>
       </div>
     </header>
   </body>

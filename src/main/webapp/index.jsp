@@ -20,13 +20,10 @@
 			<jsp:include page="${contentPage }"></jsp:include>
 		</main>
 	</div>
-<<<<<<< HEAD
-=======
 		<footer>
 				<jsp:include page="jsp/footer.jsp"></jsp:include>
 		</footer>
 
 
->>>>>>> 404d7711b32cf96b94f688e20fc18a6cf011057c
 </body>
 </html>
