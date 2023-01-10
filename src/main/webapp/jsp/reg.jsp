@@ -5,11 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript" src = "check.js"></script>
-<script type="text/javascript" src = "validCheck.js"></script>
+<script type="text/javascript" src = "validcheck.js"></script>
+<script type="text/javascript" src = "valueCheck.js"></script>
 </head>
 <body>
-<form action="RegC" method ="post" enctype =  onsubmit="return call()">
+<form action="RegC" method ="post" onsubmit="return call()">
 <div class = "container">
 
 <div class = "items">
