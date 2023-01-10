@@ -221,5 +221,16 @@ public class DAO_Master {
 			DBManager.close(con, pstmt, rs);
 		}
 	}
+	
+
+	public static void paging(int page ,HttpServletRequest request) {
+		
+		ArrayList<Newpage> newpage = new ArrayList<Newpage>();
+		
+		int count = 9;
+		int total = newpage.size();
+		
+		
+	}
 
 }

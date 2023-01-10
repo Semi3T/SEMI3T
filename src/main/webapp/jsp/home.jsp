@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>home</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -52,6 +52,9 @@
 				<div class="a-box">
 					<a href="DetailC?p_no=${p.p_no }"><img
 						src="jsp/master/imgFolder/${p.p_img }"></a>
+				</div>
+				<div class="a-box">
+				<a href="DetailC?p_no=${p.p_no }">${p.p_brand }</a>
 				</div>
 				<div class="a-box" style="font-size: 20pt;">
 					<a href="DetailC?p_no=${p.p_no }">${p.p_title }</a>

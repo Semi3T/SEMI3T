@@ -14,7 +14,7 @@ import com.sm.master.DAO_Master;
 public class HC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-	
+		
 		DAO_Master.getAllProduct(request);
 		request.setAttribute("contentPage", "jsp/home.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
