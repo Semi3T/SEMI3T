@@ -23,7 +23,7 @@ pageEncoding="UTF-8"%>
 
       <div class="navi_Btn_container">
         <div id="navi_brand">
-          <a class="navi_Btn" href="ProductC">브랜드</a>
+          <a class="navi_Btn" href="BrandC">브랜드</a>
           <div class="dropdown-content">
             <a href="#"> 브랜드1</a>
             <a href="#"> 브랜드2</a>

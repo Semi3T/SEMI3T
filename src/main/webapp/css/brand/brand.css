@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+h1{
+	text-align: center;
+	font-size: 50pt;
+}
+
+
+.brand_logo{
+	display: flex;
+ 	justify-content: space-around;
+  
+}
+
+
+.brand_logo_size{
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	width: 270px;
+	background-color: white;
+  	transition: 0.5s ease-in-out;
+}
+
+.brand_logo_size a{
+	font-size: 15pt;
+	text-decoration: none;
+	color:black;
+}
+.brand_logo_size img{
+	width: 270px;
+	
+}
+
+.brand_logo_size:hover {
+  transform: scale(1.1, 1.1);
+  transition: 0.3s ease-in-out;
+  background: rgba(102, 177, 241, 0.8);
+
+}
+
+.brand_logo_size a:hover{
+	color:white;
+}
+.brand_logo_size img:hover{
+	filter: brightness(0) invert(1); 
+	filter: brightness(0) invert(1);
+}
