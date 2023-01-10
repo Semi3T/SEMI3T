@@ -17,7 +17,7 @@ pageEncoding="UTF-8"%>
 
       <div class="rogo_img">
         <a href="HC">
-          <img src="img/Imported_Image.png" style="width: 400px" />
+          <img src="img/mainlogoimg/Imported_Image.png" style="width: 400px" />
         </a>
       </div>
 
