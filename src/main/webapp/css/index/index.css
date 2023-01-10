@@ -5,6 +5,10 @@
     padding: 0px;
 }
 
+main {
+	margin-bottom: 30px;
+}
+
 .account_Btn {
     display: flex;
     justify-content: flex-end;

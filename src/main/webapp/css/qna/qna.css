@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.qnalist {
+	display: flex;
+}
+
+.qnano {
+	flex: 2
+}
+
+.qnatitle {
+	flex: 5
+}
+
+.qnaid {
+	flex: 3
+}
+
+.qna_detail_container {
+	display: flex;
+}
