@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>brand</title>
 </head>
 <body>
 	<br><br><br>
@@ -15,49 +15,43 @@
 	
 	<div class="brand_logo">
 		
-		<div class="brand_logo_size">
+		<div class="brand_logo_style">
 			<a href="#">
-				<img alt="arius" src="img/arius.png">
-				<span>아리우</span><br><br>
+				<img src="img/brand/arius.png">
 			</a>
 		</div>
 		
 		
-		<div class="brand_logo_size">
+		<div class="brand_logo_style">
 			<a href="#">
-				<img alt="arius" src="img/cronos.png">
-				<span>크로노스</span><br><br>
+				<img src="img/brand/srt.png">
 			</a>
 		</div>
 		
-		<div class="brand_logo_size">
+		<div class="brand_logo_style">
 			<a href="#">
-				<img alt="arius" src="img/gehenna.png">
-				<span>게헨나</span><br><br>
+				<img src="img/brand/gehenna.png">
 			</a>
 		</div>
 	</div>
 	
 	<br><br><br>
 	<div class="brand_logo">
-		<div class="brand_logo_size">
+		<div class="brand_logo_style">
 			<a href="#">
-				<img alt="arius" src="img/srt.png">
-				<span>스타</span><br><br>
+				<img src="img/brand/abydos.png">
 			</a>
 		</div>
 		
-		<div class="brand_logo_size">
+		<div class="brand_logo_style">
 			<a href="#">
-				<img alt="arius" src="img/trinity.png">
-				<span>트리니티</span><br><br>
+				<img src="img/brand/shan_hai_jing.png">
 			</a>
 		</div>
 		
-		<div class="brand_logo_size">
+		<div class="brand_logo_style">
 			<a href="#">
-				<img alt="arius" src="img/abidos.png">
-				<span>어비도스</span><br><br>
+				<img src="img/brand/trinity.png">
 			</a>
 		</div>
 	</div>
