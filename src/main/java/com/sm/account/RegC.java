@@ -7,21 +7,23 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 @WebServlet("/RegC")
 public class RegC extends HttpServlet {
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-		AccountDAO.loginCheck(request);
-		request.setAttribute("contentPage", "reg.jsp");
-		request.getRequestDispatcher("jsp/home.jsp").forward(request, response);
-	
+		request.setAttribute("contentPage", "jsp/reg.jsp");
+		request.getRequestDispatcher("index.jsp").forward(request, response);
+		
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//가입하는 일
-		AccountDAO.regAccount(request);
 	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		AccountDAO.regAccount(request);
+		
+		request.setAttribute("contentPage", "jsp/home.jsp");
+		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
 }
- 

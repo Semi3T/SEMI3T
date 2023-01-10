@@ -10,12 +10,12 @@
 <form action="LoginC" method="post">
 <table id = "loginAreaTbl">
 <tr>
-<td>ID</td>
+<td>아이디</td>
 <td><input id = "id" name = "id"></td>
 </tr>
 
 <tr>
-<td>PW</td>
+<td>비밀번호</td>
 <td><input id = "pw" name = "pw"></td>
 </tr>
 

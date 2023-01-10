@@ -74,7 +74,7 @@
 
 <div class="items item3">
 <div class="button">
-<button>sign up</button>
+<button>회원가입</button>
 </div>
 </div>
 </div>

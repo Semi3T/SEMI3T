@@ -1,7 +1,6 @@
 package com.sm.account;
 
 
-import java.io.File;
 
 import java.sql.Connection;
 
@@ -12,8 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import com.sm.main.DBManager;
-import com.oreilly.servlet.MultipartRequest;
-import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 public class AccountDAO {
 	
@@ -23,10 +20,10 @@ public class AccountDAO {
 		Account a = (Account) hs.getAttribute("account");
 		
 		if (a == null) {
-			request.setAttribute("loginPage", "login.jsp");
+			request.setAttribute("contentPage", "login.jsp");
 			return false;
 		} else {
-			request.setAttribute("loginPage", "loginOK.jsp");
+			request.setAttribute("contentPage", "loginOK.jsp");
 			return true;
 		}
 		
@@ -66,7 +63,7 @@ public class AccountDAO {
 			if(rs.next()) {
 				
 				if(userPW.equals(rs.getString("l_pw"))) {
-					request.setAttribute("r", "로그인 성공!");
+					request.setAttribute("r", "");
 					
 					
 					Account a = new Account();
@@ -87,12 +84,12 @@ public class AccountDAO {
 					
 				} else {
 					
-					request.setAttribute("r", "비밀번호 오류입니다");
+					request.setAttribute("r", "아이디 또는 비밀번호가 일치하지않습니다");
 				}
 				
 			}else {
 				
-				request.setAttribute("r", "로그인 실패..");
+				request.setAttribute("r", "아이디 또는 비밀번호가 일치하지않습니다");
 				
 			}
 			
@@ -118,10 +115,7 @@ public class AccountDAO {
 		
 		
 		HttpSession hs = request.getSession();
-		
 	hs.setAttribute("account", null);
-	//	hs.removeAttribute("account");
-	// hs.invalidate(); 
 		loginCheck(request);
 		
 	}

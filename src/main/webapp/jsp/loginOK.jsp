@@ -7,9 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+<form action="LoginC" method="post">
 <table id ="loginAreaTbl">
-
-
 <tr>
 <td>
 
@@ -26,12 +25,13 @@ ${sessionScope.l_id } (${sessionScope.account.l_name })님 안녕하세요</td>
 <td>
 <button class="loginBtn" onclick="location.href='MyPageAccountC?id=${sessionScope.l_id }'">마이페이지</button>
 <button class="loginBtn" onclick="location.href='LoginC'">로그아웃</button>
+<button class="loginBtn" onclick="location.href='LoginC'">메인화면으로</button>
 </td>
 </tr>
 
 
 </table>
 
-
+</form>
 </body>
 </html>
