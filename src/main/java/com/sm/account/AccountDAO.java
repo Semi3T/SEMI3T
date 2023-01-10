@@ -20,10 +20,10 @@ public class AccountDAO {
 		Account a = (Account) hs.getAttribute("account");
 		
 		if (a == null) {
-			request.setAttribute("contentPage", "login.jsp");
+			request.setAttribute("loginPage", "login.jsp");
 			return false;
 		} else {
-			request.setAttribute("contentPage", "loginOK.jsp");
+			request.setAttribute("loginPage", "loginOK.jsp");
 			return true;
 		}
 		
@@ -115,7 +115,9 @@ public class AccountDAO {
 		
 		
 		HttpSession hs = request.getSession();
+		
 	hs.setAttribute("account", null);
+ 
 		loginCheck(request);
 		
 	}
