@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>home</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -23,13 +23,13 @@
 			data-bs-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img class="d-block w-100" src="img/aaaa.jpg" />
+					<img class="d-block w-100" src="img/slideimg/slide1.jpg" />
 				</div>
 				<div class="carousel-item">
-					<img class="d-block w-100" src="img/dddd.png" />
+					<img class="d-block w-100" src="img/slideimg/slide2.jpg" />
 				</div>
 				<div class="carousel-item">
-					<img class="d-block w-100" src="img/qqqq.jpg" />
+					<img class="d-block w-100" src="img/slideimg/slide3.jpg" />
 				</div>
 			</div>
 			<button class="carousel-control-prev" type="button"
@@ -52,6 +52,9 @@
 				<div class="a-box">
 					<a href="DetailC?p_no=${p.p_no }"><img
 						src="jsp/master/imgFolder/${p.p_img }"></a>
+				</div>
+				<div class="a-box">
+				<a href="DetailC?p_no=${p.p_no }">${p.p_brand }</a>
 				</div>
 				<div class="a-box" style="font-size: 20pt;">
 					<a href="DetailC?p_no=${p.p_no }">${p.p_title }</a>
