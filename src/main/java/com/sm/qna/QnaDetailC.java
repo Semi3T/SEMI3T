@@ -7,19 +7,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/QnAC")
-public class QnAC extends HttpServlet {
+@WebServlet("/QnaDetailC")
+public class QnaDetailC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		DAO_QnA.getAllqna(request);
+		DAO_QnA.getQna(request);
 		
-		request.setAttribute("contentPage", "jsp/qna/qna.jsp");
+		request.setAttribute("contentPage", "jsp/qna/qnadetail.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-	
 	}
 
 }
