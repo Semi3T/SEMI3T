@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="css/index/index.css">
 </head>
 <body>
+
 	<div class="index_con">
 		<div>
 			<jsp:include page="jsp/header.jsp"></jsp:include>
@@ -18,10 +19,14 @@
 		<main>
 			<jsp:include page="${contentPage }"></jsp:include>
 		</main>
-	
-		<footer>
-			<jsp:include page="jsp/footer.jsp"></jsp:include>
-		</footer>
 	</div>
+<<<<<<< HEAD
+=======
+		<footer>
+				<jsp:include page="jsp/footer.jsp"></jsp:include>
+		</footer>
+
+
+>>>>>>> 404d7711b32cf96b94f688e20fc18a6cf011057c
 </body>
 </html>

@@ -13,17 +13,21 @@ public class DBManager {
 		String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=C:/JGW/Wallet_URJ817BYXD912F6F";
 		
 		// 영웅
+<<<<<<< HEAD
 		//String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=C:/Wallet_URJ817BYXD912F6F";
 		
+=======
+		String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=C:/Wallet_URJ817BYXD912F6F";
+
+>>>>>>> 404d7711b32cf96b94f688e20fc18a6cf011057c
 		// 용규
 		//String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=/Users/jeon-yong-gyu/Documents/Wallet_URJ817BYXD912F6F";
-		
+
 		// 현빈
 		//String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=D:/lhb/semi3tWorkspace/Wallet/Wallet_URJ817BYXD912F6F";
 		
 		String user="YGG";
 		String password="Soldesk802!!";
-		System.out.println(url);
 		return DriverManager.getConnection(url, user, password);
 		
 	}

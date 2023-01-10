@@ -7,10 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-		<footer class="footer">
-			<div style="background-color: black; width: 1130px; height: 100%; margin: auto;">
-				footer
-			</div>
-		</footer>
+	<h1>brand</h1>
 </body>
 </html>

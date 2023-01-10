@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 public class ProductRegC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		request.setAttribute("contentPage", "jsp/master/master.jsp");
-		request.getRequestDispatcher("index.jsp").forward(request, response);
+			request.setAttribute("contentPage", "jsp/master/master.jsp");
+			request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
