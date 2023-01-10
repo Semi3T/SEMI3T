@@ -7,10 +7,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.sm.master.DAO_Master;
+
 @WebServlet("/NewPotionC")
 public class NewPotionC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
+		DAO_Master.newproduct(request);
+		DAO_Master.paging(request);
+		request.setAttribute("contentPage", "jsp/new/new.jsp");
+		request.getRequestDispatcher("index.jsp").forward(request, response);
 	
 	}
 

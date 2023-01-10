@@ -15,7 +15,7 @@ local.properties
 .recommenders
 .project
 .classpath
-.class
+DBManager.class
 build/
 # External tool builders
 .externalToolBuilders/

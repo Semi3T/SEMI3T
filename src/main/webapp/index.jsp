@@ -8,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PolyPotion HomePage</title>
 <link rel="stylesheet" href="css/index/index.css">
+<link rel="stylesheet" href="css/brand/brand.css">
 </head>
 <body>
 
@@ -19,11 +20,10 @@
 		<main>
 			<jsp:include page="${contentPage }"></jsp:include>
 		</main>
-	
-		<footer>
-			<jsp:include page="jsp/footer.jsp"></jsp:include>
-		</footer>
 	</div>
+		<footer>
+				<jsp:include page="jsp/footer.jsp"></jsp:include>
+		</footer>
 
 
 </body>
