@@ -97,16 +97,17 @@ main {
 
 .product-container {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	border: 1px;
-	margin-left: 20px;
+    flex-wrap: wrap;
+    border: 1px;
+    margin-left: 20px;
 }
 
 .product-box {
-	margin-top: 60px;
-	width: 300px;
-	height: 400px;
+ 	margin-top: 60px;
+    width: 290px;
+    height: 350px;
+    float: left;
+    margin: 50px 40px;
 }
 
 .a-box:first-child {

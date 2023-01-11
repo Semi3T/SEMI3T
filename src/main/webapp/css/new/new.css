@@ -11,17 +11,18 @@
 }
 
 .product-container-new {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	border: 1px;
-	margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px;
+    margin-left: 20px;
 }
 
 .product-box-new {
-	margin-top: 60px;
-	width: 290px;
-	height: 350px;
+    margin-top: 60px;
+    width: 290px;
+    height: 350px;
+    float: left;
+    margin: 50px 40px;
 }
 
 .a-box:first-child {
