@@ -11,7 +11,10 @@ import javax.servlet.http.HttpServletResponse;
 public class QnAC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-	
+		DAO_QnA.getAllqna(request);
+		
+		request.setAttribute("contentPage", "jsp/qna/qna.jsp");
+		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

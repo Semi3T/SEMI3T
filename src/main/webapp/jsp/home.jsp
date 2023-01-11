@@ -25,13 +25,13 @@
 			data-bs-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img class="d-block w-100" src="img/aaaa.jpg" />
+					<img class="d-block w-100" src="img/slideimg/slide1.jpg" />
 				</div>
 				<div class="carousel-item">
-					<img class="d-block w-100" src="img/dddd.png" />
+					<img class="d-block w-100" src="img/slideimg/slide2.jpg" />
 				</div>
 				<div class="carousel-item">
-					<img class="d-block w-100" src="img/qqqq.jpg" />
+					<img class="d-block w-100" src="img/slideimg/slide3.jpg" />
 				</div>
 			</div>
 			<button class="carousel-control-prev" type="button"

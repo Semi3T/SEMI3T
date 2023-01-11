@@ -14,6 +14,7 @@ public class SalePotionC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		DAO_Master.saleproduct(request);
+		DAO_Master.paging_sale(1, request);
 		request.setAttribute("contentPage", "jsp/sale/sale.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 		
