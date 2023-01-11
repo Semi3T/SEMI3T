@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 <form action="LoginC" method="post">
 <table id = "loginAreaTbl">
 <tr>

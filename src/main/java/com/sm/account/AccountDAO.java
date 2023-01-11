@@ -11,6 +11,8 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.apache.catalina.connector.Response;
+
 import com.sm.main.DBManager;
 
 public class AccountDAO {
@@ -76,30 +78,31 @@ public class AccountDAO {
 					a.setL_address(rs.getString("l_address"));
 					a.setL_gender(rs.getString("l_gender"));
 					
-					  
+					
 					HttpSession hs = request.getSession();
 					hs.setAttribute("account", a);
 					hs.setMaxInactiveInterval(30);
 					
-					Cookie[] coo = request.getCookies();
-					Cookie userId = new Cookie(U, sql)
 					
-					
+						
+					}
 					
 					
 					
 				
-					
-				} else {
-					
-					request.setAttribute("r", "아이디 또는 비밀번호가 일치하지않습니다");
-				}
-				
-			}else {
+			} else {
 				
 				request.setAttribute("r", "아이디 또는 비밀번호가 일치하지않습니다");
-				
 			}
+			
+		}else {
+			
+			request.setAttribute("r", "아이디 또는 비밀번호가 일치하지않습니다");
+			
+		}	
+				
+				
+	
 			
 			
 			
@@ -113,7 +116,7 @@ public class AccountDAO {
 		
 		
 		
-	}
+	
 
 
 
