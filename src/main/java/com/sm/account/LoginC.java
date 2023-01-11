@@ -12,7 +12,7 @@ public class LoginC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		
-		request.setAttribute("contentPage", "jsp/login.jsp");
+		request.setAttribute("contentPage", "jsp/account/login.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
@@ -21,7 +21,7 @@ public class LoginC extends HttpServlet {
 		AccountDAO.login(request);
 		 
 		AccountDAO.loginCheck(request);
-		request.setAttribute("contentPage", "jsp/loginOK.jsp");
+		request.setAttribute("contentPage", "jsp/account/loginOK.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 public class RegC extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setAttribute("contentPage", "jsp/reg.jsp");
+		request.setAttribute("contentPage", "jsp/account/reg.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 		
 	}

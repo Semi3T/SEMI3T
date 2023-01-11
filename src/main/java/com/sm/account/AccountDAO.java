@@ -20,10 +20,10 @@ public class AccountDAO {
 		Account a = (Account) hs.getAttribute("account");
 
 		if (a == null) {
-			request.setAttribute("loginPage", "login.jsp");
+			request.setAttribute("loginPage", "account/login.jsp");
 			return false;
 		} else {
-			request.setAttribute("loginPage", "loginOK.jsp");
+			request.setAttribute("loginPage", "account/loginOK.jsp");
 			return true;
 		}
 
@@ -119,9 +119,9 @@ public class AccountDAO {
 			String address = request.getParameter("address");
 			String gender = request.getParameter("gender");
 
-			pstmt.setString(1, name);
-			pstmt.setString(2, id);
-			pstmt.setString(3, pw);
+			pstmt.setString(1, id);
+			pstmt.setString(2, pw);
+			pstmt.setString(3, name);
 			pstmt.setString(4, phonenumber);
 			pstmt.setString(5, birthday);
 			pstmt.setString(6, address);

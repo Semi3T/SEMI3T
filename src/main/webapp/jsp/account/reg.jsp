@@ -52,7 +52,7 @@
 
 
 <div class = "items">
-<div class = "item1">ADDR</div>
+<div class = "item1">주소</div>
 <div class = "item2">
 <input type="text" id="address" name="address">
 </div>
@@ -64,7 +64,7 @@
 
 
 <div class = "items">
-<div class = "item1">Gender</div>
+<div class = "item1">성별</div>
 <div class = "item2">
 <input type = "radio" name="gender" value="남">남성
 <input type = "radio" name="gender" value="여">여성
