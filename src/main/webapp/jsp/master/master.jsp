@@ -10,8 +10,16 @@
 
 	<form action="ProductRegC" method="post" enctype="multipart/form-data">
 		타이틀 이미지 : <input name="tilte_img" type="file"><br>
-		브랜드 명    : <input name="brand"><br>
-		제품 제목    : <input name="title"><br>
+		브랜드 명    : <select name="brand">
+							<option value="shan_hai_jing">SHAN HAI JING</option>
+							<option value="trinity">BRAND TRINITY</option>
+							<option value="abydos">ABYDOS</option>
+							<option value="gehenna">GEHENNA</option>
+							<option value="srt">SRT</option>
+							<option value="arius">ARIUS </option>
+						</select>	<br>
+							
+	    제품 제목		: <input name="title"><br>
 		<hr>
 			<label><input name="p_new" type="radio" value="1">신제품 YES</label>
 			<label><input name="p_new" type="radio" value="0">신제품 NO</label>
