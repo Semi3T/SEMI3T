@@ -110,12 +110,6 @@ main {
     margin: 50px 40px;
 }
 
-.a-box:first-child {
-	display: flex;
-	align-items: center;
-	height: 300px;
-}
-
 .a-box {
 	text-align: center;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -126,10 +120,8 @@ main {
 }
 
 .a-box a {
-	text-decoration: none;
 	font-size: 15pt;
 	font-weight: bold;
-	color: #fc5dff;
 	text-shadow: 1px 1px 1px gray;
 }
 
