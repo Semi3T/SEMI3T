@@ -12,12 +12,7 @@
 <form action="RegC" method ="post" onsubmit="return call()">
 <div class = "container">
 
-<div class = "items">
-<div class = "item1">이름</div>
-<div class = "item2">
-<input name = "name" class="textInput">
-</div>
-</div>
+
 
 <div class = "items">
 <div class = "item1">ID</div>
@@ -31,6 +26,13 @@
 <div class = "item1">비밀번호</div>
 <div class = "item2">
 <input name = "pw" class="textInput">
+</div>
+</div>
+
+<div class = "items">
+<div class = "item1">이름</div>
+<div class = "item2">
+<input name = "name" class="textInput">
 </div>
 </div>
 
