@@ -17,7 +17,7 @@
 <div class = "items">
 <div class = "item1">ID</div>
 <div class = "item2">
-<input name = "id" class="textInput">
+<input name = "id" class="textInput" type="text">
 </div>
 </div>
 
@@ -25,14 +25,14 @@
 <div class = "items">
 <div class = "item1">비밀번호</div>
 <div class = "item2">
-<input name = "pw" class="textInput">
-</div>
+					<input name="pw" class="textInput" type="password">
+				</div>
 </div>
 
 <div class = "items">
 <div class = "item1">이름</div>
 <div class = "item2">
-<input name = "name" class="textInput">
+<input name = "login_name" class="textInput" type="text">
 </div>
 </div>
 
@@ -61,15 +61,13 @@
 </div>
 
 
-
-
-
-
 <div class = "items">
 <div class = "item1">성별</div>
 <div class = "item2">
+<div class = "reg_gender">
 <input type = "radio" name="gender" value="남">남성
 <input type = "radio" name="gender" value="여">여성
+</div>
 </div>
 </div>
 
@@ -80,6 +78,17 @@
 </div>
 </div>
 </div>
+
+
+
 </form>
+
+
+     
+
+
+
+
+
 </body>
 </html>

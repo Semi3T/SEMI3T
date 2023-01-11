@@ -9,17 +9,18 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/LoginC")
 public class LoginC extends HttpServlet {
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
-		
 		request.setAttribute("contentPage", "jsp/account/login.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		AccountDAO.login(request);
-		 
+
 		AccountDAO.loginCheck(request);
 		request.setAttribute("contentPage", "jsp/account/loginOK.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);

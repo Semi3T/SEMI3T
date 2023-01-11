@@ -113,7 +113,7 @@ public class AccountDAO {
 
 			String id = request.getParameter("id");
 			String pw = request.getParameter("pw");
-			String name = request.getParameter("name");
+			String name = request.getParameter("login_name");
 			String phonenumber = request.getParameter("phonenumber");
 			String birthday = request.getParameter("birthday");
 			String address = request.getParameter("address");
