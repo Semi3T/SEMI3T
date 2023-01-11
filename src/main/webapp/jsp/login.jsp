@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,30 +9,29 @@
 <body>
 
 <form action="LoginC" method="post">
-<table id = "loginAreaTbl">
-<tr>
-<td>아이디</td>
-<td><input id = "id" name = "id"></td>
-</tr>
+<div class="panel">
+		<div class="state"><br><i class="fa fa-unlock-alt"></i><br><h1>Log in</h1></div>
+		<div class="form">
+			<input id="id" name="id" type="text">
+			<input id="pw" name="pw" type="text">
+			<div class="login">Login</div>
+		</div>
+		<div class="fack"><a href="#"><i class="fa fa-question-circle"></i>회원가입</a></div>
+	</div>
 
-<tr>
-<td>비밀번호</td>
-<td><input id = "pw" name = "pw"></td>
-</tr>
+					<button class="loginBtn">로그인</button>
+					<button type="button" class="loginBtn"
+						onclick="location.href='RegC'">회원가입</button>
+				</td>
 
-<tr>
-<td colspan="2">
-<button class = "loginBtn">로그인</button>
-<button type = "button" class = "loginBtn" onclick="location.href='RegC'">회원가입</button>
-</td>
+			</tr>
 
-</tr>
-
-</table>
+	
 
 
 
-</form>
+
+	</form>
 
 
 </body>
