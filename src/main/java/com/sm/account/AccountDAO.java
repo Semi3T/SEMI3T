@@ -85,7 +85,7 @@ public class AccountDAO {
 					
 					
 						
-					}
+					
 					
 					
 					
@@ -95,7 +95,7 @@ public class AccountDAO {
 				request.setAttribute("r", "아이디 또는 비밀번호가 일치하지않습니다");
 			}
 			
-		}else {
+		} else {
 			
 			request.setAttribute("r", "아이디 또는 비밀번호가 일치하지않습니다");
 			
@@ -112,8 +112,8 @@ public class AccountDAO {
 		 e.printStackTrace();
 		}
 		
-		
-		
+
+}
 		
 		
 	
