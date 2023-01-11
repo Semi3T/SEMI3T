@@ -14,12 +14,14 @@
 			<div class="product-box-sale">
 				<div class="product-ani">
 					<div class="a-box-sale">
-						<a href="DetailC?p_no=${p.p_no }"><img
-							src="jsp/master/imgFolder/${p.p_img }"></a>
+						<a href="DetailC?p_no=${p.p_no }">
+						<img src="jsp/master/imgFolder/${p.p_img }"></a>
 					</div>
+						<div class="a-box-sale">
+							 <a>${p.p_title }</a>
+						</div>
 					<div class="a-box-sale">
-						<a href="DetailC?p_no=${p.p_no }">${p.p_brand }</a> <br>
-						 <a href="DetailC?p_no=${p.p_no }">${p.p_title }</a> <br>
+						
 						  <a href="DetailC?p_no=${p.p_no }">${p.p_price } 원</a>
 
 					</div>

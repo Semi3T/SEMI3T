@@ -12,21 +12,17 @@
 
 .product-container-sale {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	border: 1px;
+    flex-wrap: wrap;
+    border: 1px;
+    margin-left: 20px;
 }
 
 .product-box-sale {
 	margin-top: 60px;
-	width: 290px;
-	height: 350px;
-}
-
-.a-box:first-child {
-	display: flex;
-	align-items: center;
-	height: 300px;
+    width: 290px;
+    height: 350px;
+    float: left;
+    margin: 50px 40px;
 }
 
 .a-box-sale {
