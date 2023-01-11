@@ -35,7 +35,7 @@ pageEncoding="UTF-8"%>
 
         <a class="navi_Btn" href="NewPotionC">신제품</a>
         <a class="navi_Btn" href="SalePotionC">세일제품</a>
-        <a class="navi_Btn" href="QnAC">Q&A</a>
+        <a class="navi_Btn" href="QnAC?p=1">Q&A</a>
       </div>
     </header>
   </body>
