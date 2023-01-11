@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -79,6 +80,13 @@ public class AccountDAO {
 					HttpSession hs = request.getSession();
 					hs.setAttribute("account", a);
 					hs.setMaxInactiveInterval(30);
+					
+					Cookie[] coo = request.getCookies();
+					Cookie userId = new Cookie(U, sql)
+					
+					
+					
+					
 					
 				
 					
