@@ -49,13 +49,20 @@
 	<div class="product-container">
 		<c:forEach var="p" items="${product }">
 			<div class="product-box">
-				<div class="a-box">
-					<a href="DetailC?p_no=${p.p_no }"><img
-						src="jsp/master/imgFolder/${p.p_img }"></a>
-				</div>
-				<div class="a-box">
-					<a>${p.p_title }</a> <br>
-					<a>${p.p_price } 원</a>
+				<div class="product-ani">
+					<c:if test="${p.p_new eq '1'}">
+						<div class="new-text">New</div>
+					</c:if>
+					<c:if test="${p.p_sale eq '1' }">
+						<div class="sale-text">Sale</div>
+					</c:if>
+						<div class="a-box">
+							<a href="DetailC?p_no=${p.p_no }"><img
+								src="jsp/master/imgFolder/${p.p_img }"></a>
+						</div>
+					<div class="a-box">
+						<a>${p.p_title }</a> <br> <a>${p.p_price } 원</a>
+					</div>
 				</div>
 			</div>
 		</c:forEach>
