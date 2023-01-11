@@ -14,7 +14,7 @@
 	<div class="brand_list">
 		<select onchange="if(this.value) location.href=this.value">
 				<option value="brand_shan_hai_jingC?brand=shan_hai_jing">SHAN HAI JING</option>
-				<option value="brand_trinityC?brand=trinity">BRAND TRINITY</option>
+				<option value="brand_trinityC?brand=trinity">TRINITY</option>
 				<option value="brand_abydosC?brand=abydos">ABYDOS</option>
 				<option value="brand_gehennaC?brand=gehenna">GEHENNA</option>
 				<option value="brand_srtC?brand=srt">SRT</option>
