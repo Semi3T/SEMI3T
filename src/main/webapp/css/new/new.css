@@ -13,8 +13,9 @@
 .product-container-new {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: space-between;
 	border: 1px;
+	margin-left: 20px;
 }
 
 .product-box-new {

@@ -221,7 +221,6 @@ public class DAO_Master {
 
 	public static void paging_new(int newpage, HttpServletRequest request) {
 
-		request.setAttribute("currentPageNo", newpage);
 
 		int count = 9;
 		int total = products_new.size();
@@ -241,7 +240,6 @@ public class DAO_Master {
 
 	public static void paging_sale(int salepage, HttpServletRequest request) {
 
-		request.setAttribute("currentPageNo", salepage);
 
 		int count = 9;
 		int total = products_sale.size();
