@@ -31,7 +31,7 @@ public class DAO_Master {
 
 			MultipartRequest mr = new MultipartRequest(request, path, 30 * 1024 * 1024, "utf-8",
 					new DefaultFileRenamePolicy());
-
+ 
 			String tilte_img = mr.getFilesystemName("tilte_img");
 			String brand = mr.getParameter("brand");
 			String title = mr.getParameter("title");
@@ -79,7 +79,7 @@ public class DAO_Master {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "select * from product_table";
+		String sql = "select * from product_table order by p_no DESC";
 		try {
 			con = DBManager.connect();
 			pstmt = con.prepareStatement(sql);
@@ -153,7 +153,7 @@ public class DAO_Master {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "select * from product_table where p_new=1";
+		String sql = "select * from product_table where p_new=1 order by p_no";
 		try {
 			con = DBManager.connect();
 			pstmt = con.prepareStatement(sql);
@@ -189,7 +189,7 @@ public class DAO_Master {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "select * from product_table where p_sale=1";
+		String sql = "select * from product_table where p_sale=1 order by p_no";
 		try {
 			con = DBManager.connect();
 			pstmt = con.prepareStatement(sql);

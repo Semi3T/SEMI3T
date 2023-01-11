@@ -8,8 +8,13 @@
 </head>
 <body>
 		<footer class="footer">
-			<div style="background-color: black; width: 1130px; height: 100%; margin: auto;">
-				footer
+			<div style="background-color: #1C1C1C; width: 1130px; height: 100%; margin: auto;">
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h1 style="text-align: center; color: white;">footer</h1>
 			</div>
 		</footer>
 </body>
