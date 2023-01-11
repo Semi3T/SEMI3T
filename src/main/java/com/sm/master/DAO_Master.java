@@ -290,7 +290,7 @@ public class DAO_Master {
 				brand.add(p);
 			}
 			request.setAttribute("brand", brand);
-
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

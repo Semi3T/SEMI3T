@@ -10,13 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 import com.sm.master.DAO_Master;
 
 
-@WebServlet("/brand_ariusC")
-public class brand_ariusC extends HttpServlet {
+@WebServlet("/brand_trinityC")
+public class brand_trinityC extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 		DAO_Master.getBrand(request);
-		request.setAttribute("contentPage", "jsp/brand/brand_arius.jsp");
+		request.setAttribute("contentPage", "jsp/brand/brand_trinity.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 

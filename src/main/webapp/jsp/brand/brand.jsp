@@ -23,13 +23,13 @@
 		
 		
 		<div class="brand_logo_style">
-			<a href="brand_ariusC?brand=srt">
+			<a href="brand_srtC?brand=srt">
 				<img src="img/brand/srt.png">
 			</a>
 		</div>
 		
 		<div class="brand_logo_style">
-			<a href="brand_ariusC?brand=gehenna">
+			<a href="brand_gehennaC?brand=gehenna">
 				<img src="img/brand/gehenna.png">
 			</a>
 		</div>
@@ -38,19 +38,19 @@
 	<br><br><br>
 	<div class="brand_logo">
 		<div class="brand_logo_style">
-			<a href="brand_ariusC?brand=abydos">
+			<a href="brand_abydosC?brand=abydos">
 				<img src="img/brand/abydos.png">
 			</a>
 		</div>
 		
 		<div class="brand_logo_style">
-			<a href="brand_ariusC?brand=shan_hai_jing">
+			<a href="brand_shan_hai_jingC?brand=shan_hai_jing">
 				<img src="img/brand/shan_hai_jing.png">
 			</a>
 		</div>
 		
 		<div class="brand_logo_style">
-			<a href="brand_ariusC?brand=trinity">
+			<a href="brand_trinityC?brand=trinity">
 				<img src="img/brand/trinity.png">
 			</a>
 		</div>

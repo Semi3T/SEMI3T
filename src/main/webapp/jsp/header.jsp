@@ -26,10 +26,11 @@ pageEncoding="UTF-8"%>
           <a class="navi_Btn" href="BrandC">BRAND</a>
           <div class="dropdown-content">
             <a href="brand_ariusC?brand=arius"> ARIUS</a>
-            <a href="#"> 브랜드2</a>
-            <a href="#"> 브랜드3</a>
-            <a href="#"> 브랜4</a>
-            <a href="#"> 브랜드5</a>
+            <a href="brand_srtC?brand=srt"> SRT</a>
+            <a href="brand_gehennaC?brand=gehenna"> GEHENNA</a>
+            <a href="brand_abydosC?brand=abydos"> ABYDOS</a>
+            <a href="brand_shan_hai_jingC?brand=shan_hai_jing"> SHAN HAI JING</a>
+            <a href="brand_trinityC?brand=trinity">TRINITY</a>
           </div>
         </div>
 
