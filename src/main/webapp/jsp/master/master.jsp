@@ -28,7 +28,7 @@
 			<label><input name="sale" type="radio" value="0">세일 NO</label>
 		<hr>
 		상세페이지 이미지 : 	<input name="content_img" type="file"><br>
-		상품 제고 개수	 : 	<input name="stock"><br>
+		상품 재고 개수	 : 	<input name="stock"><br>
 		가격			 :	<input name="price"><br>
 		like         :	<input name="like" value="0"><br>
 		<button>등록</button>

@@ -17,6 +17,7 @@
 			<div class="contentinfo_date">${q.date }</div>
 		</div>
 		<div class="qna_detail_contentwrapper">
+			<img src="jsp/qna/imgFolder/${q.img }">
 			<div class="contentwrapper_content">${q.contents }</div>
 		</div>
 		<div class="qna_detail_buttonwrapper">
