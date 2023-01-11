@@ -17,6 +17,8 @@
 	crossorigin="anonymous"></script>
 </head>
 <body>
+
+
 	${r }
 	<div>
 		<div id="carouselExampleControls" class="carousel slide"
