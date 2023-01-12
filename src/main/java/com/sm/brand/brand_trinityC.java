@@ -1,4 +1,4 @@
-package com.sm.qna;
+package com.sm.brand;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,19 +7,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/QnAC")
-public class QnAC extends HttpServlet {
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+import com.sm.master.DAO_Master;
+
+
+@WebServlet("/brand_trinityC")
+public class brand_trinityC extends HttpServlet {
 	
-		DAO_QnA.getAllqna(request);
-		DAO_QnA.qnaPaging(Integer.parseInt(request.getParameter("p")), request);
-		
-		request.setAttribute("contentPage", "jsp/qna/qna.jsp");
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		DAO_Master.getBrand(request);
+		request.setAttribute("contentPage", "jsp/brand/brand_trinity.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 	
 	}
 

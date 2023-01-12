@@ -16,6 +16,7 @@ public class DAO_Master {
 	private static ArrayList<Product> products;
 	private static ArrayList<Product> products_new;
 	private static ArrayList<Product> products_sale;
+	private static ArrayList<Product> brand;
 
 	public static void regproduct(HttpServletRequest request) {
 		Connection con = null;
@@ -30,7 +31,7 @@ public class DAO_Master {
 
 			MultipartRequest mr = new MultipartRequest(request, path, 30 * 1024 * 1024, "utf-8",
 					new DefaultFileRenamePolicy());
-
+ 
 			String tilte_img = mr.getFilesystemName("tilte_img");
 			String brand = mr.getParameter("brand");
 			String title = mr.getParameter("title");
@@ -78,7 +79,7 @@ public class DAO_Master {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "select * from product_table";
+		String sql = "select * from product_table order by p_no DESC";
 		try {
 			con = DBManager.connect();
 			pstmt = con.prepareStatement(sql);
@@ -152,7 +153,7 @@ public class DAO_Master {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "select * from product_table where p_new=1";
+		String sql = "select * from product_table where p_new=1 order by p_no";
 		try {
 			con = DBManager.connect();
 			pstmt = con.prepareStatement(sql);
@@ -188,7 +189,7 @@ public class DAO_Master {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "select * from product_table where p_sale=1";
+		String sql = "select * from product_table where p_sale=1 order by p_no";
 		try {
 			con = DBManager.connect();
 			pstmt = con.prepareStatement(sql);
@@ -221,7 +222,6 @@ public class DAO_Master {
 
 	public static void paging_new(int newpage, HttpServletRequest request) {
 
-		request.setAttribute("currentPageNo", newpage);
 
 		int count = 9;
 		int total = products_new.size();
@@ -241,7 +241,6 @@ public class DAO_Master {
 
 	public static void paging_sale(int salepage, HttpServletRequest request) {
 
-		request.setAttribute("currentPageNo", salepage);
 
 		int count = 9;
 		int total = products_sale.size();
@@ -258,5 +257,46 @@ public class DAO_Master {
 		}
 		request.setAttribute("product", items);
 
+	}
+
+	
+
+	public static void getBrand(HttpServletRequest request) {
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = "select * from product_table where p_brand=?";
+		try {
+			con = DBManager.connect();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, request.getParameter("brand"));
+				
+			rs = pstmt.executeQuery();
+			brand = new ArrayList<Product>();
+			Product p = null;
+			while (rs.next()) {
+				p = new Product();
+				p.setP_no(rs.getInt("p_no"));
+				p.setP_new(rs.getInt("p_new"));
+				p.setP_sale(rs.getInt("p_sale"));
+				p.setP_stock(rs.getInt("p_stock"));
+				p.setP_price(rs.getInt("p_price"));
+				p.setP_like(rs.getInt("p_like"));
+				p.setP_brand(rs.getString("p_brand"));
+				p.setP_title(rs.getString("p_title"));
+				p.setP_img(rs.getString("p_img"));
+				p.setP_contents(rs.getString("p_contents"));
+				brand.add(p);
+			}
+			request.setAttribute("brand", brand);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(con, pstmt, rs);
+		}
+		
+		
 	}
 }
