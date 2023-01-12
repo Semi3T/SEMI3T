@@ -6,11 +6,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript" src="js/qna/passCheck.js"></script>
 </head>
 <body>
 	<c:forEach var="qna" items="${q }" >
 		<div class="qnalist_Container">
-			<div class="qnalist" onclick="location.href='QnaDetailC?no=${qna.no}'">
+			<div class="qnalist" onclick="passCheck()">
 				<div class="qnano">${qna.no }</div>
 				<div class="qnatitle">${qna.title }</div>
 				<div class="qnaid">${qna.id }</div>
