@@ -19,15 +19,15 @@
 					<c:if test="${p.p_sale eq '1' }">
 						<div class="sale-text">Sale</div>
 					</c:if>
-					
+
 					<div class="a-box-new">
 						<a href="DetailC?p_no=${p.p_no }"><img
 							src="jsp/master/imgFolder/${p.p_img }"></a>
 					</div>
 
 					<div class="a-box-new">
-						 <a href="DetailC?p_no=${p.p_no }">${p.p_title }</a> <br>
-						  <a href="DetailC?p_no=${p.p_no }">${p.p_price } 원</a>
+						<a href="DetailC?p_no=${p.p_no }">${p.p_title }</a> <br> <a
+							href="DetailC?p_no=${p.p_no }">${p.p_price } 원</a>
 					</div>
 				</div>
 			</div>
@@ -37,12 +37,30 @@
 	<br>
 	<div class="new-paging-box">
 		<nav aria-label="Page navigation example">
- 			 <ul class="pagination">
-			    <li class="page-item"><a class="page-link" href="PagingNewC?p=1">First Page</a></li>
-		<c:forEach var="page" begin="1" end="${pageCount }">
-			    <li class="page-item"><a class="page-link" href="PagingNewC?p=${page }">${page }</a></li>
-		</c:forEach>
-			    <li class="page-item"><a class="page-link" href="PagingNewC?p=${pageCount }">End</a></li>
+			<ul class="pagination">
+				<li class="page-item">
+						<!-- p값이 널이 아니라면 나온다 -->
+						<!-- p값이 1이 아니라면 나온다 -->
+						<c:if test="${!empty param.p && curPageNo != 1}">
+							<a class="page-link" href="PagingNewC?p=1">First Page</a>
+						</c:if>
+				</li> 
+				<c:forEach var="page" begin="1" end="${pageCount }">
+					<li class="page-item">
+							<c:choose>
+							<c:when test="${page eq param.p}">
+								<a class="page-link" href="PagingNewC?p=${page }"
+									style="background-color: #76d7ea;">${page }</a>
+						</c:when> <c:otherwise>
+							<a class="page-link" href="PagingNewC?p=${page }">${page }</a>
+						</c:otherwise>
+					</c:choose></li>
+				</c:forEach>
+				<li class="page-item">
+					<c:if test="${curPageNo != pageCount }">
+						<a class="page-link" href="PagingNewC?p=${pageCount }">End</a>
+					</c:if>
+				</li>
 			</ul>
 		</nav>
 	</div>
