@@ -38,8 +38,13 @@
 	<div class="new-paging-box">
 		<nav aria-label="Page navigation example">
 			<ul class="pagination">
-				<li class="page-item"><a class="page-link"
-					href="PagingNewC?p=1">First Page</a></li> 
+				<li class="page-item">
+						<!-- p값이 널이 아니라면 나온다 -->
+						<!-- p값이 1이 아니라면 나온다 -->
+						<c:if test="${!empty param.p && curPageNo != 1}">
+							<a class="page-link" href="PagingNewC?p=1">First Page</a>
+						</c:if>
+				</li> 
 				<c:forEach var="page" begin="1" end="${pageCount }">
 					<li class="page-item">
 							<c:choose>
@@ -51,8 +56,11 @@
 						</c:otherwise>
 					</c:choose></li>
 				</c:forEach>
-				<li class="page-item"><a class="page-link"
-					href="PagingNewC?p=${pageCount }">End</a></li>
+				<li class="page-item">
+					<c:if test="${curPageNo != pageCount }">
+						<a class="page-link" href="PagingNewC?p=${pageCount }">End</a>
+					</c:if>
+				</li>
 			</ul>
 		</nav>
 	</div>
