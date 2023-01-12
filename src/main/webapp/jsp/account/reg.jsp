@@ -64,7 +64,8 @@
 <div class = "items">
 <div class = "item1">성별</div>
 <div class = "item2">
-<div class = "reg_gender">
+
+<div class = "gender">
 <input type = "radio" name="gender" value="남">남성
 <input type = "radio" name="gender" value="여">여성
 </div>

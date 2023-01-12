@@ -17,6 +17,7 @@ ${r } </td>
 <tr>
 
 <td>
+
 ${sessionScope.l_id } (${sessionScope.account.l_name })님 안녕하세요</td>
 </tr>
 
