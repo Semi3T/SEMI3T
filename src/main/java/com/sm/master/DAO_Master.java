@@ -241,6 +241,7 @@ public class DAO_Master {
 
 	public static void paging_sale(int salepage, HttpServletRequest request) {
 
+		request.setAttribute("curPageNo", salepage);
 
 		int count = 9;
 		int total = products_sale.size();
