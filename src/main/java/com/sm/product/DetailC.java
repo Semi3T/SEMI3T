@@ -14,7 +14,7 @@ public class DetailC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		DAO_Master.getdetailproduct(request);
-		request.setAttribute("contentPage", "jsp/product/detailproduct.jsp");
+		request.setAttribute("contentPage", "jsp/detail/detailproduct.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	
 	}

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.detail-container{
+	display: flex;
+}
+
+.detail-product-img-box{
+	margin: 100px;
+}
+
+.detail-product-img-box img {
+
+}
+
+.detail-product-count-box{
+	display: flex;
+}
