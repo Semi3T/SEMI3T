@@ -222,7 +222,7 @@ public class DAO_Master {
 
 	public static void paging_new(int newpage, HttpServletRequest request) {
 
-
+		request.setAttribute("curPageNo", newpage);
 		int count = 9;
 		int total = products_new.size();
 		int pageCount = (int) Math.ceil((double) total / count);
