@@ -21,24 +21,29 @@ public class LoginC extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		
+		
 		AccountDAO.login(request);
 
 		AccountDAO.loginCheck(request);
-
+		
 		HttpSession hs = request.getSession();
 		Account a = (Account) hs.getAttribute("account");
-
+		
 		if (a != null) {
+			
 
-			request.setAttribute("contentPage", "jsp/account/loginOK.jsp");
+			request.setAttribute("contentPage", "jsp/home.jsp");
+			request.getRequestDispatcher("index.jsp").forward(request, response);
+			
+		}else
+			
+			
+			request.setAttribute("contentPage", "jsp/account/login.jsp");
 			request.getRequestDispatcher("index.jsp").forward(request, response);
 
-		} else
-
-			request.setAttribute("contentPage", "jsp/account/login.jsp");
-		request.getRequestDispatcher("index.jsp").forward(request, response);
-
+			
+		
 	}
 
 }

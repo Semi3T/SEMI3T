@@ -23,7 +23,7 @@ public class AccountDAO {
 			request.setAttribute("loginPage", "account/login.jsp");
 			return false;
 		} else {
-			request.setAttribute("loginPage", "account/loginOK.jsp");
+			request.setAttribute("contentPage", "jsp/home.jsp");
 			return true;
 		}
 
