@@ -10,7 +10,7 @@
 </head>
 <body>
 <form action="RegC" method ="post" onsubmit="return call()">
-<div class = "container">
+<div class = "myPagecontainer">
 
 
 
@@ -62,15 +62,29 @@
 
 
 <div class = "items">
-<div class = "item1">성별</div>
+<div class = "item1"></div>
 <div class = "item2">
 
-<div class = "gender">
-<input type = "radio" name="gender" value="남">남성
-<input type = "radio" name="gender" value="여">여성
+<div class="mb-3">
+	<label for="userSex" class="form-label">성별</label>
+	<div class="form_toggle row-vh d-flex flex-row justify-content-between" >
+		<div class="form_radio_btn radio_male">
+			<input id="radio-1" type="radio" name="gender" value="남" checked>
+			<label for="radio-1">남성</label>
+		</div>
+									 
+		<div class="form_radio_btn">
+			<input id="radio-2" type="radio" name="gender" value="여">
+			<label for="radio-2">여성</label>
+		</div>
+	</div>
+</div>
+
+
 </div>
 </div>
 </div>
+
 
 
 <div class="items item3">
