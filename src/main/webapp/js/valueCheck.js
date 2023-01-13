@@ -7,6 +7,11 @@ function reg_Check() {
 	let phonenumber = document.Reg.phonenumber;
 	let address = document.Reg.address;
 
+//비밀번호에 대문자,소문자,특수문자
+//ID 8글자 이상
+//이름 한글 제한
+//전화번호 숫자제한
+//
 
 
 	if (isEmpty(id)) {
