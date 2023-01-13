@@ -5,19 +5,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript" src="validcheck.js"></script>
-<script type="text/javascript" src="valueCheck.js"></script>
+<script type="text/javascript" src="js/valueCheck.js"></script>
+<script type="text/javascript" src="js/validCheck.js"></script>
+
+
 </head>
 <body>
-	<form action="RegC" method="post" onsubmit="return checkAll()"
-		class="reg-container">
+	<form name = "Reg" action="RegC" method="post" class="reg-container" onsubmit= "return reg_Check()">
 
 
 
 		<div class="reg-items">
 			<div class="reg-item1">ID</div>
 			<div class="reg-item2">
-				<input name="id" class="reg-data" type="text">
+				<input name="id" class="reg-data" type="text" placeholder="한글 사용불가">
 			</div>
 		</div>
 
@@ -32,7 +33,7 @@
 		<div class="reg-items">
 			<div class="reg-item1">비밀번호 확인</div>
 			<div class="reg-item2">
-				<input name="pw2" class="reg-data" type="password">
+				<input name="repw" class="reg-data" type="password">
 			</div>
 		</div>
 
