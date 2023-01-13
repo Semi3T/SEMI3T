@@ -17,7 +17,7 @@
 		<div class="reg-items">
 			<div class="reg-item1">ID</div>
 			<div class="reg-item2">
-				<input name="id" class="reg-textInput" type="text">
+				<input name="id" class="reg-data" type="text">
 			</div>
 		</div>
 
@@ -47,7 +47,7 @@
 		<div class="reg-items">
 			<div class="reg-item1">전화번호</div>
 			<div class="reg-item2">
-				<input type="text" name="phonenumber" placeholder="핸드폰번호 입력"
+				<input type="text" name="phonenumber" placeholder="핸드폰번호 입력" class="reg-data"
 					maxlength="11" />
 			</div>
 		</div>
