@@ -11,7 +11,8 @@
 
 </head>
 <body>
-	<form name = "Reg" action="RegC" method="post" class="reg-container" onsubmit= "return reg_Check()">
+	<form name="Reg" action="RegC" method="post" class="reg-container"
+		onsubmit="return reg_Check()">
 
 
 
@@ -29,7 +30,7 @@
 				<input name="pw" class="reg-data" type="password">
 			</div>
 		</div>
-		
+
 		<div class="reg-items">
 			<div class="reg-item1">비밀번호 확인</div>
 			<div class="reg-item2">
@@ -48,8 +49,8 @@
 		<div class="reg-items">
 			<div class="reg-item1">전화번호</div>
 			<div class="reg-item2">
-				<input type="text" name="phonenumber" placeholder="핸드폰번호 입력" class="reg-data"
-					maxlength="11" />
+				<input type="text" name="phonenumber" placeholder="핸드폰번호 입력"
+					class="reg-data" maxlength="11" />
 			</div>
 		</div>
 

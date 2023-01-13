@@ -17,6 +17,7 @@
 
 .login-form {
 	position: relative;
+	top: 30px;
 	z-index: 1;
 	background: #FFFFFF;
 	max-width: 360px;
@@ -25,7 +26,7 @@
 	text-align: center;
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0
 		rgba(0, 0, 0, 0.24);
-		left: 320px;
+	left: 320px;
 }
 
 .login-form input {
@@ -55,7 +56,8 @@
 	cursor: pointer;
 }
 
-.login-form button:hover, .login-form button:active, .login-form button:focus {
+.login-form button:hover, .login-form button:active, .login-form button:focus
+	{
 	background: #43A047;
 }
 

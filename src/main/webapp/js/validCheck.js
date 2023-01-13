@@ -14,7 +14,7 @@ function isEmpty(input) {
 function containKR(input) {
 
 
-	let ok = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM_@."
+	let ok = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM_@."
 
 
 	for (let i = 0; i < input.value.length; i++) {
