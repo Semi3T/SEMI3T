@@ -14,7 +14,6 @@ import com.sm.master.DAO_Master;
 public class ProductC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		DAO_Master.getAllProduct(request);
 		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.setAttribute("contentPage", "jsp/master/master.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
@@ -23,6 +22,11 @@ public class ProductC extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		DAO_Master.regproduct(request);
+		DAO_Master.getAllProduct(request);
+		request.setAttribute("headerPage", "jsp/header.jsp");
+		request.setAttribute("contentPage", "jsp/home.jsp");
+		request.getRequestDispatcher("index.jsp").forward(request, response);
 	
 	}
 

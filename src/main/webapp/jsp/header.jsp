@@ -12,11 +12,13 @@ pageEncoding="UTF-8"%>
       <div class="account_Btn">
 	    <c:choose>
 	    <c:when test="${sessionScope.account.l_id == 'master' }">
+	    	<h5> ${sessionScope.account.l_name } 님 </h5>
 	    	<a href="ProductC">제품 등록</a>
 	    	<a href="LogOutC">로그아웃</a>      
 	        <a href="MyPageC">마이페이지</a>
 	    </c:when>
 		<c:when test="${sessionScope.account ne null }">
+	    	<h5> ${sessionScope.account.l_name } 님 </h5>
 			<a href="LogOutC">로그아웃</a>      
 	        <a href="MyPageC">마이페이지</a>
 		</c:when>	    
