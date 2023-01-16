@@ -37,11 +37,11 @@
 
 	
 		<div class="detail_area">
-			
-			<div class="detail_img">
-				<img src="jsp/master/imgFolder/${product.p_img }">
-			</div>
-
+		
+				<div class="detail_img">
+					<img src="jsp/master/imgFolder/${product.p_img }">
+				</div>
+		
 			<div class="detail_info">
 				<div>
 					<div class="detail-brand-name">
@@ -78,7 +78,7 @@
 				  	</div>
 			</div>
 		</div>
-			
+		<hr>
 			
 	<div>
 		<img src="jsp/master/imgFolder/${product.p_contents}">
