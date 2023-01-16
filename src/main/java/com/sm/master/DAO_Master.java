@@ -6,9 +6,11 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+import com.sm.account.Account;
 import com.sm.main.DBManager;
 
 public class DAO_Master {
@@ -336,19 +338,19 @@ public class DAO_Master {
 		public static void regcomment(HttpServletRequest request) {
 			Connection con = null;
 			PreparedStatement pstmt = null;
+			HttpSession hs = request.getSession();
+			Account a = (Account) hs.getAttribute("account");
 			
-			String sql = "insert into comments values(comments_seq.nextval,'testid','testname',?,sysdate,?)";
+			String sql = "insert into comments values(comments_seq.nextval,?,?,?,sysdate,?)";
+			
 			try {
 				request.setCharacterEncoding("utf-8");
 				con = DBManager.connect();
 				pstmt = con.prepareStatement(sql);
-//				pstmt.setString(1, "id");
-//				pstmt.setString(2, "name");
-				
-
-				
-				pstmt.setString(1, request.getParameter("c_content"));
-				pstmt.setInt(2, Integer.parseInt(request.getParameter("p_no")));
+				pstmt.setString(1, a.getL_id());
+				pstmt.setString(2, a.getL_name());
+				pstmt.setString(3, request.getParameter("c_content"));
+				pstmt.setInt(4, Integer.parseInt(request.getParameter("p_no")));
 				pstmt.executeUpdate();
 				
 				
