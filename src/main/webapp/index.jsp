@@ -17,7 +17,6 @@
 <link rel="stylesheet" href="css/detail/detail.css">
 <link rel="stylesheet" href="css/myPage/myPage.css">
 <link rel="stylesheet" href="css/index/footer.css">
-<script type="text/javascript" src="js/myPage.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
@@ -34,7 +33,16 @@
 	<footer>
 		<jsp:include page="jsp/footer.jsp"></jsp:include>
 	</footer>
+	
+	<div class="btns">
+	  <div class="moveTopBtn">Top</div>
+	  <div class="moveBottomBtn">Bottom</div>
+	</div>
 
+<script type="text/javascript" src="js/login/updownbtn.js"></script>
+<script type="text/javascript" src="js/detail/detail.js"></script>
+<script type="text/javascript" src="js/login/valueCheck.js"></script>
+<script type="text/javascript" src="js/login/validCheck.js"></script>
 
 </body>
 </html>
