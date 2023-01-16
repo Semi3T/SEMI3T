@@ -10,16 +10,22 @@ public class DBManager {
 	public static Connection connect() throws SQLException {
 
 		// 건우
-		//String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=C:/JGW/Wallet_URJ817BYXD912F6F";
-
+		String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=C:/JGW/Wallet_URJ817BYXD912F6F";
 		// 영웅
+<<<<<<< HEAD
 		String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=C:/Wallet_URJ817BYXD912F6F";
 
 		// 용규
 		//String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=/Users/jeon-yong-gyu/Documents/Wallet_URJ817BYXD912F6F";
+=======
+		//String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=C:/Wallet_URJ817BYXD912F6F";
+		
+		// 용규
+		// String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=/Users/jeon-yong-gyu/Documents/Wallet_URJ817BYXD912F6F";
+>>>>>>> 5f44a2b10159fbf13da86b17896d39191e42a27a
 
 		// 현빈
-		//String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=D:/lhb/semi3tWorkspace/Wallet/Wallet_URJ817BYXD912F6F";
+		// String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=D:/lhb/semi3tWorkspace/Wallet/Wallet_URJ817BYXD912F6F";
 
 		
 		String user="YGG";
