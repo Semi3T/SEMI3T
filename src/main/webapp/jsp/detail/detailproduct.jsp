@@ -85,8 +85,6 @@
 
 	</div>
 	
-	<script type="text/javascript" src="js/detail/detail.js"></script>
-	
 	
 	<!-- 뎃글 -->
 	

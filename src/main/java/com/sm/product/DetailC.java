@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.sm.account.AccountDAO;
 import com.sm.master.DAO_Master;
 
 @WebServlet("/DetailC")
