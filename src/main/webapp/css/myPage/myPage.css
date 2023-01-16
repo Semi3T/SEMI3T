@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+.myPage-container{
+	margin-top: 80px;
+}
+
+.myPage-name-box {
+	height: 100px;
+	text-align: center;
+}
+
+#myPage-table-box {
+	width: 500px;
+	margin: auto;
+	border: ghostwhite;
+}
+
+th{
+	margin: auto;
+	
+}
+
+.myPage-th{
+	text-align: center;
+	vertical-align: middle;
+}
+
+.mtPage-content-td{
+    border-left: solid;
+	
+}
+.myPage-button-box{
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+#mypage-update-button{
+	margin: 20px;
+	
+}
+
+#mypage-delete-button {
+	margin: 20px;
+	background-color: #FC7184;
+}
+.myPage-button-box button{
+    display: flex;
+	width: 150px;
+    padding: 12px 0;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #dddddd;
+    margin-right: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    background: #00388c;
+    border-radius: 5px;
+}
