@@ -8,6 +8,15 @@
 <script type="text/javascript" src="js/valueCheck.js"></script>
 <script type="text/javascript" src="js/validCheck.js"></script>
 
+<script>
+
+const hypenTel = (target) => {
+	 target.value = target.value
+	   .replace(/[^0-9]/g, '')
+	   .replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`);
+	}
+	
+</script>
 
 </head>
 <body>
@@ -27,7 +36,8 @@
 		<div class="reg-items">
 			<div class="reg-item1">비밀번호</div>
 			<div class="reg-item2">
-				<input name="pw" class="reg-data" type="password">
+				<input name="pw" class="reg-data" type="password"
+					placeholder="대,소,특수문자 각각 1글자 이상">
 			</div>
 		</div>
 
@@ -49,8 +59,9 @@
 		<div class="reg-items">
 			<div class="reg-item1">전화번호</div>
 			<div class="reg-item2">
-				<input type="text" name="phonenumber" placeholder="핸드폰번호 입력"
-					class="reg-data" maxlength="11" />
+				<input type="text" name="phonenumber" id="phonenumber"
+					oninput="hypenTel(this)" placeholder="핸드폰번호 입력" class="reg-data"
+					maxlength="13" />
 			</div>
 		</div>
 

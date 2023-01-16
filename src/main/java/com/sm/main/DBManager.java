@@ -12,11 +12,7 @@ public class DBManager {
 		// 건우
 		//String url = "jdbc:oracle:thin:@URJ817BYXD912F6F_high?TNS_ADMIN=C:/JGW/Wallet_URJ817BYXD912F6F";
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> c229859abb7066d4be7ef187e5c82cf8b09bd84a
 		// 영웅
 
 
