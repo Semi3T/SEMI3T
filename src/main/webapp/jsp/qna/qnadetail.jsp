@@ -25,5 +25,6 @@
 			<button>삭제</button>
 		</div>
 	</div>
+	<jsp:include page="qnareply.jsp"></jsp:include>
 </body>
 </html>

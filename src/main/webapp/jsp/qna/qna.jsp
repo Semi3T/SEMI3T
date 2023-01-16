@@ -9,7 +9,7 @@
 <script type="text/javascript" src="js/qna/passCheck.js"></script>
 </head>
 <body>
-	<c:forEach var="qna" items="${q }" >
+	<c:forEach var="qna" items="${q }">
 		<div class="qnalist_Container">
 			<div class="qnalist" onclick="passCheck(${qna.no})">
 				<div class="qnano">${qna.no }</div>
