@@ -174,6 +174,7 @@ public class DAO_QnA {
 			if (rs.next()) {
 				dbpw = rs.getString("q_pw");
 			}
+			
 					
 			request.setAttribute("dbpw", dbpw);
 			

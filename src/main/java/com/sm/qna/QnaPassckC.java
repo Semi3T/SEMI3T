@@ -11,7 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 public class QnaPassckC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-	
+		request.setAttribute("contentPage", "jsp/qna/qnaconfirm.jsp");
+		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -25,7 +26,8 @@ public class QnaPassckC extends HttpServlet {
 		} else {
 			DAO_QnA.getAllqna(request);
 			DAO_QnA.qnaPaging(1, request);
-			request.setAttribute("contentPage", "jsp/qna/qna.jsp");
+			request.setAttribute("invalid", "비밀번호가 일치하지 않습니다.");
+			request.setAttribute("contentPage", "jsp/qna/qnaconfirm.jsp");
 			request.getRequestDispatcher("index.jsp").forward(request, response);
 		}
 	}
