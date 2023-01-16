@@ -7,11 +7,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.sm.account.AccountDAO;
 import com.sm.master.DAO_Master;
 
 @WebServlet("/ProductC")
 public class ProductC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		DAO_Master.getAllProduct(request);
+		request.setAttribute("headerPage", "jsp/header.jsp");
+		request.setAttribute("contentPage", "jsp/master/master.jsp");
+		request.getRequestDispatcher("index.jsp").forward(request, response);
 		
 	}
 	

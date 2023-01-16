@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.sm.account.AccountDAO;
+
 @WebServlet("/QnAC")
 public class QnAC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -14,6 +16,8 @@ public class QnAC extends HttpServlet {
 		DAO_QnA.getAllqna(request);
 		DAO_QnA.qnaPaging(Integer.parseInt(request.getParameter("p")), request);
 		
+		AccountDAO.loginCheck(request);
+		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.setAttribute("contentPage", "jsp/qna/qna.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}

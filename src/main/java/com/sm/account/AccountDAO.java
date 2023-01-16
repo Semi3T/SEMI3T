@@ -18,9 +18,9 @@ public class AccountDAO {
 	public static boolean loginCheck(HttpServletRequest request) {
 		HttpSession hs = request.getSession();
 		Account a = (Account) hs.getAttribute("account");
-
+		
 		if (a == null) {
-			request.setAttribute("loginPage", "account/login.jsp");
+			request.setAttribute("contentPage", "jsp/account/login.jsp");
 			return false;
 		} else {
 			request.setAttribute("contentPage", "jsp/home.jsp");
@@ -33,7 +33,6 @@ public class AccountDAO {
 		String userID = request.getParameter("id");
 		String userPW = request.getParameter("pw");
 
-		//
 		String iddd = (String) request.getAttribute("iddd");
 		String pwww = (String) request.getAttribute("pwww");
 
@@ -100,7 +99,6 @@ public class AccountDAO {
 	}
 
 	public static void regAccount(HttpServletRequest request) {
-		// 가입
 
 		Connection con = null;
 		PreparedStatement pstmt = null;

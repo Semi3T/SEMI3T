@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,12 +10,24 @@ pageEncoding="UTF-8"%>
   <body>
     <header>
       <div class="account_Btn">
-        <a href="ProductRegC">제품 등록</a>
-        <a href="RegC">회원가입</a>
-        <a href="LoginC">로그인</a>
-        <a href="MyPageC">마이페이지</a>
+	    <c:choose>
+	    <c:when test="${sessionScope.account.l_id == 'master' }">
+	    	<a href="ProductC">제품 등록</a>
+	    	<a href="LogOutC">로그아웃</a>      
+	        <a href="MyPageC">마이페이지</a>
+	    </c:when>
+		<c:when test="${sessionScope.account ne null }">
+			<a href="LogOutC">로그아웃</a>      
+	        <a href="MyPageC">마이페이지</a>
+		</c:when>	    
+		<c:otherwise>
+	        <a href="RegC">회원가입</a>
+	        <a href="LoginC">로그인</a>
+	        <a href="MyPageC">마이페이지</a>
+		</c:otherwise>
+	    </c:choose>
       </div>
-
+	
       <div class="rogo_img">
         <a href="HC">
           <img src="img/mainlogoimg/Imported_Image.png" style="width: 400px" />
