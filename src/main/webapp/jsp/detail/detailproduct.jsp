@@ -37,11 +37,11 @@
 
 	
 		<div class="detail_area">
-			
-			<div class="detail_img">
-				<img src="jsp/master/imgFolder/${product.p_img }">
-			</div>
-
+		
+				<div class="detail_img">
+					<img src="jsp/master/imgFolder/${product.p_img }">
+				</div>
+		
 			<div class="detail_info">
 				<div>
 					<div class="detail-brand-name">
@@ -78,14 +78,12 @@
 				  	</div>
 			</div>
 		</div>
-			
+		<hr>
 			
 	<div>
 		<img src="jsp/master/imgFolder/${product.p_contents}">
 
 	</div>
-	
-	<script type="text/javascript" src="js/detail/detail.js"></script>
 	
 	
 	<!-- 뎃글 -->
@@ -93,7 +91,7 @@
 	<div>
 
 	<table id="tblListComment" class="table table-bordered">
-	
+		
 		<c:if test="${ comment.size() == 0 }">
 			<tr>
 				<td colspan="2">댓글이 없습니다.</td>
@@ -114,8 +112,22 @@
 	 	</c:forEach>
 	 		
 	</table>
-	
+		
+		
+		
+		<c:if test="${sessionScope.account.l_id eq null}">
+			<form action="LoginC" method="get">
+				<table id="tblAddComment" class="table table-bordered">
+					<tr>
+						<td><input type="text" name="c_content" id="c_content" class="form-control" readonly placeholder="로그인을 해주세요"/></td>
+						<td><input type="submit" value="로그인" class="btn btn-primary" /></td>
+					</tr>
+				</table>	
+			</form>
+		</c:if> 
+		<c:if test="${sessionScope.account.l_id}">
 		<form action="DetailC" method="post">
+		
 			<table id="tblAddComment" class="table table-bordered">
 				<tr>
 					<td><input type="text" name="c_content" id="c_content" class="form-control" required placeholder="댓글을 작성하세요. "/></td>
@@ -124,6 +136,7 @@
 			</table>	
 			<input type="hidden" name="p_no" value="${ product.p_no}">
 		</form>
+		</c:if> 
 	</div>
 
 
