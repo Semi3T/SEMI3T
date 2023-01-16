@@ -16,6 +16,7 @@ public class PagingSaleC extends HttpServlet {
 		DAO_Master.getAllProduct(request);
 		DAO_Master.paging_sale(Integer.parseInt(request.getParameter("p")), request);
 	
+		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.setAttribute("contentPage", "jsp/sale/sale.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	

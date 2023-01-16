@@ -14,6 +14,7 @@ public class PagingNewC extends HttpServlet {
 		DAO_Master.getAllProduct(request);
 		DAO_Master.paging_new(Integer.parseInt(request.getParameter("p")), request);
 	
+		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.setAttribute("contentPage", "jsp/new/new.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}

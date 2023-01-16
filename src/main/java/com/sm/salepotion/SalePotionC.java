@@ -15,6 +15,7 @@ public class SalePotionC extends HttpServlet {
 	
 		DAO_Master.saleproduct(request);
 		DAO_Master.paging_sale(1, request);
+		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.setAttribute("contentPage", "jsp/sale/sale.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 		

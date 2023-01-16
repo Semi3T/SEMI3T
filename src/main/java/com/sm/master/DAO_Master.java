@@ -17,7 +17,8 @@ public class DAO_Master {
 	private static ArrayList<Product> products_new;
 	private static ArrayList<Product> products_sale;
 	private static ArrayList<Product> brand;
-
+	private static ArrayList<Comment> comments;
+	
 	public static void regproduct(HttpServletRequest request) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -267,7 +268,7 @@ public class DAO_Master {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "select * from product_table where p_brand=?";
+		String sql = "select * from product_table where p_brand=? order by p_no desc";
 		try {
 			con = DBManager.connect();
 			pstmt = con.prepareStatement(sql);
@@ -297,6 +298,65 @@ public class DAO_Master {
 		} finally {
 			DBManager.close(con, pstmt, rs);
 		}
+	}
+		public static void getcomment(HttpServletRequest request) {
+			
+			Connection con = null;
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			String sql = "select * from comments where p_no=?";
+			try {
+				con = DBManager.connect();
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1, request.getParameter("p_no"));
+				rs = pstmt.executeQuery();
+
+				comments = new ArrayList<Comment>();
+				Comment c = null;
+				while (rs.next()) {
+					c = new Comment();
+					c.setC_no(rs.getString("c_no"));
+					c.setC_id(rs.getString("c_id"));
+					c.setC_name(rs.getString("c_name"));
+					c.setC_content(rs.getString("c_content"));
+					c.setC_date(rs.getString("c_date"));
+					c.setP_no(rs.getString("p_no"));
+					comments.add(c);
+				}
+				request.setAttribute("comment", comments);
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				DBManager.close(con, pstmt, rs);
+			}
+			
+		}
+
+		public static void regcomment(HttpServletRequest request) {
+			Connection con = null;
+			PreparedStatement pstmt = null;
+			
+			String sql = "insert into comments values(comments_seq.nextval,'testid','testname',?,sysdate,?)";
+			try {
+				request.setCharacterEncoding("utf-8");
+				con = DBManager.connect();
+				pstmt = con.prepareStatement(sql);
+//				pstmt.setString(1, "id");
+//				pstmt.setString(2, "name");
+				
+
+				
+				pstmt.setString(1, request.getParameter("c_content"));
+				pstmt.setInt(2, Integer.parseInt(request.getParameter("p_no")));
+				pstmt.executeUpdate();
+				
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				DBManager.close(con, pstmt,null);
+			}
 		
 		
 	}

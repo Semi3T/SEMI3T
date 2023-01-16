@@ -4,15 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>master product</title>
 </head>
 <body>
 
-	<form action="ProductRegC" method="post" enctype="multipart/form-data">
+	<form action="ProductC" method="post" enctype="multipart/form-data">
 		타이틀 이미지 : <input name="tilte_img" type="file"><br>
 		브랜드 명    : <select name="brand">
 							<option value="shan_hai_jing">SHAN HAI JING</option>
-							<option value="trinity">BRAND TRINITY</option>
+							<option value="trinity">TRINITY</option>
 							<option value="abydos">ABYDOS</option>
 							<option value="gehenna">GEHENNA</option>
 							<option value="srt">SRT</option>
