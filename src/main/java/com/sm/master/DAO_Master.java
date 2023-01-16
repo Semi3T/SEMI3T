@@ -268,7 +268,7 @@ public class DAO_Master {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "select * from product_table where p_brand=?";
+		String sql = "select * from product_table where p_brand=? order by p_no desc";
 		try {
 			con = DBManager.connect();
 			pstmt = con.prepareStatement(sql);
