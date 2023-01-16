@@ -1,4 +1,4 @@
-package com.sm.master;
+package com.sm.account;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,20 +7,28 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/ProductRegC")
-public class ProductRegC extends HttpServlet {
+import com.sm.master.DAO_Master;
+
+
+@WebServlet("/LogOutC")
+public class LogOutC extends HttpServlet {
+	
+    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-			request.setAttribute("contentPage", "jsp/master/master.jsp");
-			request.getRequestDispatcher("index.jsp").forward(request, response);
+		AccountDAO.logOut(request);
+		DAO_Master.getAllProduct(request);
+		request.setAttribute("headerPage", "jsp/header.jsp");
+		request.setAttribute("contentPage", "jsp/home.jsp");
+		request.getRequestDispatcher("index.jsp").forward(request, response);
+		
 	}
+
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-			DAO_Master.regproduct(request);
-			DAO_Master.getAllProduct(request);
-			request.setAttribute("contentPage", "jsp/home.jsp");
-			request.getRequestDispatcher("index.jsp").forward(request, response);
+
+		
 	}
 
 }

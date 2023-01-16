@@ -7,10 +7,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.sm.account.AccountDAO;
+
 @WebServlet("/DeleteCustomerC")
 public class DeleteCustomerC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		AccountDAO.loginCheck(request);
+		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.setAttribute("contentPage", "jsp/home.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}

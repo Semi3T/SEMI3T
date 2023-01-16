@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +12,8 @@
 <link rel="stylesheet" href="css/brand/brand.css">
 <link rel="stylesheet" href="css/new/new.css">
 <link rel="stylesheet" href="css/sale/sale.css">
+<link rel="stylesheet" href="css/account/login.css">
+<link rel="stylesheet" href="css/account/reg.css">
 <link rel="stylesheet" href="css/detail/detail.css">
 <link rel="stylesheet" href="css/myPage/myPage.css">
 <script type="text/javascript" src="js/myPage.js"></script>
@@ -21,16 +23,16 @@
 
 	<div class="index_con">
 		<div>
-			<jsp:include page="jsp/header.jsp"></jsp:include>
+			<jsp:include page="${headerPage }"></jsp:include>
 		</div>
-		
+
 		<main>
 			<jsp:include page="${contentPage }"></jsp:include>
 		</main>
 	</div>
-		<footer>
-				<jsp:include page="jsp/footer.jsp"></jsp:include>
-		</footer>
+	<footer>
+		<jsp:include page="jsp/footer.jsp"></jsp:include>
+	</footer>
 
 
 </body>
