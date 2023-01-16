@@ -1,4 +1,4 @@
-package com.sm.account;
+package com.sm.mypage;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,16 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/MyPageC")
-public class MyPageC extends HttpServlet {
+@WebServlet("/UpdateInfoC")
+public class UpdateInfoC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+		
+		request.setAttribute("contentPage", "jsp/myPage/updateInfo.jsp");
+		request.getRequestDispatcher("index.jsp").forward(request, response);
 	
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-	
+		
+		request.setAttribute("contentPage", "jsp/myPage/myPage.jsp");
+		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
 }
