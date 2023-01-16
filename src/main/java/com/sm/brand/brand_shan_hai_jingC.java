@@ -15,6 +15,7 @@ public class brand_shan_hai_jingC extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		DAO_Master.getBrand(request);
+		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.setAttribute("contentPage", "jsp/brand/brand_shan_hai_jing.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}

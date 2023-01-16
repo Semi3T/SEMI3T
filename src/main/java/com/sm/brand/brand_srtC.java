@@ -17,6 +17,7 @@ public class brand_srtC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		DAO_Master.getBrand(request);
+		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.setAttribute("contentPage", "jsp/brand/brand_srt.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
