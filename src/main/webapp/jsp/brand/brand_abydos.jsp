@@ -23,13 +23,31 @@
 		
 	</div>
 	
-	<c:forEach var="b" items="${brand }">
-		<div>
-			<img src="jsp/master/imgFolder/${b.p_img }">
-		</div>
-		<div>
-			<span>${b.p_title }</span>
-		</div>
-	</c:forEach>
+	
+	
+		<div class="product-container">
+			<c:forEach var="b" items="${brand }">
+				<div class="product-box">
+					<div class="product-ani">
+						<c:if test="${b.p_new eq '1'}">
+							<div class="new-text">New</div>
+						</c:if>
+						<c:if test="${b.p_sale eq '1' }">
+							<div class="sale-text">Sale</div>
+						</c:if>
+							<div class="a-box">
+								<a href="DetailC?p_no=${b.p_no }"><img
+									src="jsp/master/imgFolder/${b.p_img }"></a>
+							</div>
+						<div class="a-box">
+							<a>${b.p_title }</a> <br>
+							<a>${b.p_price } 원</a>
+						</div>
+					</div>
+				</div>
+			</c:forEach>
+	</div>
+	
+
 </body>
 </html>
