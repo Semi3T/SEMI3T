@@ -132,12 +132,12 @@ public class AccountDAO {
 			System.out.println(gender);
 
 			if (pstmt.executeUpdate() == 1) {
-				System.out.println("-- > 가입 성공");
 				request.setAttribute("r", "가입성공");
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
+			request.setAttribute("r", "가입실패");
 		} finally {
 			DBManager.close(con, pstmt, null);
 

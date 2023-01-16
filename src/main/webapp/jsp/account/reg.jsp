@@ -4,11 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<script type="text/javascript" src="js/valueCheck.js"></script>
-<script type="text/javascript" src="js/validCheck.js"></script>
-
-
+<title>register</title>
 </head>
 <body>
 	<form name="Reg" action="RegC" method="post" class="reg-container"
