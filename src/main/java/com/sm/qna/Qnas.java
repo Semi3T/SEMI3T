@@ -9,13 +9,14 @@ public class Qnas {
 	private Date date;
 	private String img;
 	private String id;
+	private String pw;
 	
 	public Qnas() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Qnas(int no, String title, String contents, Date date, String img, String id) {
+	public Qnas(int no, String title, String contents, Date date, String img, String id, String pw) {
 		super();
 		this.no = no;
 		this.title = title;
@@ -23,8 +24,18 @@ public class Qnas {
 		this.date = date;
 		this.img = img;
 		this.id = id;
+		this.pw = pw;
 	}
 	
+
+	public String getPw() {
+		return pw;
+	}
+
+	public void setPw(String pw) {
+		this.pw = pw;
+	}
+
 	public int getNo() {
 		return no;
 	}

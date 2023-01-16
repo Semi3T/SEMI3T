@@ -8,9 +8,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<c:forEach var="qna" items="${q }" >
+	<c:forEach var="qna" items="${q }">
 		<div class="qnalist_Container">
-			<div class="qnalist" onclick="location.href='QnaDetailC?no=${qna.no}'">
+			<div class="qnalist" onclick="location.href='QnaPassckC?no=${qna.no}'">
 				<div class="qnano">${qna.no }</div>
 				<div class="qnatitle">${qna.title }</div>
 				<div class="qnaid">${qna.id }</div>

@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
+import javax.naming.spi.DirStateFactory.Result;
 import javax.servlet.http.HttpServletRequest;
 
 import com.oreilly.servlet.MultipartRequest;
@@ -154,6 +155,36 @@ public class DAO_QnA {
 		}
 		
 		request.setAttribute("q", qnaitems);
+	}
+
+	public static void passCk(HttpServletRequest request) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = "select q_pw from qna where q_no=?";
+		
+		try {
+			con = DBManager.connect();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, request.getParameter("no"));
+			rs = pstmt.executeQuery();
+			
+			String dbpw = null;
+			
+			if (rs.next()) {
+				dbpw = rs.getString("q_pw");
+			}
+			
+					
+			request.setAttribute("dbpw", dbpw);
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(con, pstmt, rs);
+		}
+		
 	}
 
 	
