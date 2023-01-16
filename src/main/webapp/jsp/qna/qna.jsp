@@ -6,7 +6,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript" src="js/qna/passCheck.js"></script>
 </head>
 <body>
 	<c:forEach var="qna" items="${q }">
