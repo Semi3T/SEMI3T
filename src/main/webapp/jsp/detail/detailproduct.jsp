@@ -114,8 +114,8 @@
 	</table>
 		
 		
-		
-		<c:if test="${sessionScope.account.l_id eq null}">
+		<c:choose>
+		<c:when test="${sessionScope.account eq null}">
 			<form action="LoginC" method="get">
 				<table id="tblAddComment" class="table table-bordered">
 					<tr>
@@ -124,8 +124,8 @@
 					</tr>
 				</table>	
 			</form>
-		</c:if> 
-		<c:if test="${sessionScope.account.l_id}">
+		</c:when> 
+		<c:otherwise>
 		<form action="DetailC" method="post">
 		
 			<table id="tblAddComment" class="table table-bordered">
@@ -136,7 +136,8 @@
 			</table>	
 			<input type="hidden" name="p_no" value="${ product.p_no}">
 		</form>
-		</c:if> 
+		</c:otherwise> 
+		</c:choose>
 	</div>
 
 
