@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 public class RegC extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.setAttribute("contentPage", "jsp/account/reg.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 		
@@ -22,6 +24,7 @@ public class RegC extends HttpServlet {
 		
 		AccountDAO.regAccount(request);
 		
+		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.setAttribute("contentPage", "jsp/home.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}

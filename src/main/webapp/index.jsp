@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/brand/brand.css">
 <link rel="stylesheet" href="css/new/new.css">
 <link rel="stylesheet" href="css/sale/sale.css">
+<<<<<<< HEAD
 
 <link rel="stylesheet" href="css/account/login.css">
 <link rel="stylesheet" href="css/account/reg.css">
@@ -24,17 +25,24 @@
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
 
+=======
+<link rel="stylesheet" href="css/account/login.css">
+<link rel="stylesheet" href="css/account/reg.css">
+>>>>>>> 53391b7adda984c91b6ff9f7560ad3ebace9af03
 <link rel="stylesheet" href="css/detail/detail.css">
 <link rel="stylesheet" href="css/myPage/myPage.css">
 <script type="text/javascript" src="js/myPage.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 53391b7adda984c91b6ff9f7560ad3ebace9af03
 </head>
 <body>
 
 	<div class="index_con">
 		<div>
-			<jsp:include page="jsp/header.jsp"></jsp:include>
+			<jsp:include page="${headerPage }"></jsp:include>
 		</div>
 
 		<main>

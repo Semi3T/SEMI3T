@@ -12,19 +12,19 @@ import com.sm.master.DAO_Master;
 
 @WebServlet("/HC")
 public class HC extends HttpServlet {
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		AccountDAO.loginCheck(request);
-
+		
 		DAO_Master.getAllProduct(request);
+		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.setAttribute("contentPage", "jsp/home.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 
 	}
 

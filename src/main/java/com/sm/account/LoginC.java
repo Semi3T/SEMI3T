@@ -10,11 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.sm.master.DAO_Master;
+
 @WebServlet("/LoginC")
 public class LoginC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.setAttribute("contentPage", "jsp/account/login.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
@@ -23,22 +26,12 @@ public class LoginC extends HttpServlet {
 			throws ServletException, IOException {
 
 		AccountDAO.login(request);
-
 		AccountDAO.loginCheck(request);
-
-		HttpSession hs = request.getSession();
-		Account a = (Account) hs.getAttribute("account");
-
-		if (a != null) {
-
-			request.setAttribute("contentPage", "jsp/home.jsp");
-			request.getRequestDispatcher("index.jsp").forward(request, response);
-
-		} else
-
-			request.setAttribute("contentPage", "jsp/account/login.jsp");
+		
+		DAO_Master.getAllProduct(request);
+		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
-
+		
 	}
 
 }

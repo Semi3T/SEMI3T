@@ -10,29 +10,29 @@
 
 	<div class="myPage-container">
 		<div class="myPage-name-box">
-			누구누구님 안녕하세요
+			<h2>${sessionScope.account.l_name } 님, 환영합니다 </h2>
 		</div>
 		<div style="font-size: 20px;">
 			<table id="myPage-table-box" class="table">
 				<tr>
 					<th class="myPage-th" scope="col">ID</th>
-					<td class="mtPage-content-td">master</td>
+					<td class="mtPage-content-td">${sessionScope.account.l_id }</td>
 				</tr>
 				<tr>
 					<th class="myPage-th" scope="col">Name</th>
-					<td class="mtPage-content-td">박영웅</td>
+					<td class="mtPage-content-td">${sessionScope.account.l_name }</td>
 				</tr>
 				<tr>
 					<th class="myPage-th" scope="col">Gender</th>
-					<td class="mtPage-content-td">남자</td>
+					<td class="mtPage-content-td">${sessionScope.account.l_gender }</td>
 				</tr>
 				<tr>
 					<th class="myPage-th" scope="col">PhoneNumber</th>
-					<td class="mtPage-content-td">010-1111-2222</td>
+					<td class="mtPage-content-td">${sessionScope.account.l_phonenumber }</td>
 				</tr>
 				<tr>
 					<th class="myPage-th" scope="col">Address</th>
-					<td class="mtPage-content-td">서울 종로구 솔데스크 802호 이렇게 길게 쓰는 이유는 길게 나왔을때를 대비해서 써놓은것 이것보다 좀 더 길게 나올수도 있으니까 적어봄 ㅋ</td>
+					<td class="mtPage-content-td">${sessionScope.account.l_address }</td>
 				</tr>
 			</table>
 		</div>
