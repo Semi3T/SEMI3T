@@ -13,6 +13,8 @@ import com.sm.account.AccountDAO;
 public class QnaPassckC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		AccountDAO.loginCheck(request);
+		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.setAttribute("contentPage", "jsp/qna/qnaconfirm.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
