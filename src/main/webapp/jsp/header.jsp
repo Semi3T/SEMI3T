@@ -13,7 +13,7 @@ pageEncoding="UTF-8"%>
 	    <c:choose>
 	    <c:when test="${sessionScope.account.l_id == 'master' }">
 	    	<h5> ${sessionScope.account.l_name } 님 </h5>
-	    	<a href="ProductC">제품 등록</a>
+	    	<a href="ProductC">제품등록</a>
 	    	<a href="LogOutC">로그아웃</a>      
 	        <a href="MyPageC">마이페이지</a>
 	    </c:when>
