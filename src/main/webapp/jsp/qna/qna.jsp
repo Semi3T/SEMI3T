@@ -11,7 +11,7 @@
 <body>
 	<c:forEach var="qna" items="${q }" >
 		<div class="qnalist_Container">
-			<div class="qnalist" onclick="passCheck()">
+			<div class="qnalist" onclick="passCheck(${qna.no})">
 				<div class="qnano">${qna.no }</div>
 				<div class="qnatitle">${qna.title }</div>
 				<div class="qnaid">${qna.id }</div>
