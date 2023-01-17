@@ -66,16 +66,19 @@
 						<input type="button" value=" + " name="add" class="detail-add"> 	
 					</div>
 					
-					<div class="total">
+					<div class="tatal-area">
 						<strong class="detail-text">총 상품금액: </strong>
 						<input type="text" name="sum" size="11" readonly class="detail-total" ><br>
 					</div>
 				</div>
 				
-					<div class="detail_button">
-						<button type="button" >장바구니</button>
+				<form action="#">
+					<div class="myPage-button-box">
+						<button>장바구니</button>
 						<button>구매하기</button>
 				  	</div>
+				</form>
+				
 			</div>
 		</div>
 		<hr>
@@ -104,10 +107,15 @@
 					 ${ c.c_content }
 					 <span>${ c.c_name }. ${ c.c_date }</span>
 				</td>
+				<c:if test="${sessionScope.account.l_id eq c.c_id }">
 				<td>
 					<input type="button" value="삭제하기" class="btn btn-default" 
-						onclick="location.href='#'"/>
+						onclick="location.href='CommentDeleteC?c_no=${c.c_no}&p_no=${product.p_no}'"/>
 				</td>
+				<td>
+					<input type="button" value="수정하기" class="btn btn-default" onclick="location.href='CommentUpdeta?c_no=${c.c_no}&p_no=${product.p_no}'"> 
+				</td>
+				</c:if>
 			</tr>
 	 	</c:forEach>
 	 		
