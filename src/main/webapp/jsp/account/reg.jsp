@@ -64,7 +64,7 @@ pageEncoding="UTF-8"%>
       <div class="reg-items">
         <div class="reg-item1">생년월일</div>
         <div class="reg-item2">
-          <input type="date" name="birthday" class="reg-data" />
+          <input type="date" name="birthday" class="reg-data" min="1920-01-01" />
         </div>
       </div>
       <div class="reg-items">

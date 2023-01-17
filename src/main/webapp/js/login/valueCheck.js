@@ -93,3 +93,25 @@ function reg_Check() {
 
 
 
+
+
+function login_Check(){
+	let l_id = document.Login.id;
+	let l_pw = document.Login.pw;
+	
+	if (isEmpty(l_id)) {
+		alert('아이디를 입력해주십시오')
+		l_id.focus();
+		return false;
+	}
+	
+	
+	if (isEmpty(l_pw)) {
+		alert('비밀번호를 입력해주십시오')
+		l_pw.focus();
+		return false;
+	}
+	
+}
+
+
