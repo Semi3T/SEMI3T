@@ -72,6 +72,8 @@ public class AccountDAO {
 					HttpSession hs = request.getSession();
 					hs.setAttribute("account", a);
 					hs.setMaxInactiveInterval(30);
+					
+					
 
 				} else {
 
