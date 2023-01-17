@@ -24,7 +24,12 @@ public class QnAC extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-	
+		DAO_QnA.regReply(request);
+		DAO_QnA.getReply(request);
+		DAO_QnA.getQna(request);
+		request.setAttribute("headerPage", "jsp/header.jsp");
+		request.setAttribute("contentPage", "jsp/qna/qnadetail.jsp");
+		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
 }

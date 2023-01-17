@@ -7,14 +7,18 @@ import java.util.ArrayList;
 
 import javax.naming.spi.DirStateFactory.Result;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+import com.sm.account.Account;
 import com.sm.main.DBManager;
+import com.sm.master.Comment;
 
 public class DAO_QnA {
 	
 	private static ArrayList<Qnas> qnas;
+	private static ArrayList<Qnareply> qnareply;
 
 	public static void getAllqna(HttpServletRequest request) {
 		Connection con = null;
@@ -185,6 +189,77 @@ public class DAO_QnA {
 			DBManager.close(con, pstmt, rs);
 		}
 		
+	}
+
+	public static void regReply(HttpServletRequest request) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		HttpSession hs = request.getSession();
+		Account a = (Account) hs.getAttribute("account");
+		
+		String lid = null;
+		String lname = null;
+		if (a != null) {
+			lid = a.getL_id();
+			lname = a.getL_name();
+		} else {
+			lid = "unknown";
+			lname = "비회원";
+		}
+		
+		String sql = "insert into qna_reply values(qna_reply_seq.nextval,?,?,?,sysdate,?)";
+		
+		try {
+			request.setCharacterEncoding("utf-8");
+			con = DBManager.connect();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, lid);
+			pstmt.setString(2, lname);
+			pstmt.setString(3, request.getParameter("r_content"));
+			pstmt.setInt(4, Integer.parseInt(request.getParameter("no")));
+			pstmt.executeUpdate();
+			
+			
+		} catch (Exception e) {
+			System.out.println("등록실패");
+			e.printStackTrace();
+		} finally {
+			DBManager.close(con, pstmt,null);
+		}
+	}
+	
+
+	public static void getReply(HttpServletRequest request) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		String sql = "select * from qna_reply where q_no=?";
+		try {
+			con = DBManager.connect();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, request.getParameter("no"));
+			rs = pstmt.executeQuery();
+
+			qnareply = new ArrayList<Qnareply>();
+			Qnareply q = null;
+			while (rs.next()) {
+				q = new Qnareply();
+				q.setR_no(rs.getString("r_no"));
+				q.setR_id(rs.getString("r_id"));
+				q.setR_name(rs.getString("r_name"));
+				q.setR_content(rs.getString("r_content"));
+				q.setR_date(rs.getString("r_date"));
+				q.setQ_no(rs.getString("q_no"));
+				qnareply.add(q);
+			}
+			request.setAttribute("qnareply", qnareply);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(con, pstmt, rs);
+		}
 	}
 
 	

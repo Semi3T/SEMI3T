@@ -28,16 +28,16 @@
 	</div>
 	<div>
 		<table id="tblListComment" class="table table-bordered">
-			<c:if test="${ comment.size() == 0 }">
+			<c:if test="${qnareply.size() == 0 }">
 				<tr>
-					<td colspan="2">댓글이 없습니다.</td>
+					<td colspan="2">답변을 기다려주세요.</td>
 				</tr>
 			</c:if>
-			<c:forEach items="${ comment }" var="c" > 
+			<c:forEach items="${qnareply }" var="q" > 
 				<tr>
 					<td>
-						 ${ c.c_content }
-						 <span>${ c.c_name }. ${ c.c_date }</span>
+						 ${q.r_content }
+						 <span>${ q.r_name }. ${ q.r_date }</span>
 					</td>
 					<td>
 						<input type="button" value="삭제하기" class="btn btn-default" 
@@ -46,14 +46,14 @@
 				</tr>
 		 	</c:forEach>
 		</table>
-		<form action="" method="post">
+		<form action="QnAC" method="post">
 			<table id="tblAddComment" class="table table-bordered">
 				<tr>
-					<td><input type="text" name="c_content" id="c_content" class="form-control" required placeholder="댓글을 작성하세요. "/></td>
+					<td><input type="text" name="r_content" id="r_content" class="form-control" required placeholder="내용을 입력하세요. "/></td>
 					<td><input type="submit" value="등록" class="btn btn-primary" /></td>
 				</tr>
 			</table>	
-			<input type="hidden" name="p_no" value="${product.p_no }">
+			<input type="hidden" name="no" value="${q.no }">
 		</form>
 	</div>
 </body>
