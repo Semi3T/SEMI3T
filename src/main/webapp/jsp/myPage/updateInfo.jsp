@@ -14,19 +14,19 @@
 						<table id="myPage-table-box" class="table">
 							<tr>
 								<th class="myPage-th" scope="col">ID</th>
-								<td class="mtPage-content-td"><input name="id" value="${sessionScope.account.l_id }"></td>
+								<td class="mtPage-content-td"><input disabled="disabled" name="id" value="${sessionScope.account.l_id }"></td>
+							</tr>
+							<tr>
+								<th class="myPage-th" scope="col">PW</th>
+								<td class="mtPage-content-td"><input name="pw" value="${sessionScope.account.l_pw }"></td>
 							</tr>
 							<tr>
 								<th class="myPage-th" scope="col">Name</th>
 								<td class="mtPage-content-td"><input name="name" value="${sessionScope.account.l_name }"></td>
 							</tr>
 							<tr>
-								<th class="myPage-th" scope="col">Gender</th>
-								<td class="mtPage-content-td"><input name="gender" value="${sessionScope.account.l_gender }"></td>
-							</tr>
-							<tr>
 								<th class="myPage-th" scope="col">PhoneNumber</th>
-								<td class="mtPage-content-td"><input name="phonenumber" value="${sessionScope.account.l_phonenumber }"></td>
+								<td class="mtPage-content-td"><input maxlength="11" placeholder="ex) 01011112222" name="phonenumber" value="${sessionScope.account.l_phonenumber }"></td>
 							</tr>
 							<tr>
 								<th class="myPage-th" scope="col">Address</th>

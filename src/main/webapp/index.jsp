@@ -49,6 +49,7 @@
 	</div>
 
 <script type="text/javascript" src="js/login/updownbtn.js"></script>
+<script type="text/javascript" src="js/login/myPage.js"></script>
 <script type="text/javascript" src="js/detail/detail.js"></script>
 <script type="text/javascript" src="js/login/valueCheck.js"></script>
 <script type="text/javascript" src="js/login/validCheck.js"></script>

@@ -72,6 +72,7 @@ public class DAO_Master {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
+			request.setAttribute("r", "등록 실패");
 		} finally {
 			DBManager.close(con, pstmt, null);
 		}
@@ -362,4 +363,30 @@ public class DAO_Master {
 		
 		
 	}
+
+		public static void updateReg(HttpServletRequest request) {
+
+			Connection con = null;
+			PreparedStatement pstmt = null;
+			
+			String sql = "update login set l_pw=?, l_name=?, l_phonenumber=?, l_address=?";
+			
+			try {
+				con = DBManager.connect();
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1, request.getParameter("pw"));
+				pstmt.setString(2, request.getParameter("name"));
+				pstmt.setString(3, request.getParameter("phonenumber"));
+				pstmt.setString(4, request.getParameter("address"));
+				if (pstmt.executeUpdate() == 1) {
+					request.setAttribute("result", "회원정보가 정상적으로 수정 되었습니다.");
+				}
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+				request.setAttribute("result", "비정상 접근");
+			}finally {
+				DBManager.close(con, pstmt, null);
+			}
+		}
 }
