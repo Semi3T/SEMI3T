@@ -1,4 +1,4 @@
-package com.sm.qna;
+package com.sm.product;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,23 +7,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.sm.account.AccountDAO;
+import com.sm.master.DAO_Master;
 
-@WebServlet("/QnAC")
-public class QnAC extends HttpServlet {
+@WebServlet("/CommentController")
+public class CommentController extends HttpServlet {
+       
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-		DAO_QnA.getAllqna(request);
-		DAO_QnA.qnaPaging(Integer.parseInt(request.getParameter("p")), request);
 		
-		AccountDAO.loginCheck(request);
-		request.setAttribute("headerPage", "jsp/header.jsp");
-		request.setAttribute("contentPage", "jsp/qna/qna.jsp");
-		request.getRequestDispatcher("index.jsp").forward(request, response);
+		// 화면을 깜빡 하나요?
+		if(request.getParameter("c_content") == null) {
+			// delete 수행
+			System.out.println("ddddd");
+		} else {
+			DAO_Master.updatecomment(request, response);
+		}
+
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 	}
 
 }
