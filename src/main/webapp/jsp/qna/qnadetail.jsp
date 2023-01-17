@@ -42,6 +42,8 @@
 					<td>
 						<input type="button" value="삭제하기" class="btn btn-default" 
 							onclick="location.href='#'"/>
+						<input type="button" value="수정하기" class="btn btn-default" 
+							onclick="location.href='#'"/>
 					</td>
 				</tr>
 		 	</c:forEach>

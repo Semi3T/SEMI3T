@@ -113,7 +113,17 @@ public class DAO_QnA {
 	public static void regQna(HttpServletRequest request) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
-		String sql = "insert into qna values(qna_seq.nextval, ?, ?, sysdate, ?, 'test_id')";
+		HttpSession hs = request.getSession();
+		Account a = (Account)hs.getAttribute("account");
+		
+		String lid = null;
+		if (a != null) {
+			lid = a.getL_id();
+		} else {
+			lid = "비회원";
+		}
+		
+		String sql = "insert into qna values(qna_seq.nextval, ?, ?, sysdate, ?, ?, ?)";
 		
 		try {
 			con = DBManager.connect();
@@ -127,10 +137,13 @@ public class DAO_QnA {
 			String title = mr.getParameter("title");
 			String contents = mr.getParameter("contents");
 			String img = mr.getFilesystemName("img");
+			int pw = Integer.parseInt(mr.getParameter("pw"));
 			
 			pstmt.setString(1, title);
 			pstmt.setString(2, contents);
 			pstmt.setString(3, img);
+			pstmt.setString(4, lid);
+			pstmt.setInt(5, pw);
 			pstmt.executeUpdate();
 			
 		} catch (Exception e) {
