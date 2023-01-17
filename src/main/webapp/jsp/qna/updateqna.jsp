@@ -21,6 +21,7 @@
 				<div class="contentwrapper_content"><textarea name="contents">${q.contents }</textarea></div>
 			</div>
 			<div class="qna_detail_buttonwrapper">
+				비밀번호 : <input id="passinput" name="pw" type="password" pattern="[0-9]*" maxlength="4" placeholder="숫자만 입력가능(4자리)" required="required">
 				<button value="${q.no }" name="no">수정완료</button>
 				<button onclick="history.back(-1)">취소</button>
 			</div>

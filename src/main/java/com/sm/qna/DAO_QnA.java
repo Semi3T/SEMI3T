@@ -89,14 +89,15 @@ public class DAO_QnA {
 	public static void updateQna(HttpServletRequest request) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
-		String sql = "update qna set q_title=?, q_contents=? where q_no=?";
+		String sql = "update qna set q_title=?, q_contents=?, q_pw=? where q_no=?";
 		
 		try {
 			con = DBManager.connect();
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, request.getParameter("title"));
 			pstmt.setString(2, request.getParameter("contents"));
-			pstmt.setString(3, request.getParameter("no"));
+			pstmt.setInt(3, Integer.parseInt(request.getParameter("pw")));
+			pstmt.setString(4, request.getParameter("no"));
 			pstmt.executeUpdate();
 			
 			

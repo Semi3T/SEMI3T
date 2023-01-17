@@ -25,6 +25,7 @@ public class QnaUpdateC extends HttpServlet {
 		DAO_QnA.updateQna(request);
 		
 		DAO_QnA.getQna(request);
+		DAO_QnA.getReply(request);
 		AccountDAO.loginCheck(request);
 		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.setAttribute("contentPage", "jsp/qna/qnadetail.jsp");
