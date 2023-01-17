@@ -41,14 +41,12 @@
 					</td>
 					<td>
 						<input type="button" value="삭제하기" class="btn btn-default" 
-							onclick="location.href='#'"/>
-						<input type="button" value="수정하기" class="btn btn-default" 
-							onclick="location.href='#'"/>
+							onclick="location.href='QnaReplyDeleteC?r_no=${q.r_no}&&no=${q.q_no }'"/>
 					</td>
 				</tr>
 		 	</c:forEach>
 		</table>
-		<form action="QnAC" method="post">
+		<form action="QnaReplyC" method="get">
 			<table id="tblAddComment" class="table table-bordered">
 				<tr>
 					<td><input type="text" name="r_content" id="r_content" class="form-control" required placeholder="내용을 입력하세요. "/></td>

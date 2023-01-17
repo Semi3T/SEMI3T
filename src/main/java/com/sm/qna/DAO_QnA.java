@@ -276,5 +276,25 @@ public class DAO_QnA {
 		}
 	}
 
+	public static void deleteReply(HttpServletRequest request) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		String sql = "delete from qna_reply where r_no=?";
+		
+		try {
+			con = DBManager.connect();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, request.getParameter("r_no"));
+			pstmt.executeUpdate();
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(con, pstmt, null);
+		}
+	}
+
+
 	
 }
