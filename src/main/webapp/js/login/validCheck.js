@@ -6,6 +6,26 @@ function notEquals(input1, input2) {
 
 }
 
+function lessThan(input, length) {
+	return input.value.length < length;
+}
+
+function notContains(input, set) {
+
+
+	for (let i = 0; i < set.length; i++) {
+
+		if (input.value.indexOf(set[i]) != -1) {
+			return false;
+
+		}
+
+	}
+	return true;
+
+
+}
+
 
 function isEmpty(input) {
 	return !input.value;
@@ -26,3 +46,12 @@ function containKR(input) {
 
 	}
 }
+
+
+function isNotNumber(input) {
+	return isNaN(input.value);
+
+}
+
+
+
