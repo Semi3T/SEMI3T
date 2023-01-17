@@ -7,29 +7,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.sm.account.AccountDAO;
-
-@WebServlet("/QnaUpdateC")
-public class QnaUpdateC extends HttpServlet {
+@WebServlet("/QnaReplyDeleteC")
+public class QnaReplyDeleteC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+		DAO_QnA.deleteReply(request);
 		DAO_QnA.getQna(request);
-		
-		AccountDAO.loginCheck(request);
+		DAO_QnA.getReply(request);
 		request.setAttribute("headerPage", "jsp/header.jsp");
-		request.setAttribute("contentPage", "jsp/qna/updateqna.jsp");
+		request.setAttribute("contentPage", "jsp/qna/qnadetail.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("utf-8");
-		DAO_QnA.updateQna(request);
-		
-		DAO_QnA.getQna(request);
-		DAO_QnA.getReply(request);
-		AccountDAO.loginCheck(request);
-		request.setAttribute("headerPage", "jsp/header.jsp");
-		request.setAttribute("contentPage", "jsp/qna/qnadetail.jsp");
-		request.getRequestDispatcher("index.jsp").forward(request, response);
+	
+	
 	}
 
 }
