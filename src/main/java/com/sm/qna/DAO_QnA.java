@@ -87,6 +87,7 @@ public class DAO_QnA {
 	}
 
 	public static void updateQna(HttpServletRequest request) {
+
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		String sql = "update qna set q_title=?, q_contents=?, q_pw=? where q_no=?";
@@ -109,6 +110,25 @@ public class DAO_QnA {
 			
 		}
 		
+	}
+	
+	public static void deleteQna(HttpServletRequest request) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		String sql = "delete from qna where q_no=?";
+		
+		try {
+			con = DBManager.connect();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, request.getParameter("no"));
+			pstmt.executeUpdate();
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(con, pstmt, null);
+		}
 	}
 	
 	public static void regQna(HttpServletRequest request) {
@@ -294,7 +314,26 @@ public class DAO_QnA {
 			DBManager.close(con, pstmt, null);
 		}
 	}
+	
 
+	public static void deleteAllreply(HttpServletRequest request) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		String sql = "delete from qna_reply where q_no=?";
+		
+		try {
+			con = DBManager.connect();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, request.getParameter("no"));
+			pstmt.executeUpdate();
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(con, pstmt, null);
+		}
+	}
 
 	
 }

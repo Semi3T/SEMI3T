@@ -23,7 +23,7 @@
 		</div>
 		<div class="qna_detail_buttonwrapper">
 			<button onclick="location.href='QnaUpdateC?no=${q.no}'">수정</button>
-			<button>삭제</button>
+			<button onclick="location.href='QnaDeleteC?no=${q.no}'">삭제</button>
 		</div>
 	</div>
 	<div>
