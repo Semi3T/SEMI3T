@@ -11,7 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 public class CommentDeleteC extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+		DAO_Master.deletecomment(request);
+		DAO_Master.getdetailproduct(request);
+		DAO_Master.getcomment(request);
+		request.setAttribute("headerPage", "jsp/header.jsp");
+		request.setAttribute("contentPage", "jsp/detail/detailproduct.jsp");
+		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
 	

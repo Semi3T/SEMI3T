@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.apache.taglibs.standard.tag.common.core.SetSupport;
+
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import com.sm.account.Account;
@@ -362,4 +364,27 @@ public class DAO_Master {
 		
 		
 	}
+
+		public static void deletecomment(HttpServletRequest request) {
+			Connection con = null;
+			PreparedStatement pstmt = null;
+			String sql = "delete from comments where c_no=?";
+			try {
+				con = DBManager.connect();
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1, request.getParameter("c_no"));
+				pstmt.executeUpdate();
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				DBManager.close(con, pstmt,null);
+			}
+		
+		}
+
+		public static void updatecomment(HttpServletRequest request) {
+			
+			
+		}
 }
