@@ -5,13 +5,6 @@ pageEncoding="UTF-8"%>
   <head>
     <meta charset="UTF-8" />
     <title>register</title>
-    <script>
-      const hypenTel = (target) => {
-        target.value = target.value
-          .replace(/[^0-9]/g, "")
-          .replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`);
-      };
-    </script>
   </head>
   <body>
     <form
@@ -62,10 +55,9 @@ pageEncoding="UTF-8"%>
             type="text"
             name="phonenumber"
             id="phonenumber"
-            oninput="hypenTel(this)"
             placeholder="핸드폰번호 입력"
             class="reg-data"
-            maxlength="13"
+            maxlength="11"
           />
         </div>
       </div>
