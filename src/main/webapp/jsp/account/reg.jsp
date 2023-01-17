@@ -5,7 +5,6 @@ pageEncoding="UTF-8"%>
   <head>
     <meta charset="UTF-8" />
     <title>register</title>
-    <title>Insert title here</title>
     <script>
       const hypenTel = (target) => {
         target.value = target.value
