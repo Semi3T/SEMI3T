@@ -2,10 +2,11 @@
 
 .qnalist {
 	display: flex;
+	
 }
 
 .qnano {
-	flex: 2;
+	flex: 2;	
 }
 
 .qnatitle {
@@ -15,6 +16,7 @@
 .qnaid {
 	flex: 3;
 }
+
 
 .qna_detail_container {
 	display: flex;
@@ -58,4 +60,12 @@
 .qna_detail_buttonwrapper {
 	display: flex;
 	justify-content: flex-end;
+}
+
+.qna_reply_container {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	padding: 15px;
+	border: 1px solid black;
 }

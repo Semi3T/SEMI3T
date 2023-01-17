@@ -24,8 +24,14 @@ public class RegC extends HttpServlet {
 		
 		AccountDAO.regAccount(request);
 		
-		request.setAttribute("headerPage", "jsp/header.jsp");
-		request.setAttribute("contentPage", "jsp/home.jsp");
+		if (request.getAttribute("r") == null) {
+			request.setAttribute("headerPage", "jsp/header.jsp");
+			request.setAttribute("contentPage", "jsp/account/reg.jsp");
+		}else {
+			request.setAttribute("headerPage", "jsp/header.jsp");
+			request.setAttribute("contentPage", "jsp/account/login.jsp");
+		}
+		
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 

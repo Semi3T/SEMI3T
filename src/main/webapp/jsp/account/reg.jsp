@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<<<<<<< HEAD
 <title>Insert title here</title>
 <script type="text/javascript" src="js/valueCheck.js"></script>
 <script type="text/javascript" src="js/validCheck.js"></script>
@@ -18,6 +19,9 @@ const hypenTel = (target) => {
 	
 </script>
 
+=======
+<title>register</title>
+>>>>>>> 4af725f8ebc7c2c0b2160898aa677afb74c51af2
 </head>
 <body>
 	<form name="Reg" action="RegC" method="post" class="reg-container"

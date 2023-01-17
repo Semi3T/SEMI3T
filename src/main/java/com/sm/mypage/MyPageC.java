@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.sm.account.AccountDAO;
-import com.sm.master.DAO_Master;
 
 @WebServlet("/MyPageC")
 public class MyPageC extends HttpServlet {
@@ -18,12 +17,24 @@ public class MyPageC extends HttpServlet {
 
 		AccountDAO.loginCheck(request);
 
+<<<<<<< HEAD
 
 		request.setAttribute("contentPage", "jsp/account/myPage.jsp");
 
 		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.setAttribute("contentPage", "jsp/myPage/myPage.jsp");
 
+=======
+		if (AccountDAO.loginCheck(request) == true) {
+			request.setAttribute("headerPage", "jsp/header.jsp");
+			request.setAttribute("contentPage", "jsp/myPage/myPage.jsp");
+		}else {
+			request.setAttribute("headerPage", "jsp/header.jsp");
+			request.setAttribute("contentPage", "jsp/account/login.jsp");
+			
+		}
+		
+>>>>>>> 4af725f8ebc7c2c0b2160898aa677afb74c51af2
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 
 	}

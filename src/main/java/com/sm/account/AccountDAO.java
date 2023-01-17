@@ -5,11 +5,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.apache.catalina.connector.Response;
 
 import com.sm.main.DBManager;
 
@@ -138,12 +136,12 @@ public class AccountDAO {
 			System.out.println(gender);
 
 			if (pstmt.executeUpdate() == 1) {
-				System.out.println("-- > 가입 성공");
 				request.setAttribute("r", "가입성공");
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
+			request.setAttribute("r", "가입실패");
 		} finally {
 			DBManager.close(con, pstmt, null);
 
