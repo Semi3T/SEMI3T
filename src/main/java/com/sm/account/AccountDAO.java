@@ -18,7 +18,11 @@ public class AccountDAO {
 		Account a = (Account) hs.getAttribute("account");
 		
 		if (a == null) {
+
+			request.setAttribute("contentPage", "account/login.jsp");
+
 			request.setAttribute("contentPage", "jsp/account/login.jsp");
+
 			return false;
 		} else {
 			request.setAttribute("contentPage", "jsp/home.jsp");
