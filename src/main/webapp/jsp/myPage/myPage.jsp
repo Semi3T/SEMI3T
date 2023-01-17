@@ -38,7 +38,7 @@
 		</div>
 		
 		<div class="myPage-button-box">
-			<button id="mypage-update-button" onclick="location.href='UpdateInfoC'" value="">정보수정</button>
+			<button id="mypage-update-button" onclick="location.href='UpdateInfoC'">정보수정</button>
 			<button id="mypage-delete-button" onclick="DeleteCustomer()">회원탈퇴</button>
 		</div>
 		

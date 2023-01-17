@@ -86,6 +86,8 @@ public class AccountDAO {
 
 		} catch (Exception e) {
 			e.printStackTrace();
+		}finally {
+			DBManager.close(con, pstmt, rs);
 		}
 
 	}

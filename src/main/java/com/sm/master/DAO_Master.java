@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import com.sm.account.Account;
+import com.sm.account.AccountDAO;
 import com.sm.main.DBManager;
 
 public class DAO_Master {
@@ -20,6 +21,7 @@ public class DAO_Master {
 	private static ArrayList<Product> products_sale;
 	private static ArrayList<Product> brand;
 	private static ArrayList<Comment> comments;
+	
 	
 	public static void regproduct(HttpServletRequest request) {
 		Connection con = null;
@@ -368,18 +370,35 @@ public class DAO_Master {
 
 			Connection con = null;
 			PreparedStatement pstmt = null;
+			String sql = "update login set l_pw=?, l_name=?, l_phonenumber=?, l_address=? where l_id=?";
+			Account account = (Account)request.getSession().getAttribute("account");
 			
-			String sql = "update login set l_pw=?, l_name=?, l_phonenumber=?, l_address=?";
+			String pw = request.getParameter("pw");
+			String name = request.getParameter("name");
+			String phonenumber = request.getParameter("phonenumber");
+			String address = request.getParameter("address");
 			
 			try {
 				con = DBManager.connect();
+				request.setCharacterEncoding("utf-8");
 				pstmt = con.prepareStatement(sql);
-				pstmt.setString(1, request.getParameter("pw"));
-				pstmt.setString(2, request.getParameter("name"));
-				pstmt.setString(3, request.getParameter("phonenumber"));
-				pstmt.setString(4, request.getParameter("address"));
+				pstmt.setString(1, pw);
+				pstmt.setString(2, name);
+				pstmt.setString(3, phonenumber);
+				pstmt.setString(4, address);
+				pstmt.setString(5, account.getL_id());
 				if (pstmt.executeUpdate() == 1) {
 					request.setAttribute("result", "회원정보가 정상적으로 수정 되었습니다.");
+					
+					 account.setL_pw(pw);
+					 account.setL_name(name);
+					 account.setL_phonenumber(phonenumber);
+					 account.setL_address(address);
+					 
+					/*
+					 * request.setAttribute("iddd", account.getL_id()); request.setAttribute("pwww",
+					 * pw); AccountDAO.login(request);
+					 */
 				}
 				
 			} catch (Exception e) {
@@ -389,4 +408,6 @@ public class DAO_Master {
 				DBManager.close(con, pstmt, null);
 			}
 		}
+
+		
 }
