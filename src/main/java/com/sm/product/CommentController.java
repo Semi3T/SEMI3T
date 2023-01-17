@@ -1,4 +1,4 @@
-package com.sm.account;
+package com.sm.product;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

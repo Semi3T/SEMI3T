@@ -10,12 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.apache.taglibs.standard.tag.common.core.SetSupport;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import com.sm.account.Account;
-import com.sm.account.AccountDAO;
 import com.sm.main.DBManager;
 
 public class DAO_Master {
@@ -422,10 +420,7 @@ public class DAO_Master {
 			
 			
 		}
-<<<<<<< HEAD
 
-=======
->>>>>>> 6149d69e4b58342da5fff967efb99249c0c57e68
 		public static void updateReg(HttpServletRequest request) {
 
 			Connection con = null;
