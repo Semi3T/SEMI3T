@@ -24,6 +24,7 @@ public class UpdateInfoC extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		AccountDAO.loginCheck(request);
+		DAO_Master.updateReg(request);
 		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.setAttribute("contentPage", "jsp/myPage/myPage.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);

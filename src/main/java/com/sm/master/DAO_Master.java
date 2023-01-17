@@ -13,6 +13,7 @@ import org.apache.taglibs.standard.tag.common.core.SetSupport;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import com.sm.account.Account;
+import com.sm.account.AccountDAO;
 import com.sm.main.DBManager;
 
 public class DAO_Master {
@@ -22,6 +23,7 @@ public class DAO_Master {
 	private static ArrayList<Product> products_sale;
 	private static ArrayList<Product> brand;
 	private static ArrayList<Comment> comments;
+	
 	
 	public static void regproduct(HttpServletRequest request) {
 		Connection con = null;
@@ -74,6 +76,7 @@ public class DAO_Master {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
+			request.setAttribute("r", "등록 실패");
 		} finally {
 			DBManager.close(con, pstmt, null);
 		}
@@ -365,6 +368,7 @@ public class DAO_Master {
 		
 	}
 
+<<<<<<< HEAD
 		public static void deletecomment(HttpServletRequest request) {
 			Connection con = null;
 			PreparedStatement pstmt = null;
@@ -387,4 +391,73 @@ public class DAO_Master {
 			
 			
 		}
+=======
+		public static void updateReg(HttpServletRequest request) {
+
+			Connection con = null;
+			PreparedStatement pstmt = null;
+			String sql = "update login set l_pw=?, l_name=?, l_phonenumber=?, l_address=? where l_id=?";
+			Account account = (Account)request.getSession().getAttribute("account");
+			
+			String pw = request.getParameter("pw");
+			String name = request.getParameter("name");
+			String phonenumber = request.getParameter("phonenumber");
+			String address = request.getParameter("address");
+			
+			try {
+				con = DBManager.connect();
+				request.setCharacterEncoding("utf-8");
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1, pw);
+				pstmt.setString(2, name);
+				pstmt.setString(3, phonenumber);
+				pstmt.setString(4, address);
+				pstmt.setString(5, account.getL_id());
+				if (pstmt.executeUpdate() == 1) {
+					
+					 account.setL_pw(pw);
+					 account.setL_name(name);
+					 account.setL_phonenumber(phonenumber);
+					 account.setL_address(address);
+					 
+					 request.setAttribute("result", "회원정보가 정상적으로 수정 되었습니다.");
+					/*
+					 * request.setAttribute("iddd", account.getL_id()); request.setAttribute("pwww",
+					 * pw); AccountDAO.login(request);
+					 */
+				}
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+				request.setAttribute("result", "비정상 접근");
+			}finally {
+				DBManager.close(con, pstmt, null);
+			}
+		}
+
+		public static void deleteCustomer(HttpServletRequest request) {
+
+			Connection con = null;
+			PreparedStatement pstmt = null;
+			String sql = "delete from login where l_id=?";
+			HttpSession hs = request.getSession();
+			Account a = (Account) hs.getAttribute("account");
+			
+			try {
+				con = DBManager.connect();
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1, a.getL_id());
+				pstmt.executeUpdate();
+				
+				request.setAttribute("result", "회원님의 정보가 정상적으로 삭제 되었습니다.");
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+				request.setAttribute("result", "-비정상 접근- 다시 시도 해주세요.");
+			}DBManager.close(con, pstmt, null);
+			
+		}
+
+		
+>>>>>>> 4745164dc2d08a943f4826fcd22b88d5027b907d
 }

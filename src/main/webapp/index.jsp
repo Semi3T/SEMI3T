@@ -21,6 +21,7 @@
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
 
+<link rel="stylesheet" href="css/myPage/updateInfo.css">
 <link rel="stylesheet" href="css/detail/detail.css">
 <link rel="stylesheet" href="css/myPage/myPage.css">
 <link rel="stylesheet" href="css/index/footer.css">
@@ -49,6 +50,7 @@
 	</div>
 
 <script type="text/javascript" src="js/login/updownbtn.js"></script>
+<script type="text/javascript" src="js/login/myPage.js"></script>
 <script type="text/javascript" src="js/detail/detail.js"></script>
 <script type="text/javascript" src="js/login/valueCheck.js"></script>
 <script type="text/javascript" src="js/login/validCheck.js"></script>
