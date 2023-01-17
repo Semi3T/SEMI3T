@@ -286,7 +286,7 @@ $(function() {
 							class="btn btn-default" onclick="modify_comment2('${c.c_no}')" />
 						</td>
 						<td><input id="button2-${c.c_no }" type="button" value="수정하기"
-							class="btn btn-default" onclick="modify_comment('${c.c_no}')">
+							class="btn btn-default" onclick="modify_comment('${c.c_no}')" />
 						</td>
 					</c:if>
 				</tr>
