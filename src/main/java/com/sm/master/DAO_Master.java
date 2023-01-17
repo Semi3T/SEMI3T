@@ -1,11 +1,13 @@
 package com.sm.master;
 
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.taglibs.standard.tag.common.core.SetSupport;
@@ -386,11 +388,44 @@ public class DAO_Master {
 		
 		}
 
-		public static void updatecomment(HttpServletRequest request) {
+		public static void updatecomment(HttpServletRequest request, HttpServletResponse response) {
+			int c_no = Integer.parseInt(request.getParameter("c_no"));
+			String c_content = request.getParameter("c_content");
+			
+			
+			Connection con = null;
+			PreparedStatement pstmt = null;
+			
+			try {
+				con = DBManager.connect();
+				
+				String sql = "update comments set c_content = ? where c_no = ?";
+				
+				pstmt = con.prepareStatement(sql);
+				
+				pstmt.setInt(2, c_no);
+				pstmt.setString(1, c_content);
+				
+				response.setContentType("text/html;charset=utf-8");
+				PrintWriter out = response.getWriter();
+				int num = pstmt.executeUpdate();
+				
+				System.out.println(num);
+				if(pstmt.executeUpdate() == 1) {
+					out.write("1");
+				} else {
+					out.write("0");
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			} 
 			
 			
 		}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6149d69e4b58342da5fff967efb99249c0c57e68
 		public static void updateReg(HttpServletRequest request) {
 
 			Connection con = null;
