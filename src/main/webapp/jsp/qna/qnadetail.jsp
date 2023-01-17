@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,6 +26,35 @@
 			<button>삭제</button>
 		</div>
 	</div>
-	<jsp:include page="qnareply.jsp"></jsp:include>
+	<div>
+		<table id="tblListComment" class="table table-bordered">
+			<c:if test="${ comment.size() == 0 }">
+				<tr>
+					<td colspan="2">댓글이 없습니다.</td>
+				</tr>
+			</c:if>
+			<c:forEach items="${ comment }" var="c" > 
+				<tr>
+					<td>
+						 ${ c.c_content }
+						 <span>${ c.c_name }. ${ c.c_date }</span>
+					</td>
+					<td>
+						<input type="button" value="삭제하기" class="btn btn-default" 
+							onclick="location.href='#'"/>
+					</td>
+				</tr>
+		 	</c:forEach>
+		</table>
+		<form action="" method="post">
+			<table id="tblAddComment" class="table table-bordered">
+				<tr>
+					<td><input type="text" name="c_content" id="c_content" class="form-control" required placeholder="댓글을 작성하세요. "/></td>
+					<td><input type="submit" value="등록" class="btn btn-primary" /></td>
+				</tr>
+			</table>	
+			<input type="hidden" name="p_no" value="${product.p_no }">
+		</form>
+	</div>
 </body>
 </html>
