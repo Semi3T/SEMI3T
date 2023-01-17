@@ -368,7 +368,6 @@ public class DAO_Master {
 		
 	}
 
-<<<<<<< HEAD
 		public static void deletecomment(HttpServletRequest request) {
 			Connection con = null;
 			PreparedStatement pstmt = null;
@@ -391,7 +390,7 @@ public class DAO_Master {
 			
 			
 		}
-=======
+
 		public static void updateReg(HttpServletRequest request) {
 
 			Connection con = null;
@@ -459,5 +458,5 @@ public class DAO_Master {
 		}
 
 		
->>>>>>> 4745164dc2d08a943f4826fcd22b88d5027b907d
+
 }
