@@ -18,11 +18,11 @@
 							</tr>
 							<tr>
 								<th class="myPage-th" scope="col">PW</th>
-								<td class="mtPage-content-td"><input id="uc-pw" name="pw" value="${sessionScope.account.l_pw }"></td>
+								<td class="mtPage-content-td"><input id="uc-pw" placeholder="대,소문자,특수문자(!@#$%=-)포함" name="pw" value="${sessionScope.account.l_pw }"></td>
 							</tr>
 							<tr>
 								<th class="myPage-th" scope="col">Name</th>
-								<td class="mtPage-content-td"><input id="uc-name" name="name" value="${sessionScope.account.l_name }"></td>
+								<td class="mtPage-content-td"><input id="uc-name" placeholder="한글만 입력 할 수 있습니다" name="name" value="${sessionScope.account.l_name }"></td>
 							</tr>
 							<tr>
 								<th class="myPage-th" scope="col">PhoneNumber</th>

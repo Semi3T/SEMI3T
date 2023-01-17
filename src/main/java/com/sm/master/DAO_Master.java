@@ -388,13 +388,13 @@ public class DAO_Master {
 				pstmt.setString(4, address);
 				pstmt.setString(5, account.getL_id());
 				if (pstmt.executeUpdate() == 1) {
-					request.setAttribute("result", "회원정보가 정상적으로 수정 되었습니다.");
 					
 					 account.setL_pw(pw);
 					 account.setL_name(name);
 					 account.setL_phonenumber(phonenumber);
 					 account.setL_address(address);
 					 
+					 request.setAttribute("result", "회원정보가 정상적으로 수정 되었습니다.");
 					/*
 					 * request.setAttribute("iddd", account.getL_id()); request.setAttribute("pwww",
 					 * pw); AccountDAO.login(request);
@@ -407,6 +407,29 @@ public class DAO_Master {
 			}finally {
 				DBManager.close(con, pstmt, null);
 			}
+		}
+
+		public static void deleteCustomer(HttpServletRequest request) {
+
+			Connection con = null;
+			PreparedStatement pstmt = null;
+			String sql = "delete from login where l_id=?";
+			HttpSession hs = request.getSession();
+			Account a = (Account) hs.getAttribute("account");
+			
+			try {
+				con = DBManager.connect();
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1, a.getL_id());
+				pstmt.executeUpdate();
+				
+				request.setAttribute("result", "회원님의 정보가 정상적으로 삭제 되었습니다.");
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+				request.setAttribute("result", "-비정상 접근- 다시 시도 해주세요.");
+			}DBManager.close(con, pstmt, null);
+			
 		}
 
 		

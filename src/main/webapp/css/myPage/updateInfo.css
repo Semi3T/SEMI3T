@@ -60,3 +60,23 @@ th{
     background: #00388c;
     border-radius: 5px;
 }
+#myPage-table-box input{
+	height: 55px; 
+}
+#myPage-table-box input::placeholder {
+    font-weight: bold;
+    font-size: 10pt;
+}
+
+.delete-ok-box{
+	width: 1130px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 300px;
+}
+.delete-result{
+	font-size: 30px;
+	font-weight: bolder;
+}
