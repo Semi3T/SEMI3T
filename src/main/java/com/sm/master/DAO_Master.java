@@ -422,6 +422,10 @@ public class DAO_Master {
 			
 			
 		}
+<<<<<<< HEAD
+
+=======
+>>>>>>> 6149d69e4b58342da5fff967efb99249c0c57e68
 		public static void updateReg(HttpServletRequest request) {
 
 			Connection con = null;
