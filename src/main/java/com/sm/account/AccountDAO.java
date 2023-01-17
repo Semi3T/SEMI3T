@@ -72,6 +72,8 @@ public class AccountDAO {
 					HttpSession hs = request.getSession();
 					hs.setAttribute("account", a);
 					hs.setMaxInactiveInterval(30);
+					
+					
 
 				} else {
 
@@ -101,6 +103,9 @@ public class AccountDAO {
 		loginCheck(request);
 
 	}
+	
+	
+	
 
 	public static void regAccount(HttpServletRequest request) {
 
@@ -149,6 +154,31 @@ public class AccountDAO {
 
 		}
 
+	}
+
+	public static void findId(HttpServletRequest request) {
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		String sql = "select l_id +" + "from login" + "where l_name = ? and " + "l_phonenumber = ?";
+		
+		try {
+			con = DBManager.connect();
+			pstmt = con.prepareStatement(sql);
+			String name = request.getParameter("login_name");
+			String phonenumber = request.getParameter("phonenumber");
+			pstmt.setString(1, name);
+			pstmt.setString(2, phonenumber);
+			
+			ResultSet rs = pstmt.executeQuery();
+			
+			 if (rs.next()) {
+				
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }
