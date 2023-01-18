@@ -1,15 +1,11 @@
 function reg_Check() {
-
+	
 	let id = document.Reg.id;
 	let pw = document.Reg.pw;
 	let repw = document.Reg.repw;
 	let l_name = document.Reg.login_name;
 	let phonenumber = document.Reg.phonenumber;
 	let address = document.Reg.address;
-
-
-
-	
 
 
 	if (isEmpty(id)) {
