@@ -185,4 +185,44 @@ public class AccountDAO {
 			
 		request.setAttribute("idresult", id);
 	}
+
+	public static void findPw(HttpServletRequest request) {
+		String name = request.getParameter("name");
+		String phonenumber = request.getParameter("phonenumber");
+		String id = request.getParameter("id");
+		String pw = null;
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+			
+		
+		try {
+			String sql = "select l_pw from login where l_id=? and l_name=? and l_phonenumber=?";
+			con = DBManager.connect();
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setString(1, id);
+			pstmt.setString(2, name);
+			pstmt.setString(3, phonenumber);
+			rs = pstmt.executeQuery();
+
+			
+			if (rs.next()) {
+	
+				pw = rs.getString("l_pw");
+				
+
+			}
+
+			System.out.println(pw);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+			
+		request.setAttribute("pwresult", pw);
+	}
+		
+	
 }

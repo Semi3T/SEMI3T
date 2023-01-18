@@ -25,13 +25,23 @@ public class IdfindC extends HttpServlet {
 			throws ServletException, IOException {
 
 		request.setCharacterEncoding("utf-8");
-		System.out.println(request.getParameter("name"));
-		System.out.println(request.getParameter("phonenumber"));
 		AccountDAO.findId(request);
+		
+		if (request.getAttribute("idresult") != null) {
 
-		request.setAttribute("headerPage", "jsp/header.jsp");
-		request.setAttribute("contentPage", "jsp/account/findidresult.jsp");
-		request.getRequestDispatcher("index.jsp").forward(request, response);
+			request.setAttribute("headerPage", "jsp/header.jsp");
+			request.setAttribute("contentPage", "jsp/account/findidresult.jsp");
+			request.getRequestDispatcher("index.jsp").forward(request, response);
+
+		} else {
+
+			request.setAttribute("headerPage", "jsp/header.jsp");
+			request.setAttribute("contentPage", "jsp/account/idfind.jsp");
+			request.getRequestDispatcher("index.jsp").forward(request, response);
+
+		}
+
+		
 		
 	
 		

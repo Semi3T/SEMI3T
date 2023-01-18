@@ -9,33 +9,30 @@
 <body>
 
 
-	Test(pw)
 
-	<div class="card-body">
+	<form name="idfindscreen" method="POST" action="PwfindC">
+		<div class="find-page">
+			<div class="find-form">
 
-		<form name="pwfindscreen" action="findPw_result.jsp"
-			class="form-signin" method="POST">
-
-			<!-- 1. 입력란에 내용들을 입력하고, '비밀번호 찾기'라는 버튼 클릭하면 해당 내용들이 'pw_search()'라는 함수로
-
-이동하게 됨 -->
-
-			<!-- 2. 'pw_search()' 함수에 의해 과정처리하고 'findPw_result.jsp' 페이지로 이동 (일치할 경우) -->
-
-			<input type="text" name="id" id="id" class="form-control"
-				placeholder="아이디" required><br> <input type="text"
-				name="name" id="name" class="form-control" placeholder="이름" required><BR>
-
-			<input type="email" name="email" id="email" class="form-control"
-				placeholder="이메일" required><br>
-
-		
-			<button id="btn-Yes" class="btn btn-lg btn-primary btn-block"
-				type="submit" onClick="pw_search()">비밀번호 찾기</button>
-
-		</form>
-
-	</div>
+				<section class="form-search">
+					<div class="find-id">
+						<label>아이디</label> <input type="text" name="id" class="btn-id"
+							placeholder="아이디"> <br>
+					</div>
+					<div class="find-name">
+						<label>이름</label> <input type="text" name="name" class="btn-name"
+							placeholder="등록한 이름"> <br>
+					</div>
+					<div class="find-phone">
+						<label>전화번호</label> <input type="text" name="phonenumber"
+							class="btn-phone" placeholder="휴대폰번호를 '-'없이 입력">
+					</div>
+					<br>
+				</section>
+				<button>찾기</button>
+			</div>
+		</div>
+	</form>
 
 </body>
 </html>

@@ -14,5 +14,7 @@
 
 찾으신 아이디 값은 ${ requestScope.idresult} 입니다.
 
+<button type="button" class="loginBtn"	onclick="location.href='LoginC'">로그인화면으로</button>
+
 </body>
 </html>
