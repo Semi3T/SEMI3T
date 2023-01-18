@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,35 +9,33 @@
 <body>
 
 
-Test(pw)
+	Test(pw)
 
-<form name="pwfindscreen" method = "POST">
-			<div class = "search-title">
-				<h3>휴대폰 본인확인</h3>
-			</div>
-	<section class = "form-search">
-	<div class = "find-id">
-				<label>ID</label>
-				<input type="text" name="id"  placeholder = "아이디">
-			<br>
-			</div>
-			<div class = "find-name">
-				<label>이름</label>
-				<input type="text" name="login_name"  placeholder = "등록한 이름">
-			<br>
-			</div>
-			<div class = "find-phone">
-				<label>번호</label>
-				<input type="text" name="phonenumber"  placeholder = "휴대폰번호를 '-'없이 입력">
-			</div>
-			<br>
-	</section>
-	
-	<div class ="btnSearch">
-		<input type="button" name="enter" value="찾기"  onClick="id_search()">
-		<input type="button" name="cancle" value="취소" onClick="history.back()">
- 	</div>
-</form>
+	<div class="card-body">
+
+		<form name="pwfindscreen" action="findPw_result.jsp"
+			class="form-signin" method="POST">
+
+			<!-- 1. 입력란에 내용들을 입력하고, '비밀번호 찾기'라는 버튼 클릭하면 해당 내용들이 'pw_search()'라는 함수로
+
+이동하게 됨 -->
+
+			<!-- 2. 'pw_search()' 함수에 의해 과정처리하고 'findPw_result.jsp' 페이지로 이동 (일치할 경우) -->
+
+			<input type="text" name="id" id="id" class="form-control"
+				placeholder="아이디" required><br> <input type="text"
+				name="name" id="name" class="form-control" placeholder="이름" required><BR>
+
+			<input type="email" name="email" id="email" class="form-control"
+				placeholder="이메일" required><br>
+
+		
+			<button id="btn-Yes" class="btn btn-lg btn-primary btn-block"
+				type="submit" onClick="pw_search()">비밀번호 찾기</button>
+
+		</form>
+
+	</div>
 
 </body>
 </html>
