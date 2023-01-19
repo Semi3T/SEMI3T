@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="css/account/login.css">
 <link rel="stylesheet" href="css/account/reg.css">
 <link rel="stylesheet" href="css/account/myPage.css">
+<link rel="stylesheet" href="css/buy/buy.css">
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
 	rel="stylesheet"

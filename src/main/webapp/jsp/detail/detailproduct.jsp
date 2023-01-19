@@ -209,6 +209,7 @@ $(function() {
 <body>
 
 
+			<form action="buyPageC">
 	<div class="detail_area">
 
 		<div class="detail_img">
@@ -247,15 +248,13 @@ $(function() {
 				</div>
 			</div>
 
-			<form action="#">
 				<div class="myPage-button-box">
-					<button>장바구니</button>
 					<button>구매하기</button>
 				</div>
-			</form>
+	</div>
 
 		</div>
-	</div>
+			</form>
 	<hr>
 
 	<div>
