@@ -4,10 +4,10 @@ import java.sql.Connection;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-
 
 import com.sm.main.DBManager;
 
@@ -16,7 +16,7 @@ public class AccountDAO {
 	public static boolean loginCheck(HttpServletRequest request) {
 		HttpSession hs = request.getSession();
 		Account a = (Account) hs.getAttribute("account");
-		
+
 		if (a == null) {
 
 			request.setAttribute("contentPage", "account/login.jsp");
@@ -72,8 +72,6 @@ public class AccountDAO {
 					HttpSession hs = request.getSession();
 					hs.setAttribute("account", a);
 					hs.setMaxInactiveInterval(60 * 10);
-					
-					
 
 				} else {
 
@@ -88,7 +86,7 @@ public class AccountDAO {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
+		} finally {
 			DBManager.close(con, pstmt, rs);
 		}
 
@@ -103,9 +101,6 @@ public class AccountDAO {
 		loginCheck(request);
 
 	}
-	
-	
-	
 
 	public static void regAccount(HttpServletRequest request) {
 
@@ -157,28 +152,77 @@ public class AccountDAO {
 	}
 
 	public static void findId(HttpServletRequest request) {
-		
+		String name = request.getParameter("name");
+		String phonenumber = request.getParameter("phonenumber");
+		String id = null;
 		Connection con = null;
 		PreparedStatement pstmt = null;
-		String sql = "select l_id +" + "from login" + "where l_name = ? and " + "l_phonenumber = ?";
+		ResultSet rs = null;
 		
 		try {
+			String sql = "select l_id from login where l_name=? and l_phonenumber=?";
 			con = DBManager.connect();
 			pstmt = con.prepareStatement(sql);
-			String name = request.getParameter("login_name");
-			String phonenumber = request.getParameter("phonenumber");
+			
+
 			pstmt.setString(1, name);
 			pstmt.setString(2, phonenumber);
+			rs = pstmt.executeQuery();
+
 			
-			ResultSet rs = pstmt.executeQuery();
-			
-			 if (rs.next()) {
+			if (rs.next()) {
+	
+				id = rs.getString("l_id");
 				
+
 			}
+
+			System.out.println(id);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+			
+		request.setAttribute("idresult", id);
 	}
 
+	public static void findPw(HttpServletRequest request) {
+		String name = request.getParameter("name");
+		String phonenumber = request.getParameter("phonenumber");
+		String id = request.getParameter("id");
+		String pw = null;
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+			
+		
+		try {
+			String sql = "select l_pw from login where l_id=? and l_name=? and l_phonenumber=?";
+			con = DBManager.connect();
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setString(1, id);
+			pstmt.setString(2, name);
+			pstmt.setString(3, phonenumber);
+			rs = pstmt.executeQuery();
+
+			
+			if (rs.next()) {
+	
+				pw = rs.getString("l_pw");
+				
+
+			}
+
+			System.out.println(pw);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+			
+		request.setAttribute("pwresult", pw);
+	}
+		
+	
 }
