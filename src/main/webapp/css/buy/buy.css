@@ -13,16 +13,41 @@
     box-sizing: border-box;
     border-radius: 8px;
     border: 1px solid #e0e0e0;
+    width: 100%;
+}
+
+.buy-check-title-box{
+	display: flex;
+}
+
+.buy-check-title-box > img{
+	width: 40%;
 }
 
 .customer-box{
 	display: flex;
 }
 
+.customer-label-box{
+ 	width: 96px;	
+}
+
+.customer-input-box{
+ 	width: 96px;	
+}
+
+.customer-input-box input{
+	width: 300px;
+	height: 50px;
+	font-size: 20pt;
+}
+
+
 .buy-check-box{
 	border: 1px solid #333;
     border-radius: 8px;
     padding: 30px;
+    width: 100%;
 }
 .buy-brand-box{
 	display: flex;
@@ -32,6 +57,11 @@
 	display: flex;
 	width: 200px;
 }
-.buy-check-info-box{
-	display: flex;
+
+.buy-check{
+	display: flex;	
+}
+
+.buy-check-name{
+	width: 50%;	
 }
