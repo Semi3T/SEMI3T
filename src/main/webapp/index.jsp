@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="css/account/reg.css">
 <link rel="stylesheet" href="css/account/myPage.css">
 <link rel="stylesheet" href="css/account/find.css">
+<link rel="stylesheet" href="css/account/findresult.css">
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -59,6 +60,7 @@
 <script type="text/javascript" src="js/detail/detail.js"></script>
 <script type="text/javascript" src="js/login/valueCheck.js"></script>
 <script type="text/javascript" src="js/login/validCheck.js"></script>
+<script type="text/javascript" src="js/login/find.js"></script>
 
 </body>
 </html>

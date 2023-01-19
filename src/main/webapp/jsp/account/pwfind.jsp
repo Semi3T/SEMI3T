@@ -10,10 +10,10 @@
 
 
 
-	<form name="idfindscreen" method="POST" action="PwfindC">
+	<form name="findscreen" method="POST" action="PwfindC" onsubmit="return pw_search()">
 		<div class="find-page">
 			<div class="find-form">
-
+<div class = "find-pagetitle">비밀번호 찾기</div>
 				<section class="form-search">
 					<div class="find-id">
 						<label>아이디</label> <input type="text" name="id" class="btn-id"

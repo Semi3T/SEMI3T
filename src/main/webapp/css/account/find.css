@@ -28,6 +28,7 @@
 	text-align: center;
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0
 		rgba(0, 0, 0, 0.24);
+		font-family: 'Pretendard-Regular';
 }
 
 .find-form input {
@@ -46,7 +47,7 @@
 	font-family: "Roboto", sans-serif;
 	text-transform: uppercase;
 	outline: 0;
-	background: #4CAF50;
+	background: #0080FF;
 	width: 100%;
 	border: 0;
 	padding: 15px;
@@ -59,7 +60,7 @@
 
 .find-form button:hover, .find-form button:active, .find-form button:focus
 	{
-	background: #43A047;
+	background: #0080FF;
 }
 
 .find-form .message {
@@ -69,11 +70,18 @@
 }
 
 .find-form .message a {
-	color: #4CAF50;
+	color: #0080FF;
 	text-decoration: none;
 }
 
 .find-form .register-form {
 	display: none;
+}
+
+.find-pagetitle {
+	font-size:30px;
+	 position: relative;
+        top: -30px;
+	
 }
 
