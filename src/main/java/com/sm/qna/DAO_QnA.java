@@ -262,7 +262,6 @@ public class DAO_QnA {
 		}
 	}
 	
-
 	public static void getReply(HttpServletRequest request) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -315,7 +314,6 @@ public class DAO_QnA {
 		}
 	}
 	
-
 	public static void deleteAllreply(HttpServletRequest request) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
