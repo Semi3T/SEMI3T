@@ -116,7 +116,6 @@
 
 .qnaconfirm_container {
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	width: 360px;
@@ -126,7 +125,7 @@
 }
 
 .qnaconfirm_wrapper {
-	margin:auto 10% auto 10%;
+	margin:auto 10% 50px 10%;
 }
 
 .qnaconfirm_wrapper Strong {
@@ -143,4 +142,9 @@
     padding: 15px;
     box-sizing: border-box;
     font-size: 14px;
+}
+
+.pschk_btn {
+	display: flex;
+	justify-content: flex-end;
 }
