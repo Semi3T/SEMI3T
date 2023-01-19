@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,35 +9,30 @@
 <body>
 
 
-Test(pw)
 
-<form name="pwfindscreen" method = "POST">
-			<div class = "search-title">
-				<h3>휴대폰 본인확인</h3>
+	<form name="findscreen" method="POST" action="PwfindC" onsubmit="return pw_search()">
+		<div class="find-page">
+			<div class="find-form">
+<div class = "find-pagetitle">비밀번호 찾기</div>
+				<section class="form-search">
+					<div class="find-id">
+						<label>아이디</label> <input type="text" name="id" class="btn-id"
+							placeholder="아이디"> <br>
+					</div>
+					<div class="find-name">
+						<label>이름</label> <input type="text" name="name" class="btn-name"
+							placeholder="등록한 이름"> <br>
+					</div>
+					<div class="find-phone">
+						<label>전화번호</label> <input type="text" name="phonenumber"
+							class="btn-phone" placeholder="휴대폰번호를 '-'없이 입력">
+					</div>
+					<br>
+				</section>
+				<button>찾기</button>
 			</div>
-	<section class = "form-search">
-	<div class = "find-id">
-				<label>ID</label>
-				<input type="text" name="id"  placeholder = "아이디">
-			<br>
-			</div>
-			<div class = "find-name">
-				<label>이름</label>
-				<input type="text" name="login_name"  placeholder = "등록한 이름">
-			<br>
-			</div>
-			<div class = "find-phone">
-				<label>번호</label>
-				<input type="text" name="phonenumber"  placeholder = "휴대폰번호를 '-'없이 입력">
-			</div>
-			<br>
-	</section>
-	
-	<div class ="btnSearch">
-		<input type="button" name="enter" value="찾기"  onClick="id_search()">
-		<input type="button" name="cancle" value="취소" onClick="history.back()">
- 	</div>
-</form>
+		</div>
+	</form>
 
 </body>
 </html>
