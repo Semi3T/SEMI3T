@@ -8,7 +8,6 @@
 </head>
 <body>
 
-	Test(ID)
 	<form name="idfindscreen" method="POST" action="IdfindC">
 		<div class = "find-page">
 			<div class="find-form">
