@@ -5,6 +5,9 @@ pageEncoding="UTF-8"%>
   <head>
     <meta charset="UTF-8" />
     <title>register</title>
+    
+    
+    
   </head>
   <body>
     <form
@@ -64,7 +67,7 @@ pageEncoding="UTF-8"%>
       <div class="reg-items">
         <div class="reg-item1">생년월일</div>
         <div class="reg-item2">
-          <input type="date" name="birthday" class="reg-data" min="1920-01-01" />
+          <input type="date" name="birthday" class="reg-data" min="1920-01-01" max="9999-12-31" />
         </div>
       </div>
       <div class="reg-items">

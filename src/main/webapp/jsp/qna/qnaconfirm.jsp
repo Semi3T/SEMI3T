@@ -8,16 +8,16 @@
 </head>
 <body>
 	<div class="qnaconfirm_container">
-		<div class="qnaconfirm_wrapper">
-			<form action="QnaPassckC" method="post">
+		<form action="QnaPassckC" method="post">
+			<div class="qnaconfirm_wrapper">
 					<Strong>비밀번호 입력</Strong>
 					<input id="passinput" name="pw" type="password" pattern="[0-9]*" maxlength="4" placeholder="숫자만 입력가능(4자리)" required="required">
-					<div style="display: flex; justify-content: flex-end; padding-bottom: 15px;">
+					<div class="pschk_btn">
 					<button class="btn btn-primary"name="no" value="${param.no }">확인</button>
 					</div>
-			</form>
-		</div>
+			</div>
 					<div style="text-align: center;">${invalid }</div>
+		</form>
 	</div>
 </body>
 </html>
