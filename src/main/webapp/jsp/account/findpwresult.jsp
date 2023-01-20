@@ -15,7 +15,7 @@
 
 		<div>
 			찾으신 비밀번호 값은
-			<div class="result-font">${fn:substring(requestScope.pwresult,0,fn:length(requestScope.pwresult)-4) }****</div>
+			<div class="result-font"><div class="result-font">${ requestScope.pwresult}</div></div>
 			입니다.
 		</div>
 
