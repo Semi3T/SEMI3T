@@ -29,41 +29,10 @@
 				</div>
 			</div>
 			
-			<div class="buy-check-box">
-				<div class="buy-check-title-box">
-					<img src="img/brand/arius.png">
-					<div>아리우스 00 포션</div>
-				</div>
-				<hr>
-				<div class="buy-check-productprice-box">
-					<div class="buy-check">
-						<div class="buy-check-name">제품 수량</div>
-						<div class="buy-check-content">? 개</div>
-					</div>
-					<div class="buy-check">
-						<div class="buy-check-name">가격</div>
-						<div class="buy-check-content">+ 0000 원</div>
-					</div>
-					<div class="buy-check">
-						<div class="buy-check-name">할인 금액</div>
-						<div class="buy-check-content">- 0000 원</div>
-					</div>
-					<div class="buy-check">
-						<div class="buy-check-name">배송비</div>
-						<div class="buy-check-content">+ 3000 원</div>
-					</div>
-				</div>
-				<hr>
-				<div class="buy-check">
-					<div class="buy-check-name">총 결제 금액</div>
-					<div class="buy-check-content">0000 원</div>
-				</div>
 				<div>
-					<button>결제</button>
+					<button>결제하기</button>
 				</div>
 			</div>		
-		
-		</div>
 	</form>
 </body>
 </html>
