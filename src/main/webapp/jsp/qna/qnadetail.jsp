@@ -35,7 +35,7 @@
 			</c:if>
 			<c:forEach items="${qnareply }" var="q" > 
 				<tr>
-					<td>
+					<td style="display: flex; justify-content: space-between;">
 						 ${q.r_content }
 						 <span>${ q.r_name }. ${ q.r_date }</span>
 					</td>

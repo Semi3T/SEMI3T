@@ -60,50 +60,6 @@
   text-align: center;
 }
 
-.qna_detail_container {
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
-  border: 1px solid black;
-}
-
-.qna_detail_titlewrapper {
-  display: flex;
-  align-items: center;
-}
-
-.titlewrapper_no {
-  display: inline-block;
-  width: 43px;
-  height: 43px;
-  line-height: 43px;
-  text-align: center;
-}
-
-.titlewrapper_title {
-  display: inline-block;
-  font-size: 24pt;
-  font-weight: bold;
-  height: 43px;
-  line-height: 43px;
-  text-align: center;
-}
-
-.qna_detail_accountinfo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.contentwrapper_content {
-  min-height: 500px;
-}
-
-.qna_detail_buttonwrapper {
-  display: flex;
-  justify-content: flex-end;
-}
-
 .qna_reply_container {
   margin-top: 30px;
   display: flex;
@@ -147,4 +103,89 @@
 .pschk_btn {
 	display: flex;
 	justify-content: flex-end;
+}
+
+/* qnadetail */
+
+.qna_detail_container {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border: 1px solid black;
+}
+
+.qna_detail_titlewrapper {
+  display: flex;
+  align-items: center;
+}
+
+.qna_detail_accountinfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contentwrapper_content {
+  min-height: 500px;
+}
+
+.qna_detail_buttonwrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.titlewrapper_no {
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+  line-height: 43px;
+  text-align: center;
+}
+
+.titlewrapper_title {
+  display: inline-block;
+  font-size: 24pt;
+  font-weight: bold;
+  height: 43px;
+  line-height: 43px;
+  text-align: center;
+}
+
+#tblListComment td {
+	position: relative;
+	left: 0;
+	top: 0;
+}
+
+#tblListComment td span {
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+	color: #AAA;
+	font-size: 11px;
+}
+
+#tblAddCommnet, #tblListComment {
+	width: 700px;
+	margin: 15px auto;
+}
+
+#tblAddComment {
+	margin-top: 30px;
+}
+
+#tblAddComment td:nth-child(1) {
+	width: 600px;
+}
+
+#tblAddComment td:nth-child(2) {
+	width: 100px;
+}
+
+#tblListComment td:nth-child(1) {
+	width: 600px;
+}
+
+#tblListComment td:nth-child(2) {
+	width: 100px;
 }
