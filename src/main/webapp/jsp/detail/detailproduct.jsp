@@ -157,7 +157,7 @@ $(function() {
 			}
 		}
 		
-		
+	/* 	
 		function createComment() {
 			//comment-create-input
 			console.log("클릭");
@@ -173,7 +173,7 @@ $(function() {
 				alert("5글자 이상 입력해주세요");
 				$('#comment-create-input').focus();
 				return false;
-			} */
+			} 
 			
 			// form 태그 없애기 
 			// why? 비동기 하려면 onclick 수행 해야함.(ajax)
@@ -203,8 +203,8 @@ $(function() {
 			}).done(function(data) {
 				console.log(data);
 			})
-		});
-})
+		}); */
+});
 </script>
 <body>
 
@@ -286,7 +286,7 @@ $(function() {
 							class="btn btn-default" onclick="modify_comment2('${c.c_no}')" />
 						</td>
 						<td><input id="button2-${c.c_no }" type="button" value="수정하기"
-							class="btn btn-default" onclick="modify_comment('${c.c_no}')">
+							class="btn btn-default" onclick="modify_comment('${c.c_no}')"/>
 						</td>
 					</c:if>
 				</tr>
@@ -308,7 +308,7 @@ $(function() {
 				</form>
 			</c:when>
 			<c:otherwise>
-				<%-- <form action="CommentController" method="post">
+				<form action="DetailC" method="post">
 					<table id="tblAddComment" class="table table-bordered">
 						<tr>
 							<td><input type="text" name="c_content" id="c_content"
@@ -320,21 +320,8 @@ $(function() {
 					</table>
 					<input type="hidden" name="user_id" value="${sessionScope.account.l_id }">
 					<input type="hidden" name="p_no" value="${ product.p_no}">
-				</form> --%>
+				</form> 
 				
-					<table id="tblAddComment" class="table table-bordered">
-						<tr>
-							<td><input type="text" name="c_content" id="c_content"
-								class="form-control" required placeholder="댓글을 작성하세요. " /></td>
-							<td>
-								<input value="댓글쓰기" 
-								id="comment-create-input"
-								class="btn btn-primary" />
-							</td>
-						</tr>
-					</table>
-					<input type="hidden" id="create-comment-id" name="user_id" value="${sessionScope.account.l_id }">
-					<input type="hidden" id="create-comment-p_no" name="p_no" value="${ product.p_no}">
 			</c:otherwise>
 		</c:choose>
 	</div>
