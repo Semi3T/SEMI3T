@@ -10,20 +10,20 @@
 <body>
 	<div class="qna_detail_container">
 		<div class="qna_detail_titlewrapper">
-			<div class="titlewrapper_no">${q.no }</div>
-			<div class="titlewrapper_title">${q.title }</div>
+			<Strong>${q.title }</Strong>
 		</div>
-		<div class="qna_detail_accountinfo">
-			<div class="contentinfo_id">${q.id }</div>
-			<div class="contentinfo_date">${q.date }</div>
+		<div class="qna_detail_info">
+			<div class="qna_contentinfo"><Strong>번호</Strong>${q.no }</div>
+			<div class="qna_contentinfo"><Strong>작성자</Strong>${q.id }</div>
+			<div class="qna_contentinfo_date"><Strong>작성일</Strong>${q.date }</div>
 		</div>
 		<div class="qna_detail_contentwrapper">
 			<img src="jsp/qna/imgFolder/${q.img }">
 			<div class="contentwrapper_content">${q.contents }</div>
 		</div>
 		<div class="qna_detail_buttonwrapper">
-			<button onclick="location.href='QnaUpdateC?no=${q.no}'">수정</button>
-			<button onclick="location.href='QnaDeleteC?no=${q.no}'">삭제</button>
+			<button class="btn btn-primary" onclick="location.href='QnaUpdateC?no=${q.no}'">수정</button>
+			<button class="btn btn-primary" onclick="location.href='QnaDeleteC?no=${q.no}'">삭제</button>
 		</div>
 	</div>
 	<div>
@@ -50,7 +50,7 @@
 			<table id="tblAddComment" class="table table-bordered">
 				<tr>
 					<td><input type="text" name="r_content" id="r_content" class="form-control" required placeholder="내용을 입력하세요. "/></td>
-					<td><input type="submit" value="등록" class="btn btn-primary" /></td>
+					<td><input type="submit" value="등록" class="btn btn-primary" style="width: 100%" /></td>
 				</tr>
 			</table>	
 			<input type="hidden" name="no" value="${q.no }">

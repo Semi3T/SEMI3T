@@ -92,7 +92,8 @@
 	font-family: "Roboto", sans-serif;
     outline: 0;
     background: #f2f2f2;
-    width: 100%;
+    width: 400px;
+    max-width: 100%;
     border: 0;
     margin: 15px 0 15px;
     padding: 15px;
@@ -108,51 +109,66 @@
 /* qnadetail */
 
 .qna_detail_container {
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
-  border: 1px solid black;
+	margin: 30px auto 30px auto;
 }
 
 .qna_detail_titlewrapper {
-  display: flex;
-  align-items: center;
+	padding: 10px 5px 10px 5px;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #ddd;
 }
 
-.qna_detail_accountinfo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.qna_detail_titlewrapper Strong {
+	font-size: 2rem;
+	padding-left: 5px;
 }
 
-.contentwrapper_content {
-  min-height: 500px;
+.qna_detail_info {
+	display: flex;
+	padding: 10px 0 10px 0;
+	border-bottom: 2px solid #999;
+}
+
+.qna_contentinfo {
+	padding-left: 5px;
+	width: 120px;
+	border-right: 1px solid #999;
+}
+
+.qna_contentinfo Strong {
+	margin-right: 10px;
+}
+
+.qna_contentinfo_date{
+	padding-left: 5px;
+	width: 165px;
+	border-right: 1px solid #999;
+}
+
+.qna_contentinfo_date Strong {
+	margin-right: 10px;
+}
+
+.qna_detail_contentwrapper {
+	padding: 10px 5px 0 10px;
+	height: 50vh;
+	border-bottom: 2px solid #999;
 }
 
 .qna_detail_buttonwrapper {
-  display: flex;
-  justify-content: flex-end;
+	display: flex;
+	justify-content: flex-end;
+	padding: 10px 0 10px 0;
+	border-bottom: 2px solid #000;
 }
 
-.titlewrapper_no {
-  display: inline-block;
-  width: 43px;
-  height: 43px;
-  line-height: 43px;
-  text-align: center;
+.qna_detail_buttonwrapper button {
+	margin: 0 10px 0 10px;
 }
 
-.titlewrapper_title {
-  display: inline-block;
-  font-size: 24pt;
-  font-weight: bold;
-  height: 43px;
-  line-height: 43px;
-  text-align: center;
-}
 
 #tblListComment td {
-	position: relative;
+/* 	position: relative; */
 	left: 0;
 	top: 0;
 }
@@ -188,4 +204,32 @@
 
 #tblListComment td:nth-child(2) {
 	width: 100px;
+}
+
+/* updateqna */
+
+.titlewrapper_title input {
+	font-size: 2rem;
+	width: 100%;
+	height: 100%;
+}
+a
+.qna_detail_contentwrapper textarea {
+	width: 100%;
+	height: 97%;
+	resize: none;
+}
+
+.qna_update_confirmwrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 5px;
+	border-bottom: 2px solid #000;
+}
+
+.qna_update_confirm_button {
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+	width: 160px;
 }
