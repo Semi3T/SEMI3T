@@ -32,6 +32,12 @@ function reg_Check() {
 		pw.focus();
 		return false;
 	}
+	
+	if (lessThan(pw, 8)) {
+		alert('비밀번호는 8글자 이상 입력해야합니다.');
+		pw.focus();
+		return false;
+	}
 
 	if (notContains(pw, "QWERTYUIOPASDFGHJKLZXCVBNM") ||
 		notContains(pw, "qwertyuiopasdfghjklzxcvbnm") ||

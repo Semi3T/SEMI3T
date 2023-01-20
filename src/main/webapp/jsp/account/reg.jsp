@@ -35,7 +35,7 @@ pageEncoding="UTF-8"%>
             name="pw"
             class="reg-data"
             type="password"
-            placeholder="대,소,특수문자 각각 1글자 이상"
+            placeholder="대,소,특수문자 각각 1글자 이상,8글자 이상"
           />
         </div>
       </div>

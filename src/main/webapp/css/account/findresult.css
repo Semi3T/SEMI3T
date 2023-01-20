@@ -36,3 +36,14 @@
 	transition: all 0.3 ease;
 	cursor: pointer;
 }
+
+.result-font{
+	font-size:30px;
+	padding:10px;
+}
+
+.result-button-cover{
+	
+	padding:10px;
+	
+}

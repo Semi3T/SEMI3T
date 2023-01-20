@@ -150,7 +150,7 @@ public class AccountDAO {
 			System.out.println(gender);
 
 			if (pstmt.executeUpdate() == 1) {
-				request.setAttribute("r", "가입성공");
+				request.setAttribute("r", "환영합니다");
 			}
 
 		} catch (Exception e) {
