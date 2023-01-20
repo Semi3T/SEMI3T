@@ -8,10 +8,11 @@
 </head>
 <body>
 
-	<form name="findscreen" method="POST" action="IdfindC" onsubmit="return id_search()">
-		<div class = "find-page">
+	<form name="findscreen" method="POST" action="IdfindC"
+		onsubmit="return id_search()">
+		<div class="find-page">
 			<div class="find-form">
-<div class = "find-pagetitle">아이디 찾기</div>
+				<div class="find-pagetitle">아이디 찾기</div>
 				<section class="form-search">
 					<div class="find-name">
 						<label>이름</label> <input type="text" name="name" class="btn-name"
@@ -22,7 +23,7 @@
 							class="btn-phone" placeholder="휴대폰번호를 '-'없이 입력">
 					</div>
 					<br>
-						<div class = "error-message"> ${r } </div>
+					<div class="error-message">${r }</div>
 				</section>
 				<button>찾기</button>
 			</div>
