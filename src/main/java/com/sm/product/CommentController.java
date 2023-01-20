@@ -17,7 +17,7 @@ public class CommentController extends HttpServlet {
 		// 화면을 깜빡 하나요?
 		if(request.getParameter("c_content") == null) {
 			// delete 수행
-			System.out.println("ddddd");
+			DAO_Master.deletecomment(request);
 		} else {
 			DAO_Master.updatecomment(request, response);
 		}
