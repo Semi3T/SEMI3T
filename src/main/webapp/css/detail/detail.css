@@ -107,3 +107,25 @@ input {
 .tatal-area{
 	  margin-right: 62px;
 }
+.detail-button{
+	margin-top: 50px;
+	display: flex;
+	justify-content: right;
+    align-items: center;
+}
+.detail-button button{
+	display: flex;
+	width: 150px;
+    padding: 12px 0;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #dddddd;
+    margin-right: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    background: #00388c;
+    border-radius: 5px;
+}

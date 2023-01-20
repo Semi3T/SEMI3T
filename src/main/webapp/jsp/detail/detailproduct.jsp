@@ -201,7 +201,7 @@
 				</div>
 			</div>
 
-				<div class="myPage-button-box">
+				<div class="detail-button">
 					<button>구매하기</button>
 				</div>
 	</div>
@@ -239,7 +239,7 @@
 						</td>
 						<td>
 							<input id="button2-${c.c_no }" type="button" value="수정하기"
-							class="btn btn-default" onclick="modify_comment('${c.c_no}')" style="background: transparent; border: none;"/>
+							class="btn btn-default" onclick="modify_comment('${c.c_no}')"/>
 						</td>
 					</c:if>
 				</tr>
