@@ -223,6 +223,28 @@
 			<c:forEach items="${ comment }" var="c">
 				<tr id="comment-container-${c.c_no }">
 					<td><input id="comment-content-${c.c_no }"
+						value="${ c.c_content }" disabled="disabled"> <span>${ c.c_name }.
+							${ c.c_date }</span></td>
+					<c:choose>
+						<c:when test="${sessionScope.account.l_id eq c.c_id }">
+							<td><input id="button1-${c.c_no }" type="button" value="삭제하기"
+								class="btn btn-default" onclick="modify_comment2('${c.c_no}')" />
+							</td>
+							<td>
+								<input id="button2-${c.c_no }" type="button" value="수정하기"
+								class="btn btn-default" onclick="modify_comment('${c.c_no}')"/>
+							</td>
+						</c:when>
+						<c:when test="${sessionScope.account.l_id eq 'master' }">
+							<td><input id="button1-${c.c_no }" type="button" value="삭제하기"
+								class="btn btn-default" onclick="modify_comment2('${c.c_no}')" />
+							</td>
+							<td>
+								<input id="button2-${c.c_no }" type="button" value="수정하기"
+								class="btn btn-default" onclick="modify_comment('${c.c_no}')"/>
+							</td>
+						</c:when>
+					</c:choose>
 						value="${ c.c_content }" disabled="disabled"> <span>${ c.c_name }.${ c.c_date }</span></td>
 					<c:if test="${sessionScope.account.l_id eq c.c_id }">
 						<td><input id="button1-${c.c_no }" type="button" value="삭제하기"
