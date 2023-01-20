@@ -168,7 +168,7 @@
 
 
 #tblListComment td {
-/* 	position: relative; */
+	position: relative;
 	left: 0;
 	top: 0;
 }
@@ -213,7 +213,7 @@
 	width: 100%;
 	height: 100%;
 }
-a
+
 .qna_detail_contentwrapper textarea {
 	width: 100%;
 	height: 97%;

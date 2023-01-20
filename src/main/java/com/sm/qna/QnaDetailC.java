@@ -14,6 +14,7 @@ public class QnaDetailC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		DAO_QnA.getQna(request);
+		DAO_QnA.getReply(request);
 		
 		AccountDAO.loginCheck(request);
 		request.setAttribute("headerPage", "jsp/header.jsp");
@@ -22,6 +23,7 @@ public class QnaDetailC extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
 	}
 
 }

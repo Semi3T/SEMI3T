@@ -22,11 +22,11 @@
 			</div>
 			<div class="qna_update_confirmwrapper">
 				<div>
-					<strong>비밀번호 :&nbsp</strong><input id="passinput" name="pw" type="password" pattern="[0-9]*" maxlength="4" placeholder="숫자만 입력가능(4자리)" required="required">
+					<strong>비밀번호 :&nbsp</strong><input id="passinput" name="pw" type="password" pattern="[0-9]*" maxlength="4" placeholder="숫자만 입력가능(4자리)">
 				</div>
 				<div class="qna_update_confirm_button">
 					<button class="btn btn-primary" value="${q.no }" name="no">수정완료</button>
-					<button class="btn btn-primary" onclick="location.href=QnaDetailC">취소</button>
+					<button type="button" class="btn btn-primary" onclick="location.href='QnaDetailC?no=${q.no}'">취소</button>
 				</div>
 			</div>
 		</div>

@@ -33,18 +33,35 @@
 					<td colspan="2">답변을 기다려주세요.</td>
 				</tr>
 			</c:if>
-			<c:forEach items="${qnareply }" var="q" > 
-				<tr>
-					<td style="display: flex; justify-content: space-between;">
-						 ${q.r_content }
-						 <span>${ q.r_name }. ${ q.r_date }</span>
-					</td>
-					<td>
-						<input type="button" value="삭제하기" class="btn btn-default" 
-							onclick="location.href='QnaReplyDeleteC?r_no=${q.r_no}&&no=${q.q_no }'"/>
-					</td>
+
+			<c:forEach items="${ qnareply}" var="q">
+				<tr id="comment-container-${q.r_no }">
+					<td><input id="comment-content-${q.r_no }"
+						value="${ q.r_content }" disabled="disabled"> <span>${ q.r_name }.
+							${ q.r_date }</span></td>
+					<c:choose>
+						<c:when test="${sessionScope.account.l_id eq q.r_id }">
+							<td><input id="button1-${q.r_no }" type="button" value="삭제하기"
+								class="btn btn-default" onclick="modify_comment2('${q.r_no}')" />
+							</td>
+							<td>
+								<input id="button2-${q.r_no }" type="button" value="수정하기"
+								class="btn btn-default" onclick="modify_comment('${q.r_no}')"/>
+							</td>
+						</c:when>
+						
+						<c:when test="${sessionScope.account.l_id eq 'master' }">
+							<td><input id="button1-${q.r_no }" type="button" value="삭제하기"
+								class="btn btn-default" onclick="modify_comment2('${q.r_no}')" />
+							</td>
+							<td>
+								<input id="button2-${q.r_no }" type="button" value="수정하기"
+								class="btn btn-default" onclick="modify_comment('${q.r_no}')"/>
+							</td>
+						</c:when>
+					</c:choose>
 				</tr>
-		 	</c:forEach>
+			</c:forEach>
 		</table>
 		<form action="QnaReplyC" method="get">
 			<table id="tblAddComment" class="table table-bordered">
