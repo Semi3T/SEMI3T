@@ -42,6 +42,8 @@ pageEncoding="UTF-8"%>
       integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
       crossorigin="anonymous"
     ></script>
+    
+     <script type="text/javascript" src="js/search/search.js"></script>
   </head>
   <body>
     <div class="index_con">

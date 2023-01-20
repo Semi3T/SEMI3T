@@ -203,3 +203,7 @@ main {
 .detail-button{
 	text-align: right;
 }
+.product-search{
+	text-align:right;	
+	margin: 30px 60px;
+}
