@@ -49,8 +49,7 @@
 </style>
 <script>
 
-$(function() {
-	
+
 
 		function modify_comment(no) {
 			// 수정하기 버튼을 눌렀을 때, input이 입력 가능해야 함.
@@ -157,54 +156,8 @@ $(function() {
 			}
 		}
 		
-		
-		function createComment() {
-			//comment-create-input
-			console.log("클릭");
-			/* let inputVal = $('#comment-create-input').val();
-			
-			if(inputVal == '') {
-				alert("입력하세요");
-				$('#comment-create-input').focus();
-				return false;
-			} 
-			
-			if(inputVal.length < 5) {
-				alert("5글자 이상 입력해주세요");
-				$('#comment-create-input').focus();
-				return false;
-			} */
-			
-			// form 태그 없애기 
-			// why? 비동기 하려면 onclick 수행 해야함.(ajax)
-		}
-		
-		
-		$('#comment-create-input').click(function() {
-			console.log('ddd');
-			// 값 받기
-			
-			// 유저 id, product id, content 
-			// c_content create-comment-id create-comment-p_no
-			
-			let c_content = $('#c_content').val();
-			let c_name = $('#create-comment-id').val();
-			let c_pName = $('create-comment-p_no').val();
-			
-			
-			$.ajax({
-				url: "CommentController",
-				type: "POST",
-				data: {
-					"c_content" : c_content,
-					"c_name" : c_name,
-					"c_pName" : c_pName
-				}
-			}).done(function(data) {
-				console.log(data);
-			})
-		});
-})
+	
+
 </script>
 <body>
 
@@ -248,7 +201,7 @@ $(function() {
 				</div>
 			</div>
 
-				<div class="myPage-button-box">
+				<div class="detail-button">
 					<button>구매하기</button>
 				</div>
 	</div>
@@ -284,8 +237,9 @@ $(function() {
 						<td><input id="button1-${c.c_no }" type="button" value="삭제하기"
 							class="btn btn-default" onclick="modify_comment2('${c.c_no}')" />
 						</td>
-						<td><input id="button2-${c.c_no }" type="button" value="수정하기"
-							class="btn btn-default" onclick="modify_comment('${c.c_no}')" />
+						<td>
+							<input id="button2-${c.c_no }" type="button" value="수정하기"
+							class="btn btn-default" onclick="modify_comment('${c.c_no}')"/>
 						</td>
 					</c:if>
 				</tr>
@@ -307,7 +261,7 @@ $(function() {
 				</form>
 			</c:when>
 			<c:otherwise>
-				<%-- <form action="CommentController" method="post">
+				<form action="DetailC" method="post">
 					<table id="tblAddComment" class="table table-bordered">
 						<tr>
 							<td><input type="text" name="c_content" id="c_content"
@@ -319,21 +273,8 @@ $(function() {
 					</table>
 					<input type="hidden" name="user_id" value="${sessionScope.account.l_id }">
 					<input type="hidden" name="p_no" value="${ product.p_no}">
-				</form> --%>
+				</form> 
 				
-					<table id="tblAddComment" class="table table-bordered">
-						<tr>
-							<td><input type="text" name="c_content" id="c_content"
-								class="form-control" required placeholder="댓글을 작성하세요. " /></td>
-							<td>
-								<input value="댓글쓰기" 
-								id="comment-create-input"
-								class="btn btn-primary" />
-							</td>
-						</tr>
-					</table>
-					<input type="hidden" id="create-comment-id" name="user_id" value="${sessionScope.account.l_id }">
-					<input type="hidden" id="create-comment-p_no" name="p_no" value="${ product.p_no}">
 			</c:otherwise>
 		</c:choose>
 	</div>

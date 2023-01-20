@@ -28,6 +28,7 @@
 							class="btn-phone" placeholder="휴대폰번호를 '-'없이 입력">
 					</div>
 					<br>
+						<div class = "error-message"> ${r } </div>
 				</section>
 				<button>찾기</button>
 			</div>

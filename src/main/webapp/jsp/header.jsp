@@ -35,7 +35,12 @@ pageEncoding="UTF-8"%>
           <img src="img/mainlogoimg/Imported_Image.png" style="width: 400px" />
         </a>
       </div>
-
+      
+	  <div class="product-search">
+	  	<input type="text" > 
+	  	<button>검색</button>
+	  </div>
+	  
       <div class="navi_Btn_container">
         <div id="navi_brand">
           <a class="navi_Btn" href="BrandC">BRAND</a>

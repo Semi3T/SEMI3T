@@ -18,7 +18,9 @@ public class AccountDAO {
 		Account a = (Account) hs.getAttribute("account");
 
 		if (a == null) {
-
+			
+			
+		
 			request.setAttribute("contentPage", "account/login.jsp");
 
 			request.setAttribute("contentPage", "jsp/account/login.jsp");
@@ -32,6 +34,7 @@ public class AccountDAO {
 	}
 
 	public static void login(HttpServletRequest request) {
+		boolean result = false;
 		String userID = request.getParameter("id");
 		String userPW = request.getParameter("pw");
 
@@ -47,13 +50,15 @@ public class AccountDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		String sql = "select * from login where l_id=?";
-
+		int count = 0;
+		
 		try {
 
 			con = DBManager.connect();
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, userID);
 			rs = pstmt.executeQuery();
+			
 
 			if (rs.next()) {
 
@@ -72,7 +77,8 @@ public class AccountDAO {
 					HttpSession hs = request.getSession();
 					hs.setAttribute("account", a);
 					hs.setMaxInactiveInterval(60 * 10);
-
+					count = pstmt.executeUpdate();
+					
 				} else {
 
 					request.setAttribute("r", "아이디 또는 비밀번호가 일치하지않습니다");
@@ -89,7 +95,13 @@ public class AccountDAO {
 		} finally {
 			DBManager.close(con, pstmt, rs);
 		}
-
+		
+		if (count != 0) {
+			result = true;
+		}
+		else {
+			result = false;
+		}
 	}
 
 	public static void logOut(HttpServletRequest request) {
@@ -138,7 +150,7 @@ public class AccountDAO {
 			System.out.println(gender);
 
 			if (pstmt.executeUpdate() == 1) {
-				request.setAttribute("r", "가입성공");
+				request.setAttribute("r", "환영합니다");
 			}
 
 		} catch (Exception e) {
@@ -175,6 +187,8 @@ public class AccountDAO {
 				id = rs.getString("l_id");
 				
 
+			}else {
+				request.setAttribute("r", "회원정보가 일치하지않습니다");
 			}
 
 			System.out.println(id);
@@ -213,6 +227,8 @@ public class AccountDAO {
 				pw = rs.getString("l_pw");
 				
 
+			}else {
+				request.setAttribute("r", "회원정보가 일치하지않습니다");
 			}
 
 			System.out.println(pw);
