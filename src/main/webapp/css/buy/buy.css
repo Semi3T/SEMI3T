@@ -26,10 +26,13 @@
 
 .customer-box{
 	display: flex;
+	margin: 20px;
 }
 
 .customer-label-box{
- 	width: 96px;	
+ 	width: 96px;
+    display: flex;
+    align-items: center;
 }
 
 .customer-input-box{
