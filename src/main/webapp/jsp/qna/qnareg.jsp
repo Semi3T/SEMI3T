@@ -10,10 +10,10 @@
 	<form action="QnaRegC" method="post" enctype="multipart/form-data">
 		<div class="qna_detail_container">
 			<div class="qna_detail_titlewrapper">
-				<div class="titlewrapper_title"><input value="${q.title }" name="title"></div>
+				<div class="titlewrapper_title"><input value="${q.title }" name="title" placeholder="제목을 입력하세요"></div>
 			</div>
 			<div class="qna_detail_info">
-				<input>
+				<input type="file" name="img">
 			</div>
 			<div class="qna_detail_contentwrapper">
 				<textarea name="contents">${q.contents }</textarea>
