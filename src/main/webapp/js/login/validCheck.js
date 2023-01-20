@@ -54,4 +54,3 @@ function isNotNumber(input) {
 }
 
 
-
