@@ -7,24 +7,44 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 @WebServlet("/IdfindC")
 public class IdfindC extends HttpServlet {
 
- 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		
 		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.setAttribute("contentPage", "jsp/account/idfind.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
-		
+	
+
 	}
 
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		request.setCharacterEncoding("utf-8");
+		AccountDAO.findId(request);
+		
+		if (request.getAttribute("idresult") != null) {
+
+			request.setAttribute("headerPage", "jsp/header.jsp");
+			request.setAttribute("contentPage", "jsp/account/findidresult.jsp");
+			request.getRequestDispatcher("index.jsp").forward(request, response);
+
+		} else {
+
+			request.setAttribute("headerPage", "jsp/header.jsp");
+			request.setAttribute("contentPage", "jsp/account/idfind.jsp");
+			request.getRequestDispatcher("index.jsp").forward(request, response);
+
+		}
+
+		
+		
 	
 		
-		AccountDAO.findId(request);
 	}
 
 }
