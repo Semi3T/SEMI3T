@@ -245,7 +245,7 @@
 							</td>
 						</c:when>
 					</c:choose>
-						value="${ c.c_content }" disabled="disabled"> <span>${ c.c_name }.${ c.c_date }</span></td>
+					<td>value="${ c.c_content }" disabled="disabled"> <span>${ c.c_name }.${ c.c_date }</span></td>
 					<c:if test="${sessionScope.account.l_id eq c.c_id }">
 						<td><input id="button1-${c.c_no }" type="button" value="삭제하기"
 							class="btn btn-default" onclick="modify_comment2('${c.c_no}')" />
