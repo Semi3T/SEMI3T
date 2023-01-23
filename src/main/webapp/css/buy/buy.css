@@ -67,7 +67,9 @@
 .buy-product-shipping-box{
 	margin-top: 200px;
 }
-
+.buy-purchase-box{
+	margin-top: 150px;
+}
 .buy-product-price{
  	display: flex;
 	justify-content: center;
