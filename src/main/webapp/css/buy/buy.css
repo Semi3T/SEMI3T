@@ -12,6 +12,15 @@
 
 #buy-product-name{
 	font-size: 18pt;
+	font-weight: 500;
+}
+#buy-shipping-name{
+	font-size: 18pt;
+	font-weight: 500;
+}
+#buy-purchase-name{
+	font-size: 18pt;
+	font-weight: 500;
 }
 #buy-product-name-check{
 	height: 80px;
@@ -59,6 +68,28 @@
 	margin-top: 200px;
 }
 
+.buy-product-price{
+ 	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.buy-mini-box{
+	width: 300px;
+	border: 1px solid black;
+	border-radius: 8px;
+	margin: auto;
+}
+#buy-input-box-p{
+	display: flex;
+    align-items: center;
+}
+#buy-input-box-p input{
+	border:0 solid black;
+	width: 100px;
+}
+#buy-input-box-p input:focus{
+	outline: none;
+}
 
 .buy-button {
 	margin-top: 50px;

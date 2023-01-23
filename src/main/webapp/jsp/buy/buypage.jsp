@@ -36,7 +36,7 @@ pageEncoding="UTF-8"%>
 				</div>     
 		</div>
 		<div class="buy-product-shipping-box">
-			<div id="buy-product-name">배송 정보<hr></div>
+			<div id="buy-shipping-name">배송 정보<hr></div>
 			
 				<div class="buy-product-customer">
 					<div id="buy-label-box"><label>받는사람</label></div>
@@ -55,7 +55,30 @@ pageEncoding="UTF-8"%>
 					<div id="buy-input-box"><input></div>
 				</div>     
 		</div>
-		
+		<hr>
+		<div class="buy-purchase-box">
+			<div id="buy-purchase-name">결제정보<hr></div>
+				<div class="buy-mini-box">
+					<div class="buy-product-price">
+						<div id="buy-label-box"><label>주문가격</label></div>
+						<div id="buy-input-box-p"><input readonly="readonly" value="15000원"></div>
+					</div>
+					<div class="buy-product-price">
+						<div id="buy-label-box"><label>배송비</label></div>
+						<div id="buy-input-box-p"><input readonly="readonly" value="+3000원"></div>
+					</div>
+					<div class="buy-product-price">
+						<div id="buy-label-box"><label>할인금액</label></div>
+						<div id="buy-input-box-p"><input readonly="readonly" value="-0원"></div>
+					</div>
+					<hr>
+					<div class="buy-product-price">
+						<div id="buy-label-box"><label>결제금액</label></div>
+						<div id="buy-input-box-p"><input readonly="readonly" value="18000원"></div>
+					</div>
+					
+				</div>
+		</div>
         <div class="buy-button">
           <button>결제하기</button>
         </div>
