@@ -7,7 +7,6 @@
 <title>master product</title>
 </head>
 <body>
-
 	<form action="ProductC" method="post" enctype="multipart/form-data">
 		타이틀 이미지 : <input name="tilte_img" type="file"><br>
 		브랜드 명    : <select name="brand">
@@ -24,15 +23,13 @@
 			<label><input name="p_new" type="radio" value="1">신제품 YES</label>
 			<label><input name="p_new" type="radio" value="0">신제품 NO</label>
 		<hr>
-			<label><input name="sale" type="radio" value="1">세일 YES</label>
 			<label><input name="sale" type="radio" value="0">세일 NO</label>
+			<label><input name="sale" type="radio" value="1">세일 YES</label>
+			<label><input type="number" name="saleprice">원</label>
 		<hr>
 		상세페이지 이미지 : 	<input name="content_img" type="file"><br>
-		상품 재고 개수	 : 	<input name="stock"><br>
 		가격			 :	<input name="price"><br>
-		like         :	<input name="like" value="0"><br>
 		<button>등록</button>
 	</form>
-
 </body>
 </html>
