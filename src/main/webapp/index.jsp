@@ -42,10 +42,11 @@ pageEncoding="UTF-8"%>
       integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
       crossorigin="anonymous"
     ></script>
-    <script type="text/javascript" src="js/detail/detail.js"></script>
+    
     <script type="text/javascript" src="js/search/search.js"></script>
     <script type="text/javascript" src="js/qna/deleteqna.js"></script>    
-    <script type="text/javascript" src="js/qna/qnaRegValidChk.js"></script>    
+    <script type="text/javascript" src="js/qna/qnaRegValidChk.js"></script>   
+     <script type="text/javascript" src="js/buy/buy.js"></script>    
   </head>
   <body>
     <div class="index_con">
