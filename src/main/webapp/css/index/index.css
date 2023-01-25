@@ -203,7 +203,35 @@ main {
 .detail-button{
 	text-align: right;
 }
-.product-search{
-	text-align:right;	
-	margin: 30px 60px;
+
+.search-area{
+	text-align:-webkit-right;	
 }
+.product-search{
+
+	margin: 30px 60px;
+	position:relative;
+	width: 300px;
+}
+
+
+.keyword{
+	
+  width: 100%;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+
+}
+.search-button{
+  position : absolute;
+  width: 17px;
+  top: 10px;
+  right: 12px;
+  margin: 0;
+}
+
+
+
+
