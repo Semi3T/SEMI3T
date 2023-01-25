@@ -10,8 +10,7 @@
 
 </head>
 <body>
-	<form name="Reg" action="RegC" method="post" class="reg-container"
-		onsubmit="return reg_Check()">
+	<form name="Reg" action="RegC" method="post" class="reg-container" onsubmit="return reg_Check()">
 		<div class="reg-items">
 			<div class="reg-item1">ID</div>
 			<div class="reg-item2">
