@@ -1,69 +1,87 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>buy page check</title>
-</head>
-<body>
-	<form action="#">
-		<div class="buy-container">
-			<div class="buy-customer-info-box">
-				<div class="customer-info">주문자 정보</div>
-				<div class="customer-box">
-					<div class="customer-label-box"><label>주문자</label></div>
-					<div class="customer-input-box"><input placeholder="이름을 입력해 주세요." type="text"></div>
-				</div>
-				<div class="customer-box">
-					<div class="customer-label-box"><label>연락처</label></div>
-					<div class="customer-input-box"><input placeholder="'-'을 빼고 입력해 주세요." type="text"></div>
-				</div>
-				<div class="customer-box">
-					<div class="customer-label-box"><label>이메일 주소</label></div>
-					<div class="customer-input-box"><input placeholder="example@naver.com" type="text"></div>
-				</div>
-				<div class="customer-box">
-					<div class="customer-label-box"><label>집 주소</label></div>
-					<div class="customer-input-box"><input placeholder="상세 주소 까지 기입 해주세요." type="text"></div>
-				</div>
-			</div>
-			
-			<div class="buy-check-box">
-				<div class="buy-check-title-box">
-					<img src="img/brand/arius.png">
-					<div>아리우스 00 포션</div>
-				</div>
-				<hr>
-				<div class="buy-check-productprice-box">
-					<div class="buy-check">
-						<div class="buy-check-name">제품 수량</div>
-						<div class="buy-check-content">? 개</div>
-					</div>
-					<div class="buy-check">
-						<div class="buy-check-name">가격</div>
-						<div class="buy-check-content">+ 0000 원</div>
-					</div>
-					<div class="buy-check">
-						<div class="buy-check-name">할인 금액</div>
-						<div class="buy-check-content">- 0000 원</div>
-					</div>
-					<div class="buy-check">
-						<div class="buy-check-name">배송비</div>
-						<div class="buy-check-content">+ 3000 원</div>
-					</div>
-				</div>
-				<hr>
-				<div class="buy-check">
-					<div class="buy-check-name">총 결제 금액</div>
-					<div class="buy-check-content">0000 원</div>
-				</div>
-				<div>
-					<button>결제</button>
-				</div>
-			</div>		
-		
+  <head>
+    <meta charset="UTF-8" />
+    <title>buy page check</title>
+  </head>
+  <body>
+    <form action="#">
+    <div class="order">
+    	주문서
+    </div>
+		<div class="buy-product-info-box">
+			<div id="buy-product-name">주문상품<hr></div>
+			<div id="buy-product-name-check">(산해경 포션) 상품을 주문합니다.</div>
 		</div>
-	</form>
-</body>
+		<div class="buy-product-customer-box">
+			<div id="buy-product-name">주문자 정보<hr></div>
+			
+				<div class="buy-product-customer">
+					<div id="buy-label-box"><label>주문자 이름</label></div>
+					<div id="buy-input-box"><input value=""></div>
+				</div>     
+				<div class="buy-product-customer">
+					<div id="buy-label-box"><label>휴대폰 번호</label></div>
+					<div id="buy-input-box"><input value=""></div>
+				</div>     
+				<div class="buy-product-customer">
+					<div id="buy-label-box"><label>이메일</label></div>
+					<div id="buy-input-box"><input value=""></div>
+				</div>     
+				<div class="buy-product-customer">
+					<div id="buy-label-box"><label></label></div>
+					<div class="delivery-info">배송이 시작되면 주문 처리 과정을 이메일과 휴대폰 번호로 알려드리니, 꼭 정확한 정보를 입력해 주세요.</div>
+				</div>     
+		</div>
+		<div class="buy-product-shipping-box">
+			<div id="buy-shipping-name">배송 정보<hr></div>
+			
+				<div class="buy-product-customer">
+					<div id="buy-label-box"><label>받는사람</label></div>
+					<div id="buy-input-box"><input value=""></div>
+				</div>     
+				<div class="buy-product-customer">
+					<div id="buy-label-box"><label>주소</label></div>
+					<div id="buy-input-box"><input value=""></div>
+				</div>     
+				<div class="buy-product-customer">
+					<div id="buy-label-box"><label>휴대전화</label></div>
+					<div id="buy-input-box"><input value=""></div>
+				</div>     
+				<div class="buy-product-customer">
+					<div id="buy-label-box"><label>요청사항</label></div>
+					<div id="buy-input-box"><input></div>
+				</div>     
+		</div>
+		<hr>
+		<div class="buy-purchase-box">
+			<div id="buy-purchase-name">결제정보<hr></div>
+				<div class="buy-mini-box">
+					<div class="buy-product-price">
+						<div id="buy-label-box"><label>주문가격</label></div>
+						<div id="buy-input-box-p"><input readonly="readonly" value="15000원"></div>
+					</div>
+					<div class="buy-product-price">
+						<div id="buy-label-box"><label>배송비</label></div>
+						<div id="buy-input-box-p"><input readonly="readonly" value="+3000원"></div>
+					</div>
+					<div class="buy-product-price">
+						<div id="buy-label-box"><label>할인금액</label></div>
+						<div id="buy-input-box-p"><input readonly="readonly" value="-0원"></div>
+					</div>
+					<hr>
+					<div class="buy-product-price">
+						<div id="buy-label-box"><label>결제금액</label></div>
+						<div id="buy-input-box-p"><input readonly="readonly" value="18000원"></div>
+					</div>
+					
+				</div>
+		</div>
+        <div class="buy-button">
+          <button>결제하기</button>
+        </div>
+    </form>
+  </body>
 </html>
