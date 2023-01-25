@@ -7,7 +7,6 @@
 <title>master product</title>
 </head>
 <body>
-
 	<form action="ProductC" method="post" enctype="multipart/form-data">
 		타이틀 이미지 : <input name="tilte_img" type="file"><br>
 		브랜드 명    : <select name="brand">
@@ -33,6 +32,5 @@
 		like         :	<input name="like" value="0"><br>
 		<button>등록</button>
 	</form>
-
 </body>
 </html>

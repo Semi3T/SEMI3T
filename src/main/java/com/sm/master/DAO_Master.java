@@ -29,7 +29,7 @@ public class DAO_Master {
 	public static void regproduct(HttpServletRequest request) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
-		String sql = "insert into product_table values(product_table_seq.nextval,?,?,?,?,?,?,?,?,?)";
+		String sql = "insert into product_table values(product_table_seq.nextval,?,?,?,?,?,?,?)";
 		try {
 			con = DBManager.connect();
 			pstmt = con.prepareStatement(sql);
@@ -46,9 +46,7 @@ public class DAO_Master {
 			int p_new = Integer.parseInt(mr.getParameter("p_new"));
 			int sale = Integer.parseInt(mr.getParameter("sale"));
 			String content_img = mr.getFilesystemName("content_img");
-			int stock = Integer.parseInt(mr.getParameter("stock"));
 			int price = Integer.parseInt(mr.getParameter("price"));
-			int like = Integer.parseInt(mr.getParameter("like"));
 
 			System.out.println(tilte_img);
 			System.out.println(brand);
@@ -56,9 +54,7 @@ public class DAO_Master {
 			System.out.println(p_new);
 			System.out.println(sale);
 			System.out.println(content_img);
-			System.out.println(stock);
 			System.out.println(price);
-			System.out.println(like);
 
 			pstmt.setString(1, brand);
 			pstmt.setString(2, title);
@@ -66,9 +62,7 @@ public class DAO_Master {
 			pstmt.setInt(4, sale);
 			pstmt.setString(5, tilte_img);
 			pstmt.setString(6, content_img);
-			pstmt.setInt(7, stock);
-			pstmt.setInt(8, price);
-			pstmt.setInt(9, like);
+			pstmt.setInt(7, price);
 
 //			나중에 js로 등록성공 경고창으로 뛰우기
 			if (pstmt.executeUpdate() == 1) {
@@ -101,9 +95,7 @@ public class DAO_Master {
 				p.setP_no(rs.getInt("p_no"));
 				p.setP_new(rs.getInt("p_new"));
 				p.setP_sale(rs.getInt("p_sale"));
-				p.setP_stock(rs.getInt("p_stock"));
 				p.setP_price(rs.getInt("p_price"));
-				p.setP_like(rs.getInt("p_like"));
 				p.setP_brand(rs.getString("p_brand"));
 				p.setP_title(rs.getString("p_title"));
 				p.setP_img(rs.getString("p_img"));
@@ -139,9 +131,7 @@ public class DAO_Master {
 				p.setP_no(rs.getInt("p_no"));
 				p.setP_new(rs.getInt("p_new"));
 				p.setP_sale(rs.getInt("p_sale"));
-				p.setP_stock(rs.getInt("p_stock"));
 				p.setP_price(rs.getInt("p_price"));
-				p.setP_like(rs.getInt("p_like"));
 				p.setP_brand(rs.getString("p_brand"));
 				p.setP_title(rs.getString("p_title"));
 				p.setP_img(rs.getString("p_img"));
@@ -174,9 +164,7 @@ public class DAO_Master {
 				p.setP_no(rs.getInt("p_no"));
 				p.setP_new(rs.getInt("p_new"));
 				p.setP_sale(rs.getInt("p_sale"));
-				p.setP_stock(rs.getInt("p_stock"));
 				p.setP_price(rs.getInt("p_price"));
-				p.setP_like(rs.getInt("p_like"));
 				p.setP_brand(rs.getString("p_brand"));
 				p.setP_title(rs.getString("p_title"));
 				p.setP_img(rs.getString("p_img"));
@@ -211,9 +199,7 @@ public class DAO_Master {
 				p.setP_no(rs.getInt("p_no"));
 				p.setP_new(rs.getInt("p_new"));
 				p.setP_sale(rs.getInt("p_sale"));
-				p.setP_stock(rs.getInt("p_stock"));
 				p.setP_price(rs.getInt("p_price"));
-				p.setP_like(rs.getInt("p_like"));
 				p.setP_brand(rs.getString("p_brand"));
 				p.setP_title(rs.getString("p_title"));
 				p.setP_img(rs.getString("p_img"));
@@ -290,9 +276,7 @@ public class DAO_Master {
 				p.setP_no(rs.getInt("p_no"));
 				p.setP_new(rs.getInt("p_new"));
 				p.setP_sale(rs.getInt("p_sale"));
-				p.setP_stock(rs.getInt("p_stock"));
 				p.setP_price(rs.getInt("p_price"));
-				p.setP_like(rs.getInt("p_like"));
 				p.setP_brand(rs.getString("p_brand"));
 				p.setP_title(rs.getString("p_title"));
 				p.setP_img(rs.getString("p_img"));
@@ -514,9 +498,7 @@ public class DAO_Master {
 					p.setP_no(rs.getInt("p_no"));
 					p.setP_new(rs.getInt("p_new"));
 					p.setP_sale(rs.getInt("p_sale"));
-					p.setP_stock(rs.getInt("p_stock"));
 					p.setP_price(rs.getInt("p_price"));
-					p.setP_like(rs.getInt("p_like"));
 					p.setP_brand(rs.getString("p_brand"));
 					p.setP_title(rs.getString("p_title"));
 					p.setP_img(rs.getString("p_img"));
