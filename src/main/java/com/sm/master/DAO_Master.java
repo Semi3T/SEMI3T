@@ -23,6 +23,7 @@ public class DAO_Master {
 	private static ArrayList<Product> products_sale;
 	private static ArrayList<Product> brand;
 	private static ArrayList<Comment> comments;
+	private static ArrayList<Product> Searchs;
 	
 	
 	public static void regproduct(HttpServletRequest request) {
@@ -484,6 +485,51 @@ public class DAO_Master {
 				e.printStackTrace();
 				request.setAttribute("result", "-비정상 접근- 다시 시도 해주세요.");
 			}DBManager.close(con, pstmt, null);
+			
+		}
+
+		public static void SearchProduct(HttpServletRequest request) {
+			Connection con = null;
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			String sql ="select * from product_table where p_title like '%'||?||'%'";
+//			String keyWord = request.getParameter("keyWord");
+			
+			try {      
+//		            if(keyWord != null && !keyWord.equals("") ){
+//		                sql +="WHERE p_title LIKE '%"+keyWord.trim()+"%'";
+//		            }
+//		            System.out.println("sql = " + sql);
+//				
+				
+				con = DBManager.connect();
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1, request.getParameter("keyWord"));
+				rs = pstmt.executeQuery();
+
+				Searchs = new ArrayList<Product>();
+				Product p = null;
+				while (rs.next()) {
+					p = new Product();
+					p.setP_no(rs.getInt("p_no"));
+					p.setP_new(rs.getInt("p_new"));
+					p.setP_sale(rs.getInt("p_sale"));
+					p.setP_stock(rs.getInt("p_stock"));
+					p.setP_price(rs.getInt("p_price"));
+					p.setP_like(rs.getInt("p_like"));
+					p.setP_brand(rs.getString("p_brand"));
+					p.setP_title(rs.getString("p_title"));
+					p.setP_img(rs.getString("p_img"));
+					p.setP_contents(rs.getString("p_contents"));
+					Searchs.add(p);
+				}
+				request.setAttribute("search", Searchs);
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				DBManager.close(con, pstmt, rs);
+			}
 			
 		}
 

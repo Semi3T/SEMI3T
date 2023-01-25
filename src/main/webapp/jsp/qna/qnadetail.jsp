@@ -10,20 +10,20 @@
 <body>
 	<div class="qna_detail_container">
 		<div class="qna_detail_titlewrapper">
-			<div class="titlewrapper_no">${q.no }</div>
-			<div class="titlewrapper_title">${q.title }</div>
+			<Strong>${q.title }</Strong>
 		</div>
-		<div class="qna_detail_accountinfo">
-			<div class="contentinfo_id">${q.id }</div>
-			<div class="contentinfo_date">${q.date }</div>
+		<div class="qna_detail_info">
+			<div class="qna_contentinfo"><Strong>번호</Strong>${q.no }</div>
+			<div class="qna_contentinfo"><Strong>작성자</Strong>${q.id }</div>
+			<div class="qna_contentinfo_date"><Strong>작성일</Strong>${q.date }</div>
 		</div>
 		<div class="qna_detail_contentwrapper">
 			<img src="jsp/qna/imgFolder/${q.img }">
 			<div class="contentwrapper_content">${q.contents }</div>
 		</div>
 		<div class="qna_detail_buttonwrapper">
-			<button onclick="location.href='QnaUpdateC?no=${q.no}'">수정</button>
-			<button onclick="location.href='QnaDeleteC?no=${q.no}'">삭제</button>
+			<button class="btn btn-primary" onclick="location.href='QnaUpdateC?no=${q.no}'">수정</button>
+			<button class="btn btn-primary" onclick="location.href='QnaDeleteC?no=${q.no}'">삭제</button>
 		</div>
 	</div>
 	<div>
@@ -33,24 +33,41 @@
 					<td colspan="2">답변을 기다려주세요.</td>
 				</tr>
 			</c:if>
-			<c:forEach items="${qnareply }" var="q" > 
-				<tr>
-					<td>
-						 ${q.r_content }
-						 <span>${ q.r_name }. ${ q.r_date }</span>
-					</td>
-					<td>
-						<input type="button" value="삭제하기" class="btn btn-default" 
-							onclick="location.href='QnaReplyDeleteC?r_no=${q.r_no}&&no=${q.q_no }'"/>
-					</td>
+
+			<c:forEach items="${ qnareply}" var="q">
+				<tr id="comment-container-${q.r_no }">
+					<td><input id="comment-content-${q.r_no }"
+						value="${ q.r_content }" disabled="disabled"> <span>${ q.r_name }.
+							${ q.r_date }</span></td>
+					<c:choose>
+						<c:when test="${sessionScope.account.l_id eq q.r_id }">
+							<td><input id="button1-${q.r_no }" type="button" value="삭제하기"
+								class="btn btn-default" onclick="modify_comment2('${q.r_no}')" />
+							</td>
+							<td>
+								<input id="button2-${q.r_no }" type="button" value="수정하기"
+								class="btn btn-default" onclick="modify_comment('${q.r_no}')"/>
+							</td>
+						</c:when>
+						
+						<c:when test="${sessionScope.account.l_id eq 'master' }">
+							<td><input id="button1-${q.r_no }" type="button" value="삭제하기"
+								class="btn btn-default" onclick="modify_comment2('${q.r_no}')" />
+							</td>
+							<td>
+								<input id="button2-${q.r_no }" type="button" value="수정하기"
+								class="btn btn-default" onclick="modify_comment('${q.r_no}')"/>
+							</td>
+						</c:when>
+					</c:choose>
 				</tr>
-		 	</c:forEach>
+			</c:forEach>
 		</table>
 		<form action="QnaReplyC" method="get">
 			<table id="tblAddComment" class="table table-bordered">
 				<tr>
 					<td><input type="text" name="r_content" id="r_content" class="form-control" required placeholder="내용을 입력하세요. "/></td>
-					<td><input type="submit" value="등록" class="btn btn-primary" /></td>
+					<td><input type="submit" value="등록" class="btn btn-primary" style="width: 100%" /></td>
 				</tr>
 			</table>	
 			<input type="hidden" name="no" value="${q.no }">

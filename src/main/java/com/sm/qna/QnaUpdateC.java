@@ -23,7 +23,7 @@ public class QnaUpdateC extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		DAO_QnA.updateQna(request);
-		
+				
 		DAO_QnA.getQna(request);
 		DAO_QnA.getReply(request);
 		AccountDAO.loginCheck(request);

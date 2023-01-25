@@ -35,7 +35,12 @@ pageEncoding="UTF-8"%>
           <img src="img/mainlogoimg/Imported_Image.png" style="width: 400px" />
         </a>
       </div>
-
+      <form action="ProductSearchC">
+		  <div class="product-search">
+		  	<input type="text" name="keyWord" placeholder="검색어 입력"> 
+		  	<input type="image" onclick="searchCheck(form)" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"/>
+		  </div>
+	  </form>
       <div class="navi_Btn_container">
         <div id="navi_brand">
           <a class="navi_Btn" href="BrandC">BRAND</a>

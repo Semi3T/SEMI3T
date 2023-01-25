@@ -1,4 +1,4 @@
-package com.sm.master;
+package com.sm.product;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,21 +7,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/CommentDeleteC")
-public class CommentDeleteC extends HttpServlet {
+import com.sm.master.DAO_Master;
+
+
+@WebServlet("/ProductSearchC")
+public class ProductSearchC extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		DAO_Master.deletecomment(request);
-		DAO_Master.getdetailproduct(request);
-		DAO_Master.getcomment(request);
+		DAO_Master.SearchProduct(request);
 		request.setAttribute("headerPage", "jsp/header.jsp");
-		request.setAttribute("contentPage", "jsp/detail/detailproduct.jsp");
+		request.setAttribute("contentPage", "jsp/search/productsearch.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
 	}
 
 }
