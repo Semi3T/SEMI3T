@@ -14,6 +14,7 @@ public class QnaDeleteC extends HttpServlet {
 		DAO_QnA.deleteQna(request);
 		DAO_QnA.deleteAllreply(request);
 		DAO_QnA.getAllqna(request);
+		DAO_QnA.qnaPaging(1, request);
 		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.setAttribute("contentPage", "jsp/qna/qna.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);

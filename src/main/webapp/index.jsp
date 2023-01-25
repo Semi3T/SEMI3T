@@ -44,6 +44,8 @@ pageEncoding="UTF-8"%>
     ></script>
     <script type="text/javascript" src="js/detail/detail.js"></script>
     <script type="text/javascript" src="js/search/search.js"></script>
+    <script type="text/javascript" src="js/qna/deleteqna.js"></script>    
+    <script type="text/javascript" src="js/qna/qnaRegValidChk.js"></script>    
   </head>
   <body>
     <div class="index_con">
