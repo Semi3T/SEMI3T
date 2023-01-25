@@ -65,7 +65,7 @@ pageEncoding="UTF-8"%>
       <div class="moveTopBtn">Top</div>
       <div class="moveBottomBtn">Bottom</div>
     </div>
-
+ 	
     <script type="text/javascript" src="js/login/updownbtn.js"></script>
     <script type="text/javascript" src="js/login/myPage.js"></script>
     <script type="text/javascript" src="js/login/valueCheck.js"></script>
