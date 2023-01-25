@@ -18,7 +18,9 @@
 			<div class="qna_contentinfo_date"><Strong>작성일</Strong>${q.date }</div>
 		</div>
 		<div class="qna_detail_contentwrapper">
+		<c:if test="${q.img != null}">
 			<img src="jsp/qna/imgFolder/${q.img }">
+		</c:if>
 			<div class="contentwrapper_content">${q.contents }</div>
 		</div>
 		<div class="qna_detail_buttonwrapper">

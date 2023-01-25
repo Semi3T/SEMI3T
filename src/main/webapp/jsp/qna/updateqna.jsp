@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="QnaUpdateC" method="post">
+	<form name="qnareg" action="QnaUpdateC" method="post" onsubmit="return reqchk()">
 		<div class="qna_detail_container">
 			<div class="qna_detail_titlewrapper">
 				<div class="titlewrapper_title"><input value="${q.title }" name="title"></div>
