@@ -6,6 +6,7 @@ pageEncoding="UTF-8"%>
   <head>
     <meta charset="UTF-8" />
     <title>header</title>
+  
   </head>
   <body>
     <header>
@@ -35,12 +36,14 @@ pageEncoding="UTF-8"%>
           <img src="img/mainlogoimg/Imported_Image.png" style="width: 400px" />
         </a>
       </div>
-      <form  action="ProductSearchC" class="search-area">
+      
+      <form name="search" action="ProductSearchC" class="search-area" onsubmit="return searchCheck()">
 		  <div class="product-search">
 		  	<input class="keyword" type="text" name="keyWord" placeholder="검색어 입력"> 
-		  	<input class="search-button" type="image" onclick="searchCheck(form)" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"/>
+		  	<input class="search-button" type="image" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"/>
 		  </div>
 	  </form>
+	  
       <div class="navi_Btn_container">
         <div id="navi_brand">
           <a class="navi_Btn" href="BrandC">BRAND</a>
@@ -59,5 +62,6 @@ pageEncoding="UTF-8"%>
         <a class="navi_Btn" href="QnAC?p=1">Q&A</a>
       </div>
     </header>
+ 
   </body>
 </html>
