@@ -35,10 +35,10 @@ pageEncoding="UTF-8"%>
           <img src="img/mainlogoimg/Imported_Image.png" style="width: 400px" />
         </a>
       </div>
-      <form action="ProductSearchC">
+      <form  action="ProductSearchC" class="search-area">
 		  <div class="product-search">
-		  	<input type="text" name="keyWord" placeholder="검색어 입력"> 
-		  	<input type="image" onclick="searchCheck(form)" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"/>
+		  	<input class="keyword" type="text" name="keyWord" placeholder="검색어 입력"> 
+		  	<input class="search-button" type="image" onclick="searchCheck(form)" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"/>
 		  </div>
 	  </form>
       <div class="navi_Btn_container">
