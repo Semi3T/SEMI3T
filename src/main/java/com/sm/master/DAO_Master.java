@@ -29,7 +29,7 @@ public class DAO_Master {
 	public static void regproduct(HttpServletRequest request) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
-		String sql = "insert into product_table values(product_table_seq.nextval,?,?,?,?,?,?,?)";
+		String sql = "insert into product_table values(product_table_seq.nextval,?,?,?,?,?,?,?,?)";
 		try {
 			con = DBManager.connect();
 			pstmt = con.prepareStatement(sql);
@@ -47,6 +47,7 @@ public class DAO_Master {
 			int sale = Integer.parseInt(mr.getParameter("sale"));
 			String content_img = mr.getFilesystemName("content_img");
 			int price = Integer.parseInt(mr.getParameter("price"));
+			int saleprice = Integer.parseInt(mr.getParameter("saleprice"));
 
 			System.out.println(tilte_img);
 			System.out.println(brand);
@@ -55,6 +56,7 @@ public class DAO_Master {
 			System.out.println(sale);
 			System.out.println(content_img);
 			System.out.println(price);
+			System.out.println(saleprice);
 
 			pstmt.setString(1, brand);
 			pstmt.setString(2, title);
@@ -63,6 +65,7 @@ public class DAO_Master {
 			pstmt.setString(5, tilte_img);
 			pstmt.setString(6, content_img);
 			pstmt.setInt(7, price);
+			pstmt.setInt(8, saleprice);
 
 //			나중에 js로 등록성공 경고창으로 뛰우기
 			if (pstmt.executeUpdate() == 1) {
@@ -100,6 +103,7 @@ public class DAO_Master {
 				p.setP_title(rs.getString("p_title"));
 				p.setP_img(rs.getString("p_img"));
 				p.setP_contents(rs.getString("p_contents"));
+				p.setP_saleprice(rs.getInt("p_saleprice"));
 				products.add(p);
 			}
 			request.setAttribute("product", products);
@@ -136,6 +140,7 @@ public class DAO_Master {
 				p.setP_title(rs.getString("p_title"));
 				p.setP_img(rs.getString("p_img"));
 				p.setP_contents(rs.getString("p_contents"));
+				p.setP_saleprice(rs.getInt("p_saleprice"));
 			}
 			request.setAttribute("product", p);
 
@@ -163,12 +168,12 @@ public class DAO_Master {
 				p = new Product();
 				p.setP_no(rs.getInt("p_no"));
 				p.setP_new(rs.getInt("p_new"));
-				p.setP_sale(rs.getInt("p_sale"));
 				p.setP_price(rs.getInt("p_price"));
 				p.setP_brand(rs.getString("p_brand"));
 				p.setP_title(rs.getString("p_title"));
 				p.setP_img(rs.getString("p_img"));
 				p.setP_contents(rs.getString("p_contents"));
+				p.setP_saleprice(rs.getInt("p_saleprice"));
 				products_new.add(p);
 			}
 			request.setAttribute("product", products_new);
@@ -204,6 +209,7 @@ public class DAO_Master {
 				p.setP_title(rs.getString("p_title"));
 				p.setP_img(rs.getString("p_img"));
 				p.setP_contents(rs.getString("p_contents"));
+				p.setP_saleprice(rs.getInt("p_saleprice"));
 				products_sale.add(p);
 			}
 			request.setAttribute("product", products_sale);
@@ -281,6 +287,7 @@ public class DAO_Master {
 				p.setP_title(rs.getString("p_title"));
 				p.setP_img(rs.getString("p_img"));
 				p.setP_contents(rs.getString("p_contents"));
+				p.setP_saleprice(rs.getInt("p_saleprice"));
 				brand.add(p);
 			}
 			request.setAttribute("brand", brand);
@@ -503,6 +510,7 @@ public class DAO_Master {
 					p.setP_title(rs.getString("p_title"));
 					p.setP_img(rs.getString("p_img"));
 					p.setP_contents(rs.getString("p_contents"));
+					p.setP_saleprice(rs.getInt("p_saleprice"));
 					Searchs.add(p);
 				}
 				request.setAttribute("search", Searchs);

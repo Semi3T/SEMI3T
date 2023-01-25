@@ -9,13 +9,14 @@ public class Product {
 	private String p_img;
 	private String p_contents;
 	private int p_price;
+	private int p_saleprice;
 	
 	public Product() {
 		// TODO Auto-generated constructor stub
 	}
 
 	public Product(int p_no, String p_brand, String p_title, int p_new, int p_sale, String p_img, String p_contents,
-				int p_price) {
+				int p_price, int p_saleprice) {
 		super();
 		this.p_no = p_no;
 		this.p_brand = p_brand;
@@ -25,6 +26,15 @@ public class Product {
 		this.p_img = p_img;
 		this.p_contents = p_contents;
 		this.p_price = p_price;
+		this.p_saleprice = p_saleprice;
+	}
+
+	public int getP_saleprice() {
+		return p_saleprice;
+	}
+
+	public void setP_saleprice(int p_saleprice) {
+		this.p_saleprice = p_saleprice;
 	}
 
 	public int getP_no() {
