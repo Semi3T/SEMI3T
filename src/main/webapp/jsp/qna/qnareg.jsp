@@ -14,7 +14,7 @@
 			</div>
 			<div class="qna_detail_info">
 				<span>이미지 첨부 :&nbsp</span>
-				<label class="btn btn-primary" for="imglebelid">업로드</label>
+				<label class="btn btn-primary" for="imglabelid">업로드</label>
 				<input id="imglabelid" type="file" name="img" style="display: none;">
 			</div>
 			<div class="qna_detail_contentwrapper">
