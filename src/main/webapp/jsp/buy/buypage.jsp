@@ -19,7 +19,7 @@ pageEncoding="UTF-8"%>
 				<tr>
 					<td><img style="width: 200px" src="jsp/master/imgFolder/${param.img}"></td>
 					<td> ${param.title} 상품을 주문합니다.</td>
-					<td></td>
+					<td>${param.amount }</td>
 				</tr>
 			</table>
 			
