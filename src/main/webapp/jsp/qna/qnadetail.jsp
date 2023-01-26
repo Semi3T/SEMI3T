@@ -18,12 +18,15 @@
 			<div class="qna_contentinfo_date"><Strong>작성일</Strong>${q.date }</div>
 		</div>
 		<div class="qna_detail_contentwrapper">
+		<c:if test="${q.img != null}">
 			<img src="jsp/qna/imgFolder/${q.img }">
+		</c:if>
 			<div class="contentwrapper_content">${q.contents }</div>
 		</div>
 		<div class="qna_detail_buttonwrapper">
 			<button class="btn btn-primary" onclick="location.href='QnaUpdateC?no=${q.no}'">수정</button>
-			<button class="btn btn-primary" onclick="location.href='QnaDeleteC?no=${q.no}'">삭제</button>
+			<button class="btn btn-primary" onclick="delchk(${q.no})">삭제</button>
+			<%-- location.href='QnaDeleteC?no=${q.no}' --%>
 		</div>
 	</div>
 	<div>
