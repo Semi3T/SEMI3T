@@ -18,8 +18,9 @@ pageEncoding="UTF-8"%>
 			<table>
 				<tr>
 					<td><img style="width: 200px" src="jsp/master/imgFolder/${param.img}"></td>
-					<td style="padding-left: 100px; font-size: 15pt; font-weight: bold;"> x ${param.final_amount } 개 </td>
-					<td style="padding-left: 200px; font-size: 15pt; font-weight: bold;"> ${param.title} 상품을 주문합니다.</td>
+					<td style="padding-left: 50px; font-size: 15pt; font-weight: bold;"> x ${param.final_amount } 개 </td>
+					<td style="padding-left: 200px; font-size: 15pt; font-weight: bold; color: blue;"> ${param.brand }</td>
+					<td style="padding-left: 5px; font-size: 17pt; font-weight: bold;"> ${param.title} </td>
 				</tr>
 			</table>
 			
