@@ -22,8 +22,7 @@ $(function () {
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
-  Allpraice.value =
-    priceToString(buy_sell_int + buy_fee_int - buy_sale_int) + "원";
+  Allpraice.value = priceToString(buy_sell_int + buy_fee_int - buy_sale_int) + "원";
 
   $("#sameAddressControl").click(function () {
     let same = this.checked;

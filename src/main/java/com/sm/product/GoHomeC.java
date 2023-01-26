@@ -7,16 +7,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.sm.account.AccountDAO;
+import com.sm.master.DAO_Master;
 
-@WebServlet("/buyPageC")
-public class buyPageC extends HttpServlet {
+@WebServlet("/GoHomeC")
+public class GoHomeC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		System.out.println(request.getParameter("final_amount"));
-		AccountDAO.loginCheck(request);
+	
+		DAO_Master.getAllProduct(request);
 		request.setAttribute("headerPage", "jsp/header.jsp");
-		request.setAttribute("contentPage", "jsp/buy/buypage.jsp");
+		request.setAttribute("contentPage", "jsp/home.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 

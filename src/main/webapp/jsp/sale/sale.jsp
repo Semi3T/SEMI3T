@@ -29,7 +29,7 @@
 						</div>
 						<div class="a-box-sale">
 							<a href="DetailC?p_no=${p.p_no }">${p.p_title }</a> <br> <a
-								href="DetailC?p_no=${p.p_no }">${p.p_price } 원</a>
+								href="DetailC?p_no=${p.p_no }">${p.p_price - p.p_saleprice } 원</a>
 	
 						</div>
 					</div>
@@ -55,7 +55,7 @@
 								</div>
 								<div class="a-box-sale">
 									<a href="DetailC?p_no=${p.p_no }">${p.p_title }</a> <br> <a
-										href="DetailC?p_no=${p.p_no }">${p.p_price } 원</a>
+										href="DetailC?p_no=${p.p_no }">${p.p_price - p.p_saleprice } 원</a>
 			
 								</div>
 							</div>

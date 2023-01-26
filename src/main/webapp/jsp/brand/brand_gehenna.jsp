@@ -41,7 +41,7 @@
 								<a href="LoginC"><img src="img/product/19_img.png"></a>
 							</div>
 							<div class="a-box">
-								<a>${b.p_title }</a> <br> <a>${b.p_price } 원</a>
+								<a>${b.p_title }</a> <br> <a>${b.p_price - p.p_saleprice} 원</a>
 							</div>
 						</div>
 					</div>
@@ -65,7 +65,7 @@
 									src="jsp/master/imgFolder/${b.p_img }"></a>
 							</div>
 							<div class="a-box">
-								<a>${b.p_title }</a> <br> <a>${b.p_price } 원</a>
+								<a>${b.p_title }</a> <br> <a>${b.p_price - p.p_saleprice} 원</a>
 							</div>
 						</div>
 					</div>
