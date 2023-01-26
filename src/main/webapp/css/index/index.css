@@ -233,5 +233,7 @@ main {
 }
 
 
-
+.account_Btn a:visited{
+	color: black;
+}
 

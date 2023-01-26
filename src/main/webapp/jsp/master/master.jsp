@@ -17,7 +17,7 @@
 				<tbody>
 					<tr>
 						<td class="masterReg_td1"><span>제품 명</span></td>
-						<td class="masterReg_td2"><input type="text"
+						<td class="masterReg_td2"><input type="text" name="title"
 							class="masterReg_pdinput" placeholder="EX) PolyPotion"></td>
 					</tr>
 					<tr>
@@ -34,7 +34,7 @@
 					<tr>
 						<td class="masterReg_td1"><span>제품 가격</span></td>
 						<td class="masterReg_td2">
-						<input type="number" class="masterReg_pdinput" placeholder=", 없이 숫자만 입력해주세요"></td>
+						<input name="price" type="number" class="masterReg_pdinput" placeholder=", 없이 숫자만 입력해주세요"></td>
 					</tr>
 					<tr>
 						<td class="masterReg_td1"><span>제품 이미지 등록 (썸네일)</span></td>

@@ -12,8 +12,8 @@ import com.sm.master.DAO_Master;
 
 @WebServlet("/ProductSearchC")
 public class ProductSearchC extends HttpServlet {
-	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		DAO_Master.SearchProduct(request);
 		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.setAttribute("contentPage", "jsp/search/productsearch.jsp");

@@ -20,18 +20,21 @@
 
 
 	${r }
+	<c:choose>
+	<c:when test="${sessionScope.account eq null}">
 	<div>
 		<div id="carouselExampleControls" class="carousel slide"
 			data-bs-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img class="d-block w-100" src="img/slideimg/slide1.jpg" />
+					<a href="LoginC"><img class="d-block w-100" src="img/slideimg/oatslide.png" /></a>
+					<!-- p_no로 복사해서 사용하시오  -->
 				</div>
 				<div class="carousel-item">
-					<img class="d-block w-100" src="img/slideimg/slide2.jpg" />
+					<a href="LoginC"><img class="d-block w-100" src="img/slideimg/offslide.png" /></a>
 				</div>
 				<div class="carousel-item">
-					<img class="d-block w-100" src="img/slideimg/slide3.jpg" />
+					<a href="LoginC"><img class="d-block w-100" src="img/slideimg/jubileeslide.png" /></a>
 				</div>
 			</div>
 			<button class="carousel-control-prev" type="button"
@@ -46,6 +49,37 @@
 			</button>
 		</div>
 	</div>
+	</c:when>
+		<c:otherwise>
+	<div>
+		<div id="carouselExampleControls" class="carousel slide"
+			data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<a href="http://localhost/Semi3T/DetailC?p_no=77"><img class="d-block w-100" src="img/slideimg/oatslide.png" /></a>
+					<!-- p_no로 복사해서 사용하시오  -->
+				</div>
+				<div class="carousel-item">
+					<a href="http://localhost/Semi3T/DetailC?p_no=90"><img class="d-block w-100" src="img/slideimg/offslide.png" /></a>
+				</div>
+				<div class="carousel-item">
+					<a href="http://localhost/Semi3T/DetailC?p_no=43"><img class="d-block w-100" src="img/slideimg/jubileeslide.png" /></a>
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button"
+				data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button"
+				data-bs-target="#carouselExampleControls" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</div>
+	</c:otherwise>
+	</c:choose>
 
 	<c:choose>
 		<c:when test="${sessionScope.account eq null}">
