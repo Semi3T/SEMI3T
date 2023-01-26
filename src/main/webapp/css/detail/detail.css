@@ -99,6 +99,7 @@ input {
   font-weight: bold;
   margin-left: 10px;
   text-align: right;
+  outline: none;
 }
 .detail_button {
   margin-top: 40px;

@@ -50,7 +50,7 @@
 <body>
 
 
-	<form action="buyPageC">
+	<form action="BuyPageC">
 		<div class="detail_area">
 
 			<div class="detail_img">
@@ -72,24 +72,35 @@
 
 				<div class="detail-product-price">
 					<div>
-						<fmt:formatNumber value="${product.p_price}" pattern="#,###" />
-						원
+						<c:choose>
+							<c:when test="${product.p_sale eq 0 }">
+							<fmt:formatNumber value="${product.p_price}" pattern="#,###" /> 원
+							</c:when>
+							<c:when test="${product.p_sale eq 1}">
+							<div style="text-decoration: line-through; opacity: 0.6; font-size: 18pt;">
+							<fmt:formatNumber value="${product.p_price}" pattern="#,###" /> 원
+							</div>
+							<fmt:formatNumber value="${product.p_price - product.p_saleprice}" pattern="#,###" /> 원
+							</c:when>
+						</c:choose>
 					</div>
 				</div>
 
 				<div class="quantity">
 					<div class="detail-quantity">
-						<input type="hidden" name="sell_price" value="${ product.p_price }">
+						<input type="hidden" name="sell_price" value="${ product.p_price - product.p_saleprice}">
 						 <input type="button" value=" - " name="minus" class="detail-minus">
 						  <input type="button" name="amount" value="1" size="2" max="" class="detail-amount">
 						   <input type="button" value=" + " name="add" class="detail-add">
+						
+						   	<input type="hidden" name="sale_price" value="${product.p_saleprice }">
 						   
 					</div>
 
 					<div class="tatal-area">
 						<strong class="detail-text">총 상품금액: </strong> 
 						<input type="text" name="sum" size="11" readonly class="detail-total">
-						<input type="" name="final_amount" value="1">
+						<input type="hidden" name="final_amount" value="1">
 						 
 						<br>
 					</div>

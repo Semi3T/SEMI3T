@@ -9,7 +9,7 @@ pageEncoding="UTF-8"%>
     <title>buy page check</title>
   </head>
   <body>
-    <form action="#" onsubmit="buy_price()">
+    <form action="BuyPageC" onsubmit="buy_price()" method="post">
     <div class="order">
     	주문서
     </div>
@@ -18,8 +18,8 @@ pageEncoding="UTF-8"%>
 			<table>
 				<tr>
 					<td><img style="width: 200px" src="jsp/master/imgFolder/${param.img}"></td>
-					<td> ${param.title} 상품을 주문합니다.</td>
-					<td>${param.amount }</td>
+					<td style="padding-left: 100px; font-size: 15pt; font-weight: bold;"> x ${param.final_amount } 개 </td>
+					<td style="padding-left: 200px; font-size: 15pt; font-weight: bold;"> ${param.title} 상품을 주문합니다.</td>
 				</tr>
 			</table>
 			
@@ -85,9 +85,12 @@ pageEncoding="UTF-8"%>
 						<div id="buy-label-box"><label>배송비</label></div>
 						<div id="buy-input-box-p"><input name="buy_fee_praice" readonly="readonly" value="3,000원"></div>
 					</div>
-					<div class="buy-product-price">
+					<div class="buy-product-price-fmt">
 						<div id="buy-label-box"><label>할인금액</label></div>
-						<div id="buy-input-box-p"><input name="buy_sale_praice" readonly="readonly" value="-0원"></div>
+							<div id="buy-input-box-p">
+							<fmt:formatNumber value="${param.sale_price}" pattern="#,###" />원
+							</div>
+					<input type="hidden" name="buy_sale_praice" readonly="readonly" value="${param.sale_price }원">
 					</div>
 					<hr>
 					<div class="buy-product-price">
