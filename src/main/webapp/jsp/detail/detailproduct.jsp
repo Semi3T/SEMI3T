@@ -62,6 +62,7 @@
 				<div>
 					<div class="detail-brand-name">
 						<h4>${product.p_brand }</h4>
+						<input type="hidden" name="brand" value="${product.p_brand }">
 					</div>
 					<div class="detail-product-name">
 						
