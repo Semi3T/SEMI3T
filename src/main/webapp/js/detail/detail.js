@@ -3,6 +3,7 @@ const amount = document.querySelector("input[name=amount]");
 const add = document.querySelector("input[name=add]");
 const minus = document.querySelector("input[name=minus]");
 const sum = document.querySelector("input[name=sum]");
+const final_amount = document.querySelector("input[name=final_amount]");
 
 function priceToString(price) {
   return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -13,6 +14,7 @@ let sellValue = parseInt(sell_price.value);
 add.addEventListener("click", () => {
   amount.value++;
   amountValue++;
+  final_amount.value = amount.value;
   sum.value = priceToString(sellValue * amountValue) + " 원";
 });
 
@@ -20,6 +22,7 @@ minus.addEventListener("click", () => {
   if (amount.value != 1) {
     amount.value--;
     amountValue--;
+  final_amount.value = amount.value;
     sum.value = priceToString(sellValue * amountValue) + " 원";
   }
 });

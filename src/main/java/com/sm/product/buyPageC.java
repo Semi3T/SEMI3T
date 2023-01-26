@@ -13,7 +13,7 @@ import com.sm.account.AccountDAO;
 public class buyPageC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-
+		System.out.println(request.getParameter("final_amount"));
 		AccountDAO.loginCheck(request);
 		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.setAttribute("contentPage", "jsp/buy/buypage.jsp");

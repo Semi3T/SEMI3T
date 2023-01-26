@@ -89,6 +89,7 @@
 					<div class="tatal-area">
 						<strong class="detail-text">총 상품금액: </strong> 
 						<input type="text" name="sum" size="11" readonly class="detail-total">
+						<input type="" name="final_amount" value="1">
 						 
 						<br>
 					</div>
