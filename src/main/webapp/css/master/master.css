@@ -1,1 +1,74 @@
 @charset "UTF-8";
+
+#masterReg_container {
+	margin: 30px auto 30px auto;
+}
+
+.masterReg_title {
+	margin-left: 10px;
+	margin-bottom: 30px;
+}
+
+.masterReg_title Strong {
+	font-size: 2rem;
+}
+
+.masterReg_contentsWrapper {
+	width: 100%;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+}
+
+.masterReg_contentsWrapper td{
+	padding-left: 10px;
+}
+
+.masterReg_contentsWrapper table {
+	width: 100%;
+}
+
+.masterReg_contentsWrapper tr {
+	height: 80px;
+	border-bottom: 1px solid #999;
+}
+
+.masterReg_td1 {
+	width: 282px;
+}
+
+.masterReg_td1 span {
+	width: 282px;
+	font-size: 13pt;
+	font-weight: bold;
+	line-height: 65px;
+	display:block;
+	height: 70px;
+	border-right: 1px solid #ddd;
+}
+
+.masterReg_pdinput {
+	font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 400px;
+    max-width: 100%;
+    border: 0;
+    margin: 15px 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.masterReg_td2 label {
+	width: 120px;
+}
+
+.masterReg_td2 label input {
+	margin-right: 5px;
+}
+
+#masterReg_container button {
+	margin-top: 20px;
+	width: 80px;
+	float: right;
+}
