@@ -30,7 +30,7 @@
         <tbody>
           <tr>
             <td align="center">박영웅(Master)</td>
-            <td rowspan="2" width="700px">
+            <td rowspan="2" width="600px">
               <li><strong>공통작업</strong>
                 <ol start="1">
                   <li>dd</li>
