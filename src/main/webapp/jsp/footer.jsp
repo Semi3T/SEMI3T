@@ -34,7 +34,7 @@
 						<td class="footer_emailtd"><a href="mailto:wjsdydrb123@gmail.com" class="footer_email">wjsdydrb123@gmail.com</a></td>
 					</tr>
 					<tr>
-						<td onclick="location.href='SalePostionC'" rowspan="3" class="footer_menu">세일<br></td>
+						<td onclick="location.href='SalePotionC'" rowspan="3" class="footer_menu">세일<br></td>
 						<td onclick="location.href='QnAC?p=1'" rowspan="3" class="footer_menu">Q&A<br></td>
 						<td class="footer_position">Member</td>
  						<td class="footer_name">Geon Woo Jeong</td>
