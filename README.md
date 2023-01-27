@@ -75,22 +75,21 @@
             <td rowspan="2">
               <li><strong>공통작업</strong>
                 <ol start="1">
-                  <li>dd</li>
-                  <li>dd</li>
                 </ol>
               </li>
               <li><strong>개인작업</strong>
                 <ol start="1">
-                  <li>dd</li>
-                  <li>dd</li>
+                  <li>로그인 페이지, 회원가입 페이지, ID,PW 찾기 페이지, 마이페이지 작성.</li>
+                  <li>로그인 관련 기능 구현.</li>
                 </ol>
               </li>
               <li><strong>소감</strong></li>
-              ㅇㅇ
+              첫 팀 프로젝트라 자신이 해낼수있을까에대해 솔직히 불안감도 적지않았습니다.프로젝트에 들어서고나서 직접 기능구현도 해보고 스스로 문제도 해결방안을 찾아가며 해결해보고 때로는 다르게 적용해보며 조금은 자신감을 얻을수있게된 계기가 된거같습니다.기술적으로도 구현하지 못했던 방안도 있어서 스스로한테 아쉬운점도 많았고 개발을 하다 뒤늦게 배운점도 많았지만  한가지 단계를 넘을때마다 성취감을 느끼는 맛을 간만에 제대로 느끼게되어 앞으로 공부하는데도 큰 원동력으로 작동할 경험이었습니다.
+모두 수고하셨습니다.
             </td>
           </tr>
           <tr>
-            <td><p style="text-align: center;"><img src="https://avatars.githubusercontent.com/u/53090748?s=400&v=4" style="border-radius: 100%; height: 150px; text-align: center;"></p></td>
+            <td><p style="text-align: center;"><img src="https://avatars.githubusercontent.com/u/55923756?v=4" style="border-radius: 100%; height: 150px; text-align: center;"></p></td>
           </tr>
         </tbody>
     </table>
@@ -199,6 +198,8 @@
 <br><br><br>
 
 ## 👨‍💻 노션 링크 (Notion App Link)
-<a href="https://www.notion.so/2be9a533eac146f9b70e3b52cd167f5a" target="_blank">
-<img src="https://lirp.cdn-website.com/569d015a/dms3rep/multi/opt/1-1a29b886-1920w.png" width="350px;" />
-</a>
+<p align="center">
+        <a href="https://www.notion.so/2be9a533eac146f9b70e3b52cd167f5a" target="_blank">
+        <img src="https://lirp.cdn-website.com/569d015a/dms3rep/multi/opt/1-1a29b886-1920w.png" width="350px;" />
+        </a>
+</p>
