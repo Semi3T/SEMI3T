@@ -33,18 +33,18 @@
             <td rowspan="2" width="600px">
               <li><strong>공통작업</strong>
                 <ol start="1">
-                  <li>dd</li>
-                  <li>dd</li>
+                  <li>DB 구성, 메인페이지 작성, 헤더 작성</li>
+                  <li>댓글기능, 페이징기능, 제품등록페이지 작성, 구매페이지 작성</li>
                 </ol>
               </li>
               <li><strong>개인작업</strong>
                 <ol start="1">
-                  <li>dd</li>
-                  <li>dd</li>
+                  <li>Home 페이지, 슬라이드, 헤더(회원, 비회원, 마스터 계정) 예외 처리, New 페이지, Sale 페이지</li>
+                  <li>페이징 기능, 탑-다운 스크롤 기능, 전체적인 css 작업 및 체크</li>
                 </ol>
               </li>
               <li><strong>소감</strong></li>
-              ㅇㅇ
+              팀장을 꼭 해보고 싶었는데 이번 세미 프로젝트를 통해서 값진 경험을 했습니다. 팀원 분들의 의견 조율, 의사소통 부재 등 부족했던 부분들을 통감했으며 다음에는 어떤 식으로 해결해나가야 할지 깨달았던 시간이었습니다. 또한 Git을 통해서 공동으로 작업하면서 생겼던 Conflict 오류, Commit, Pull, Push, Pull Request 등 많은 것을 배웠습니다. 부족한 팀장 밑에서 열심히 해주셔서 감사합니다. 팀원분들 고생 많았습니다.
             </td>
           </tr>
           <tr>
