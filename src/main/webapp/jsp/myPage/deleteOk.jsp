@@ -7,10 +7,13 @@
 <title>deleteOk Page</title>
 </head>
 <body>
-
-	<div class="delete-ok-box">
-		<div class="delete-result"> ${result }</div>
-	</div>
-
+	<form action="GoHomeC">
+		<div class="delete-ok-box">
+			<div class="delete-result"> ${result }</div>
+		</div>
+		<div class="buy-button">
+				<button>홈으로</button>
+		</div>
+	</form>
 </body>
 </html>
