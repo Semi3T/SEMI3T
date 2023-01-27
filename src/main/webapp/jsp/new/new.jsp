@@ -16,16 +16,16 @@
 				<c:forEach var="p" items="${product }">
 					<div class="product-box-new">
 						<div class="product-ani">
-							<c:if test="${p.p_new eq '1'}">
+							<c:if test="${p.p_new eq 1}">
 								<div class="new-text">New</div>
 							</c:if>
-							<c:if test="${p.p_sale eq '1' }">
+							<c:if test="${p.p_sale eq 1}">
 								<div class="sale-text">Sale</div>
 							</c:if>
 		
 							<div class="a-box-new">
 								<a href="LoginC"><img
-									src="img/product/19_img.png""></a>
+									src="img/product/19_img.png"></a>
 							</div>
 		
 							<div class="a-box-new">
@@ -42,13 +42,12 @@
 				<c:forEach var="p" items="${product }">
 					<div class="product-box-new">
 						<div class="product-ani">
-							<c:if test="${p.p_new eq '1'}">
+							<c:if test="${p.p_new eq 1}">
 								<div class="new-text">New</div>
 							</c:if>
-							<c:if test="${p.p_sale eq '1' }">
+							<c:if test="${p.p_sale eq 1}">
 								<div class="sale-text">Sale</div>
 							</c:if>
-		
 							<div class="a-box-new">
 								<a href="DetailC?p_no=${p.p_no }"><img
 									src="jsp/master/imgFolder/${p.p_img }"></a>

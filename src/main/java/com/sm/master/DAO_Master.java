@@ -168,6 +168,7 @@ public class DAO_Master {
 				p = new Product();
 				p.setP_no(rs.getInt("p_no"));
 				p.setP_new(rs.getInt("p_new"));
+				p.setP_sale(rs.getInt("p_sale"));
 				p.setP_price(rs.getInt("p_price"));
 				p.setP_brand(rs.getString("p_brand"));
 				p.setP_title(rs.getString("p_title"));

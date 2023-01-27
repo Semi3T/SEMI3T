@@ -17,10 +17,10 @@
 			<c:forEach var="p" items="${product }">
 				<div class="product-box-sale">
 					<div class="product-ani">
-						<c:if test="${p.p_new eq '1'}">
+						<c:if test="${p.p_new eq 1}">
 							<div class="new-text">New</div>
 						</c:if>
-						<c:if test="${p.p_sale eq '1'}">
+						<c:if test="${p.p_sale eq 1}">
 							<div class="sale-text">Sale</div>
 						</c:if>
 						<div class="a-box-sale">
@@ -43,10 +43,10 @@
 					<c:forEach var="p" items="${product }">
 						<div class="product-box-sale">
 							<div class="product-ani">
-								<c:if test="${p.p_new eq '1'}">
+								<c:if test="${p.p_new eq 1}">
 									<div class="new-text">New</div>
 								</c:if>
-								<c:if test="${p.p_sale eq '1'}">
+								<c:if test="${p.p_sale eq 1}">
 									<div class="sale-text">Sale</div>
 								</c:if>
 								<div class="a-box-sale">
