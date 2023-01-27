@@ -55,18 +55,19 @@
             <td rowspan="2">
               <li><strong>공통작업</strong>
                 <ol start="1">
-                  <li>dd</li>
-                  <li>dd</li>
+                  <li>DB 구성, 메인페이지 작성, 헤더 작성</li>
+                  <li>댓글기능, 페이징기능, 제품등록페이지 작성, 구매페이지 작성</li>
                 </ol>
               </li>
               <li><strong>개인작업</strong>
                 <ol start="1">
-                  <li>dd</li>
+                  <li>Brand페이지, 네비게이션, 검색 기능, 포토샵</li>
                   <li>dd</li>
                 </ol>
               </li>
               <li><strong>소감</strong></li>
-              ㅇㅇ
+              먼저, 같이 고생한 팀원들에게 감사합니다.<br>
+              그리고 프로젝트를 진행하면서 실전과 이론은 다르다는 것을 배웠고 발전하는 프로그래머에 한발짝 가까워지는 기회였습니다.
             </td>
           </tr>
           <tr>
