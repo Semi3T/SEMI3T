@@ -14,7 +14,6 @@ import com.sm.master.DAO_Master;
 public class NewPotionC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		AccountDAO.loginCheck(request);
 		DAO_Master.newproduct(request);
 		DAO_Master.paging_new(1, request);
 		request.setAttribute("headerPage", "jsp/header.jsp");

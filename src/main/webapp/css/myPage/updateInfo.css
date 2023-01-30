@@ -70,11 +70,10 @@ th{
 
 .delete-ok-box{
 	width: 1130px;
-	height: 100%;
+	height: 600px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 300px;
 }
 .delete-result{
 	font-size: 30px;

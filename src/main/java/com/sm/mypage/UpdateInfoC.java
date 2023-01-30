@@ -13,7 +13,6 @@ import com.sm.master.DAO_Master;
 @WebServlet("/UpdateInfoC")
 public class UpdateInfoC extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		AccountDAO.loginCheck(request);
 		request.setAttribute("headerPage", "jsp/header.jsp");
 		request.setAttribute("contentPage", "jsp/myPage/updateInfo.jsp");

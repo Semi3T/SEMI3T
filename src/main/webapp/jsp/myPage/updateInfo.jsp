@@ -37,7 +37,7 @@
 					
 					<div class="myPage-button-box">
 						<button>수정하기</button>
-						<button onclick="history.go(-1)">뒤로가기</button>
+						<button type="button" onclick="history.back()">뒤로가기</button>
 					</div>
 				</div>
 			</div>

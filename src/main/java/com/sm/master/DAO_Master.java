@@ -168,6 +168,7 @@ public class DAO_Master {
 				p = new Product();
 				p.setP_no(rs.getInt("p_no"));
 				p.setP_new(rs.getInt("p_new"));
+				p.setP_sale(rs.getInt("p_sale"));
 				p.setP_price(rs.getInt("p_price"));
 				p.setP_brand(rs.getString("p_brand"));
 				p.setP_title(rs.getString("p_title"));
@@ -414,9 +415,11 @@ public class DAO_Master {
 		}
 
 		public static void updateReg(HttpServletRequest request) {
-
 			Connection con = null;
 			PreparedStatement pstmt = null;
+
+			try {
+			request.setCharacterEncoding("utf-8");
 			String sql = "update login set l_pw=?, l_name=?, l_phonenumber=?, l_address=? where l_id=?";
 			Account account = (Account)request.getSession().getAttribute("account");
 			
@@ -425,9 +428,7 @@ public class DAO_Master {
 			String phonenumber = request.getParameter("phonenumber");
 			String address = request.getParameter("address");
 			
-			try {
 				con = DBManager.connect();
-				request.setCharacterEncoding("utf-8");
 				pstmt = con.prepareStatement(sql);
 				pstmt.setString(1, pw);
 				pstmt.setString(2, name);
@@ -463,13 +464,13 @@ public class DAO_Master {
 			String sql = "delete from login where l_id=?";
 			HttpSession hs = request.getSession();
 			Account a = (Account) hs.getAttribute("account");
-			
 			try {
 				con = DBManager.connect();
 				pstmt = con.prepareStatement(sql);
 				pstmt.setString(1, a.getL_id());
 				pstmt.executeUpdate();
 				
+				hs.invalidate();
 				request.setAttribute("result", "회원님의 정보가 정상적으로 삭제 되었습니다.");
 				
 			} catch (Exception e) {
