@@ -134,33 +134,33 @@
 
 ### 메인 페이지 (Index Page)
 ------
-
-<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6bd274e4-6e28-4edb-9c21-c67f749a133e/KakaoTalk_20230127_110154534.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230127T021042Z&X-Amz-Expires=86400&X-Amz-Signature=5a2b8984a547df7fe0ad5e36d05417c4e4d42807351f28132dd52d9cbe82d8e7&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22KakaoTalk_20230127_110154534.png%22&x-id=GetObject"/> <br>
+<p align="center">
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/79c23980-8d1b-4961-81cc-0a063013688c/ezgif.com-gif-maker_%281%29.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230201%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230201T100425Z&X-Amz-Expires=86400&X-Amz-Signature=e8166bb0efd9043b81683d32142e87f967082c2153ac27289709636ef7bf334b&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22ezgif.com-gif-maker%2520%281%29.gif%22&x-id=GetObject"/></p> <br>
 
 ### 제품상세 페이지 (ProductDetail Page)
 ------
-
-<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3770f86f-5cdb-4b3a-996b-ed203ab53b70/KakaoTalk_20230127_110154330.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230127T021931Z&X-Amz-Expires=86400&X-Amz-Signature=b5bf899e664ff2694227ad744a7efba59e327e7cbb67bf7bd2f71dcf3041f6bc&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22KakaoTalk_20230127_110154330.png%22&x-id=GetObject" /><br>
-
-### 브랜드선택 페이지 (BrandSelecting Page)
-------
-
-<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0e9548a1-d8f9-4c15-b316-2c1bd67a2a18/KakaoTalk_20230127_110154024.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230127T022041Z&X-Amz-Expires=86400&X-Amz-Signature=541ab1af4067b952fb6dc550cf6f3df259e7a07d4eaedbb55e8e6d6147911806&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22KakaoTalk_20230127_110154024.png%22&x-id=GetObject" /><br>
+<p align="center">
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/26636440-9e52-48b3-a621-8b8e5312be25/ezgif.com-gif-maker.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230202%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230202T023514Z&X-Amz-Expires=86400&X-Amz-Signature=47978735bb59cc298ceb498a5939cacdaa170ef6fb1887d495b0b03abcfabb7b&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22ezgif.com-gif-maker.gif%22&x-id=GetObject" /></p><br>
 
 ### 구매 페이지 (Buying Page)
 ------
+<p align="center">
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/329883ff-6eb3-4daa-8f48-483a0ddfc588/ezgif.com-gif-maker_%281%29.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230202%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230202T024350Z&X-Amz-Expires=86400&X-Amz-Signature=63c94a6695eaf2c6458e1d80741b3d29c835ee374bab56e86ff06f5f71451a2d&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22ezgif.com-gif-maker%2520%281%29.gif%22&x-id=GetObject" /></p><br>
 
-<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3dcc8537-7512-4f97-b833-56b52594e166/KakaoTalk_20230127_110153638.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230127T022117Z&X-Amz-Expires=86400&X-Amz-Signature=4d2b50881b17b96296917d299fcf4e815d45d34da2e54c8d54163aae4d0a8717&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22KakaoTalk_20230127_110153638.png%22&x-id=GetObject" /><br>
+### 브랜드선택 페이지 (BrandSelecting Page)
+------
+<p align="center">
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a78f4a99-41af-4e59-a5e2-1ee18e14e913/ezgif.com-gif-maker.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230202%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230202T151206Z&X-Amz-Expires=86400&X-Amz-Signature=4da3edd1d0f0eb0305017e3e78919a5070d2f540766400fad5c564530b73c8f5&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22ezgif.com-gif-maker.gif%22&x-id=GetObject" /></p><br>
 
 ### 로그인 페이지 (Login Page)
 ------
-
-<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/543b735e-ce97-43be-b8bb-d8f2f1edd1bb/KakaoTalk_20230127_110153757.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230127T022146Z&X-Amz-Expires=86400&X-Amz-Signature=98f5702b4d9a20d1025cf35f249642606e3709504c4d60f86a663d80a67a5929&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22KakaoTalk_20230127_110153757.png%22&x-id=GetObject" /><br>
+<p align="center">
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/34b8e70d-be74-44d2-b8b0-603295799de3/ezgif.com-gif-maker_%281%29.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230202%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230202T152443Z&X-Amz-Expires=86400&X-Amz-Signature=46ac18eedb940a51fcb544a6e4527343fc0dadbccc5f1e54fc583d6e34dca725&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22ezgif.com-gif-maker%2520%281%29.gif%22&x-id=GetObject" /></p><br>
 
 ### QnA게시판 페이지 (QnA Board Page)
 ------
-
-<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/641a8d43-18a0-4c2f-b124-c01e4d9fde8b/KakaoTalk_20230127_110153901.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230127T022413Z&X-Amz-Expires=86400&X-Amz-Signature=9ae93806f6960c5e63625ae23c370699569c43dadcf15547488ece1538b6f183&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22KakaoTalk_20230127_110153901.png%22&x-id=GetObject" /><br>
+<p align="center">
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e16b4c85-2024-4043-a7eb-0ff06a48a596/ezgif.com-gif-maker_%282%29.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230202%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230202T153246Z&X-Amz-Expires=86400&X-Amz-Signature=0fd58751f5080aba3a82c30386e1b2465a5d771085da6b6e206f5a47ad130155&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22ezgif.com-gif-maker%2520%282%29.gif%22&x-id=GetObject" /><p><br>
 
 ### 📊 DB 구성
 
@@ -170,8 +170,9 @@
 <br><br><br>
 
 ## ⏱ 개발 기간(Development Period)
+<br>
 
-> 2022.12.30 ~ 2023.01.27 (19일 간, 실제 작업일 기준)
+### <p align="center">2022.12.30 ~ 2023.01.27 (19일 간, 실제 작업일 기준)</p>
 
 <br><br><br><br>
 
